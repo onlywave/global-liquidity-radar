@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Liquidity &amp; Stress Radar — GLSI live</title>
+<meta name="description" content="Indice della liquidità globale e dello stress finanziario, aggiornato automaticamente dai dati ufficiali Fed, BCE, BoJ, Chicago Fed e St. Louis Fed. Alert, storico, episodi di stress degli ultimi 20 anni e interventi delle banche centrali.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=1">
+</head>
+<body>
+<div class="frame">
+
+<header class="top">
+  <div class="brand">
+    <p class="kicker">GLSI · REGIME GAUGE · LIVE</p>
+    <h1>Global Liquidity &amp; Stress Index</h1>
+    <p class="formula">Score = 100 × Φ(½·Liquidità − ½·Stress) · scala 0–100</p>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><span>SCORE</span><b id="k-score">…</b></div>
+    <div class="kpi"><span>REGIME</span><b id="k-regime">…</b></div>
+    <div class="kpi"><span id="k-up-l">ALLA FASCIA SUPERIORE</span><b id="k-up">…</b></div>
+    <div class="kpi"><span>ALLA NEUTRALITÀ</span><b id="k-neutral">…</b></div>
+  </div>
+</header>
+
+<ul class="legend">
+  <li><i style="--c:var(--b0)"></i>Siccità &lt; 20</li>
+  <li><i style="--c:var(--b1)"></i>Stretta 20–40</li>
+  <li><i style="--c:var(--b2)"></i>Neutrale 40–60</li>
+  <li><i style="--c:var(--b3)"></i>Allentamento 60–80</li>
+  <li><i style="--c:var(--b4)"></i>Abbondanza &gt; 80</li>
+  <li class="fresh"><span class="pulse"></span><span id="fresh">caricamento…</span></li>
+</ul>
+
+<section class="hero panel">
+  <div class="gauge-wrap">
+    <svg id="gauge" viewBox="0 0 600 340" role="img" aria-label="Indicatore GLSI"></svg>
+  </div>
+  <div class="side">
+    <div class="duo">
+      <div class="pill liq"><span>Liquidità (z)</span><b id="s-liq">…</b><small id="s-liq-t"></small></div>
+      <div class="pill str"><span>Stress (z)</span><b id="s-str">…</b><small id="s-str-t"></small></div>
+    </div>
+    <table class="mini">
+      <tr><th>Variazione score 1 settimana</th><td id="c1">…</td></tr>
+      <tr><th>Variazione score 4 settimane</th><td id="c4">…</td></tr>
+      <tr><th>Variazione score 13 settimane</th><td id="c13">…</td></tr>
+      <tr><th>Percentile storico dello score</th><td id="pct">…</td></tr>
+      <tr><th>Liquidità netta globale (Fed netta + BCE + BoJ)</th><td id="gnl">…</td></tr>
+      <tr><th>…variazione 4 / 13 / 52 settimane</th><td id="gnlc">…</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="panel" id="alerts-sec">
+  <div class="head">
+    <h2>Alert</h2>
+    <button id="notif" class="btn">Attiva notifiche nel browser</button>
+  </div>
+  <div id="active" class="active"></div>
+  <details>
+    <summary>Registro alert e cambi di regime</summary>
+    <div class="cols">
+      <div><h3>Alert operativi</h3><ul id="alog" class="log"></ul></div>
+      <div><h3>Cambi di regime (storico)</h3><ul id="rlog" class="log"></ul></div>
+    </div>
+  </details>
+  <p class="note">Ogni nuovo alert apre anche una issue nel repository GitHub: arriva come notifica e-mail di GitHub. Se configurati, partono anche Telegram ed e-mail diretta (vedi README).</p>
+</section>
+
+<section class="panel">
+  <div class="head"><h2>Componenti</h2><p class="sub">z-score su 10 anni. Liquidità: positivo = più liquidità. Stress: positivo = più stress.</p></div>
+  <div id="comps" class="comps"></div>
+</section>
+
+<section class="panel">
+  <div class="head">
+    <h2>Storico GLSI</h2>
+    <div class="seg" data-target="hist">
+      <button data-r="1">1A</button><button data-r="3">3A</button><button data-r="5">5A</button><button data-r="10">10A</button><button data-r="20" class="on">20A</button><button data-r="0">Max</button>
+    </div>
+  </div>
+  <div class="chart tall"><canvas id="hist"></canvas></div>
+</section>
+
+<section class="panel">
+  <div class="head">
+    <h2>S&amp;P 500, episodi di stress e interventi</h2>
+    <div class="seg" data-target="spx">
+      <button data-r="5">5A</button><button data-r="10">10A</button><button data-r="20" class="on">20A</button>
+      <button id="logtog" class="tog on">Log</button>
+    </div>
+  </div>
+  <p class="sub">Fasce rosse: episodi di stress (intensità = picco dello stress). Triangoli: interventi di banche centrali e governi. Linea viola: stress composito (asse destro). Clicca una riga della tabella per zoomare.</p>
+  <div class="chart xtall"><canvas id="spx"></canvas></div>
+  <div class="kinds" id="kinds"></div>
+</section>
+
+<section class="panel">
+  <div class="head"><h2>Episodi di stress — ultimi 20 anni</h2><p class="sub" id="ep-sub"></p></div>
+  <div class="tablewrap">
+    <table class="eps" id="eps">
+      <thead><tr>
+        <th>Episodio</th><th>Finestra</th><th>Picco stress</th><th>z stress</th><th>GLSI min</th>
+        <th>STLFSI max</th><th>NFCI max</th><th>VIX max</th><th>HY max %</th>
+        <th>S&amp;P al picco</th><th>Drawdown S&amp;P</th><th>+3m</th><th>+6m</th><th>+12m</th>
+        <th>Interventi successivi</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="note">Livelli, date di picco e rendimenti sono calcolati dai dati settimanali. I nomi e gli interventi vengono da un catalogo curato (<code>config/events.json</code>). Rendimenti S&amp;P misurati dalla settimana di picco dello stress; drawdown dal massimo delle 26 settimane precedenti al minimo dell'episodio.</p>
+</section>
+
+<section class="panel">
+  <div class="head"><h2>Fonti e aggiornamento</h2><p class="sub">Ultimo dato pubblicato di ogni serie. Aggiornamento automatico ogni 3 ore.</p></div>
+  <div class="tablewrap"><table class="src" id="src"><thead><tr><th>Serie</th><th>Fonte</th><th>Ultimo dato</th><th>Valore</th><th>Unità</th></tr></thead><tbody></tbody></table></div>
+  <details class="method">
+    <summary>Metodo</summary>
+    <ul>
+      <li><b>Liquidità netta globale</b> = attivo Fed − conto del Tesoro (TGA) − reverse repo overnight + attivo BCE + attivo BoJ, tutto in dollari al cambio corrente.</li>
+      <li><b>Fattore liquidità</b> = media degli z-score di: variazione a 13 e a 52 settimane della liquidità netta globale, M2 USA su base annua, variazione a 13 settimane del dollaro (segno invertito: dollaro forte = meno liquidità).</li>
+      <li><b>Fattore stress</b> = media degli z-score di: Chicago Fed NFCI, St. Louis Fed Financial Stress Index, VIX, spread high yield.</li>
+      <li>z-score su finestra mobile di 10 anni (minimo 2), limitati a ±3. Frequenza settimanale (mercoledì, come il bilancio Fed H.4.1).</li>
+      <li><b>Episodio di stress</b>: finestra del catalogo oppure settimane consecutive con stress z &gt; <span id="thr">1</span> non comprese in alcuna finestra.</li>
+      <li>La PBoC non è inclusa: il suo bilancio non è disponibile come serie ufficiale aggiornata su FRED.</li>
+      <li>Ricostruzione indipendente ispirata al gauge GLSI di James Easton: i valori non coincidono con l'originale, la cui ricetta non è pubblica.</li>
+    </ul>
+  </details>
+</section>
+
+<footer>
+  <span>Fonti: FRED (Federal Reserve Bank of St. Louis), Fed, BCE, BoJ, Chicago Fed, CBOE, ICE BofA; S&amp;P 500 <span id="spxsrc"></span>.</span>
+  <span>Strumento di analisi, non consulenza finanziaria.</span>
+</footer>
+</div>
+
+<script src="assets/vendor/chart.umd.js"></script>
+<script src="assets/vendor/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="assets/vendor/chartjs-plugin-annotation.min.js"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
