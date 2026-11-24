@@ -1,0 +1,1232 @@
+{
+ "log": [
+  {
+   "level": "media",
+   "code": "MOMENTUM",
+   "date": "2026-11-25",
+   "text": "Score -17.8 punti in 4 settimane"
+  },
+  {
+   "level": "media",
+   "code": "DRENAGGIO",
+   "date": "2026-11-25",
+   "text": "Liquidità netta globale -8.4% in 4 settimane"
+  }
+ ],
+ "active": [
+  {
+   "level": "media",
+   "code": "MOMENTUM",
+   "date": "2026-11-25",
+   "text": "Score -17.8 punti in 4 settimane"
+  },
+  {
+   "level": "media",
+   "code": "DRENAGGIO",
+   "date": "2026-11-25",
+   "text": "Liquidità netta globale -8.4% in 4 settimane"
+  }
+ ],
+ "regime_changes": [
+  {
+   "date": "2026-11-18",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 34.0
+  },
+  {
+   "date": "2026-09-30",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 53.4
+  },
+  {
+   "date": "2026-08-12",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 62.3
+  },
+  {
+   "date": "2026-07-22",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.4
+  },
+  {
+   "date": "2026-07-15",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.6
+  },
+  {
+   "date": "2026-06-24",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.2
+  },
+  {
+   "date": "2026-06-17",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 62.6
+  },
+  {
+   "date": "2026-06-10",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 56.3
+  },
+  {
+   "date": "2026-06-03",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.2
+  },
+  {
+   "date": "2026-02-18",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.7
+  },
+  {
+   "date": "2026-01-14",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.2
+  },
+  {
+   "date": "2025-09-24",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.8
+  },
+  {
+   "date": "2025-09-17",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.0
+  },
+  {
+   "date": "2025-09-03",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.3
+  },
+  {
+   "date": "2025-08-27",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.2
+  },
+  {
+   "date": "2025-07-16",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.6
+  },
+  {
+   "date": "2025-06-25",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.0
+  },
+  {
+   "date": "2025-04-23",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 40.1
+  },
+  {
+   "date": "2025-04-09",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 27.9
+  },
+  {
+   "date": "2024-12-25",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 43.6
+  },
+  {
+   "date": "2024-12-18",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 33.7
+  },
+  {
+   "date": "2024-08-14",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 41.7
+  },
+  {
+   "date": "2024-08-07",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 32.3
+  },
+  {
+   "date": "2024-06-12",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.5
+  },
+  {
+   "date": "2024-05-15",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 67.4
+  },
+  {
+   "date": "2024-04-17",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 53.8
+  },
+  {
+   "date": "2024-04-10",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.4
+  },
+  {
+   "date": "2023-11-08",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 40.0
+  },
+  {
+   "date": "2023-09-27",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 35.9
+  },
+  {
+   "date": "2023-06-28",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 41.3
+  },
+  {
+   "date": "2023-03-29",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 21.3
+  },
+  {
+   "date": "2023-03-15",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 18.8
+  },
+  {
+   "date": "2023-02-15",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 39.1
+  },
+  {
+   "date": "2023-01-18",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 40.7
+  },
+  {
+   "date": "2022-11-16",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 25.1
+  },
+  {
+   "date": "2022-09-21",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 18.5
+  },
+  {
+   "date": "2022-09-14",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 22.7
+  },
+  {
+   "date": "2022-09-07",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 18.1
+  },
+  {
+   "date": "2022-07-27",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 22.0
+  },
+  {
+   "date": "2022-06-15",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 16.1
+  },
+  {
+   "date": "2022-06-08",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 24.7
+  },
+  {
+   "date": "2022-05-11",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 15.4
+  },
+  {
+   "date": "2022-04-06",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 37.4
+  },
+  {
+   "date": "2022-03-16",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 43.6
+  },
+  {
+   "date": "2022-03-09",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 36.2
+  },
+  {
+   "date": "2022-01-26",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 42.9
+  },
+  {
+   "date": "2022-01-05",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.5
+  },
+  {
+   "date": "2021-12-08",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 40.1
+  },
+  {
+   "date": "2021-12-01",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 32.7
+  },
+  {
+   "date": "2021-07-21",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.9
+  },
+  {
+   "date": "2021-05-19",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.0
+  },
+  {
+   "date": "2021-05-12",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 55.1
+  },
+  {
+   "date": "2020-11-11",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 67.7
+  },
+  {
+   "date": "2020-10-28",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 49.6
+  },
+  {
+   "date": "2020-08-26",
+   "frm": "Abbondanza",
+   "to": "Allentamento",
+   "score": 78.2
+  },
+  {
+   "date": "2020-08-05",
+   "frm": "Allentamento",
+   "to": "Abbondanza",
+   "score": 80.3
+  },
+  {
+   "date": "2020-06-03",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 67.1
+  },
+  {
+   "date": "2020-05-27",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 51.5
+  },
+  {
+   "date": "2020-05-13",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 24.4
+  },
+  {
+   "date": "2020-03-11",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 11.4
+  },
+  {
+   "date": "2020-02-26",
+   "frm": "Allentamento",
+   "to": "Stretta",
+   "score": 39.8
+  },
+  {
+   "date": "2020-02-12",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 63.4
+  },
+  {
+   "date": "2020-02-05",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.2
+  },
+  {
+   "date": "2019-12-18",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.7
+  },
+  {
+   "date": "2019-12-11",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.6
+  },
+  {
+   "date": "2019-10-30",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.7
+  },
+  {
+   "date": "2019-10-16",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 49.9
+  },
+  {
+   "date": "2019-10-02",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.2
+  },
+  {
+   "date": "2019-08-21",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 41.1
+  },
+  {
+   "date": "2019-08-14",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 32.6
+  },
+  {
+   "date": "2019-01-09",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 41.6
+  },
+  {
+   "date": "2018-12-12",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.1
+  },
+  {
+   "date": "2018-12-05",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 42.7
+  },
+  {
+   "date": "2018-11-21",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 39.5
+  },
+  {
+   "date": "2018-11-07",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 45.3
+  },
+  {
+   "date": "2018-10-31",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 39.2
+  },
+  {
+   "date": "2018-02-07",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 50.5
+  },
+  {
+   "date": "2018-01-17",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.1
+  },
+  {
+   "date": "2017-12-06",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.5
+  },
+  {
+   "date": "2017-11-29",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.1
+  },
+  {
+   "date": "2017-10-25",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.3
+  },
+  {
+   "date": "2017-02-15",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.9
+  },
+  {
+   "date": "2016-08-24",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.9
+  },
+  {
+   "date": "2016-08-17",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.1
+  },
+  {
+   "date": "2016-06-15",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 54.6
+  },
+  {
+   "date": "2016-06-08",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.5
+  },
+  {
+   "date": "2016-06-01",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.9
+  },
+  {
+   "date": "2016-05-25",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.4
+  },
+  {
+   "date": "2016-05-18",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.1
+  },
+  {
+   "date": "2016-04-06",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.5
+  },
+  {
+   "date": "2016-01-27",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 41.4
+  },
+  {
+   "date": "2016-01-13",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.7
+  },
+  {
+   "date": "2015-10-07",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 44.9
+  },
+  {
+   "date": "2015-09-30",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.3
+  },
+  {
+   "date": "2015-09-16",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 43.4
+  },
+  {
+   "date": "2015-08-26",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.3
+  },
+  {
+   "date": "2015-06-24",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.4
+  },
+  {
+   "date": "2015-06-10",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 62.6
+  },
+  {
+   "date": "2014-09-10",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.7
+  },
+  {
+   "date": "2014-08-20",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.0
+  },
+  {
+   "date": "2014-08-06",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.1
+  },
+  {
+   "date": "2014-04-02",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.1
+  },
+  {
+   "date": "2014-03-12",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.6
+  },
+  {
+   "date": "2014-03-05",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.8
+  },
+  {
+   "date": "2014-01-22",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.8
+  },
+  {
+   "date": "2013-12-25",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.1
+  },
+  {
+   "date": "2013-12-11",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.0
+  },
+  {
+   "date": "2013-10-16",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.9
+  },
+  {
+   "date": "2013-10-09",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.2
+  },
+  {
+   "date": "2013-09-25",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 62.2
+  },
+  {
+   "date": "2013-08-21",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.7
+  },
+  {
+   "date": "2013-08-14",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.6
+  },
+  {
+   "date": "2013-07-31",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 56.4
+  },
+  {
+   "date": "2013-07-24",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.3
+  },
+  {
+   "date": "2013-05-29",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.7
+  },
+  {
+   "date": "2013-04-24",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.0
+  },
+  {
+   "date": "2013-04-17",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 60.0
+  },
+  {
+   "date": "2012-09-05",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.3
+  },
+  {
+   "date": "2012-05-09",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.8
+  },
+  {
+   "date": "2012-01-25",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.9
+  },
+  {
+   "date": "2011-11-30",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 42.1
+  },
+  {
+   "date": "2011-11-23",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.8
+  },
+  {
+   "date": "2011-10-19",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 40.6
+  },
+  {
+   "date": "2011-09-21",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.5
+  },
+  {
+   "date": "2011-08-10",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 43.0
+  },
+  {
+   "date": "2011-08-03",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.2
+  },
+  {
+   "date": "2011-07-20",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.8
+  },
+  {
+   "date": "2011-07-06",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 64.5
+  },
+  {
+   "date": "2011-06-08",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.4
+  },
+  {
+   "date": "2011-04-06",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.2
+  },
+  {
+   "date": "2010-08-04",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 43.0
+  },
+  {
+   "date": "2010-05-05",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 37.6
+  },
+  {
+   "date": "2010-03-17",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 43.5
+  },
+  {
+   "date": "2010-01-27",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.3
+  },
+  {
+   "date": "2009-09-30",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 47.1
+  },
+  {
+   "date": "2009-09-23",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.7
+  },
+  {
+   "date": "2009-08-12",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.3
+  },
+  {
+   "date": "2009-08-05",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 63.7
+  },
+  {
+   "date": "2009-05-06",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 45.3
+  },
+  {
+   "date": "2009-04-08",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 20.2
+  },
+  {
+   "date": "2009-02-04",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 15.4
+  },
+  {
+   "date": "2009-01-28",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 26.2
+  },
+  {
+   "date": "2009-01-14",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 19.4
+  },
+  {
+   "date": "2009-01-07",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 27.6
+  },
+  {
+   "date": "2008-12-31",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 19.3
+  },
+  {
+   "date": "2008-12-10",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 21.9
+  },
+  {
+   "date": "2008-06-04",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 17.8
+  },
+  {
+   "date": "2008-05-28",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 22.0
+  },
+  {
+   "date": "2008-05-07",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 18.9
+  },
+  {
+   "date": "2008-04-30",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 22.8
+  },
+  {
+   "date": "2008-04-02",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 14.3
+  },
+  {
+   "date": "2008-03-26",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 22.9
+  },
+  {
+   "date": "2008-01-09",
+   "frm": "Neutrale",
+   "to": "Siccità",
+   "score": 18.4
+  },
+  {
+   "date": "2008-01-02",
+   "frm": "Siccità",
+   "to": "Neutrale",
+   "score": 48.4
+  },
+  {
+   "date": "2007-12-26",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 11.2
+  },
+  {
+   "date": "2007-12-19",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 27.6
+  },
+  {
+   "date": "2007-11-14",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 17.2
+  },
+  {
+   "date": "2007-10-24",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 24.6
+  },
+  {
+   "date": "2007-10-17",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 42.7
+  },
+  {
+   "date": "2007-09-26",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 28.1
+  },
+  {
+   "date": "2007-08-22",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 18.5
+  },
+  {
+   "date": "2007-08-15",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 26.7
+  },
+  {
+   "date": "2007-08-08",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 41.8
+  },
+  {
+   "date": "2007-08-01",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 32.5
+  },
+  {
+   "date": "2007-07-04",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 52.8
+  },
+  {
+   "date": "2007-05-23",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 64.6
+  },
+  {
+   "date": "2007-05-16",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.8
+  },
+  {
+   "date": "2007-05-09",
+   "frm": "Abbondanza",
+   "to": "Allentamento",
+   "score": 65.8
+  },
+  {
+   "date": "2007-04-18",
+   "frm": "Allentamento",
+   "to": "Abbondanza",
+   "score": 81.2
+  },
+  {
+   "date": "2007-03-14",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 74.7
+  },
+  {
+   "date": "2007-03-07",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.5
+  },
+  {
+   "date": "2007-01-03",
+   "frm": "Abbondanza",
+   "to": "Allentamento",
+   "score": 67.0
+  },
+  {
+   "date": "2006-12-27",
+   "frm": "Allentamento",
+   "to": "Abbondanza",
+   "score": 85.5
+  },
+  {
+   "date": "2006-10-11",
+   "frm": "Abbondanza",
+   "to": "Allentamento",
+   "score": 73.2
+  },
+  {
+   "date": "2006-10-04",
+   "frm": "Neutrale",
+   "to": "Abbondanza",
+   "score": 88.3
+  },
+  {
+   "date": "2006-09-27",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 53.0
+  },
+  {
+   "date": "2006-09-13",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 65.8
+  },
+  {
+   "date": "2006-09-06",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.7
+  },
+  {
+   "date": "2006-08-16",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 66.1
+  },
+  {
+   "date": "2006-08-02",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.2
+  },
+  {
+   "date": "2006-07-26",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 66.9
+  },
+  {
+   "date": "2006-07-19",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.7
+  },
+  {
+   "date": "2006-06-07",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 73.0
+  },
+  {
+   "date": "2006-05-31",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.4
+  },
+  {
+   "date": "2006-05-10",
+   "frm": "Abbondanza",
+   "to": "Allentamento",
+   "score": 73.5
+  },
+  {
+   "date": "2006-05-03",
+   "frm": "Allentamento",
+   "to": "Abbondanza",
+   "score": 82.0
+  },
+  {
+   "date": "2006-04-12",
+   "frm": "Abbondanza",
+   "to": "Allentamento",
+   "score": 78.0
+  },
+  {
+   "date": "2006-03-29",
+   "frm": "Allentamento",
+   "to": "Abbondanza",
+   "score": 88.1
+  },
+  {
+   "date": "2006-03-22",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 74.1
+  },
+  {
+   "date": "2006-03-15",
+   "frm": "Abbondanza",
+   "to": "Neutrale",
+   "score": 59.6
+  },
+  {
+   "date": "2006-03-08",
+   "frm": "Allentamento",
+   "to": "Abbondanza",
+   "score": 84.6
+  },
+  {
+   "date": "2006-02-22",
+   "frm": "Abbondanza",
+   "to": "Allentamento",
+   "score": 69.5
+  },
+  {
+   "date": "2006-02-08",
+   "frm": "Allentamento",
+   "to": "Abbondanza",
+   "score": 80.2
+  },
+  {
+   "date": "2006-01-11",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 63.9
+  },
+  {
+   "date": "2006-01-04",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 55.2
+  },
+  {
+   "date": "2005-12-07",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 68.1
+  },
+  {
+   "date": "2005-10-12",
+   "frm": "Abbondanza",
+   "to": "Neutrale",
+   "score": 50.5
+  },
+  {
+   "date": "2005-10-05",
+   "frm": "Allentamento",
+   "to": "Abbondanza",
+   "score": 81.3
+  },
+  {
+   "date": "2005-09-21",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 72.6
+  },
+  {
+   "date": "2005-08-10",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.1
+  }
+ ]
+}

@@ -1,0 +1,229 @@
+{
+ "generated": "2026-11-24T23:40Z",
+ "date": "2026-11-25",
+ "score": 30.2,
+ "liq": -0.55,
+ "stress": 0.48,
+ "regime": "Tightening",
+ "regime_it": "Stretta",
+ "band_lo": 20,
+ "band_hi": 40,
+ "to_up": 9.8,
+ "to_down": 10.2,
+ "to_neutral": 9.8,
+ "chg_1w": -3.8,
+ "chg_4w": -17.8,
+ "chg_13w": -34.1,
+ "percentile": 14.0,
+ "gnl": -899423.0,
+ "gnl_4w": -8.45,
+ "gnl_13w": -3.61,
+ "gnl_52w": 1.6,
+ "fed_net": -909872.0,
+ "ecb": 6504.0,
+ "boj": 3944.0,
+ "components": [
+  {
+   "key": "gnl_13w",
+   "name": "Liquidità netta globale, var. 13 sett.",
+   "group": "Liquidità",
+   "z": -0.25
+  },
+  {
+   "key": "gnl_52w",
+   "name": "Liquidità netta globale, var. 52 sett.",
+   "group": "Liquidità",
+   "z": -0.34
+  },
+  {
+   "key": "m2_52w",
+   "name": "M2 USA, var. annua",
+   "group": "Liquidità",
+   "z": -0.06
+  },
+  {
+   "key": "usd_13w",
+   "name": "Dollaro (invertito), var. 13 sett.",
+   "group": "Liquidità",
+   "z": -1.56
+  },
+  {
+   "key": "nfci",
+   "name": "Chicago Fed NFCI",
+   "group": "Stress",
+   "z": -0.11
+  },
+  {
+   "key": "stlfsi",
+   "name": "St. Louis Fed FSI",
+   "group": "Stress",
+   "z": -0.85
+  },
+  {
+   "key": "vix",
+   "name": "VIX",
+   "group": "Stress",
+   "z": 1.13
+  },
+  {
+   "key": "hy",
+   "name": "Spread high yield",
+   "group": "Stress",
+   "z": 1.76
+  }
+ ],
+ "series": [
+  {
+   "name": "Fed — attivo totale",
+   "unit": "mln $",
+   "src": "Federal Reserve H.4.1",
+   "id": "WALCL",
+   "url": "https://fred.stlouisfed.org/series/WALCL",
+   "last_date": "2026-11-18",
+   "last_value": 6741452.0,
+   "ok": true
+  },
+  {
+   "name": "Tesoro USA — conto TGA",
+   "unit": "mld $",
+   "src": "Federal Reserve H.4.1",
+   "id": "WTREGEN",
+   "url": "https://fred.stlouisfed.org/series/WTREGEN",
+   "last_date": "2026-11-18",
+   "last_value": 916613.0,
+   "ok": true
+  },
+  {
+   "name": "Fed — reverse repo overnight",
+   "unit": "mld $",
+   "src": "NY Fed",
+   "id": "RRPONTSYD",
+   "url": "https://fred.stlouisfed.org/series/RRPONTSYD",
+   "last_date": "2026-11-24",
+   "last_value": 0.301,
+   "ok": true
+  },
+  {
+   "name": "Riserve bancarie USA",
+   "unit": "mld $",
+   "src": "Federal Reserve H.4.1",
+   "id": "WRESBAL",
+   "url": "https://fred.stlouisfed.org/series/WRESBAL",
+   "last_date": "2026-11-18",
+   "last_value": 2979656.0,
+   "ok": true
+  },
+  {
+   "name": "BCE — attivo totale",
+   "unit": "mln €",
+   "src": "BCE",
+   "id": "ECBASSETSW",
+   "url": "https://fred.stlouisfed.org/series/ECBASSETSW",
+   "last_date": "2026-11-20",
+   "last_value": 5923063.0,
+   "ok": true
+  },
+  {
+   "name": "BoJ — attivo totale",
+   "unit": "100 mln ¥",
+   "src": "Bank of Japan",
+   "id": "JPNASSETS",
+   "url": "https://fred.stlouisfed.org/series/JPNASSETS",
+   "last_date": "2026-10-01",
+   "last_value": 6261882.0,
+   "ok": true
+  },
+  {
+   "name": "M2 USA",
+   "unit": "mld $",
+   "src": "Federal Reserve H.6",
+   "id": "M2SL",
+   "url": "https://fred.stlouisfed.org/series/M2SL",
+   "last_date": "2026-10-01",
+   "last_value": 23532.8,
+   "ok": true
+  },
+  {
+   "name": "Dollaro — indice ampio",
+   "unit": "indice",
+   "src": "Federal Reserve H.10",
+   "id": "DTWEXBGS",
+   "url": "https://fred.stlouisfed.org/series/DTWEXBGS",
+   "last_date": "2026-11-20",
+   "last_value": 123.598,
+   "ok": true
+  },
+  {
+   "name": "Cambio USD per EUR",
+   "unit": "$",
+   "src": "Federal Reserve H.10",
+   "id": "DEXUSEU",
+   "url": "https://fred.stlouisfed.org/series/DEXUSEU",
+   "last_date": "2026-11-20",
+   "last_value": 1.098,
+   "ok": true
+  },
+  {
+   "name": "Cambio JPY per USD",
+   "unit": "¥",
+   "src": "Federal Reserve H.10",
+   "id": "DEXJPUS",
+   "url": "https://fred.stlouisfed.org/series/DEXJPUS",
+   "last_date": "2026-11-20",
+   "last_value": 158.76,
+   "ok": true
+  },
+  {
+   "name": "Chicago Fed NFCI",
+   "unit": "indice (0 = media)",
+   "src": "Chicago Fed",
+   "id": "NFCI",
+   "url": "https://fred.stlouisfed.org/series/NFCI",
+   "last_date": "2026-11-13",
+   "last_value": -0.478,
+   "ok": true
+  },
+  {
+   "name": "St. Louis Fed Financial Stress",
+   "unit": "indice (0 = media)",
+   "src": "St. Louis Fed",
+   "id": "STLFSI4",
+   "url": "https://fred.stlouisfed.org/series/STLFSI4",
+   "last_date": "2026-11-13",
+   "last_value": -0.866,
+   "ok": true
+  },
+  {
+   "name": "VIX",
+   "unit": "punti",
+   "src": "CBOE",
+   "id": "VIXCLS",
+   "url": "https://fred.stlouisfed.org/series/VIXCLS",
+   "last_date": "2026-11-23",
+   "last_value": 26.62,
+   "ok": true
+  },
+  {
+   "name": "Spread high yield USA (OAS)",
+   "unit": "%",
+   "src": "ICE BofA",
+   "id": "BAMLH0A0HYM2",
+   "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+   "last_date": "2026-11-23",
+   "last_value": 3.63,
+   "ok": true
+  },
+  {
+   "name": "S&P 500 (FRED, 10 anni)",
+   "unit": "punti",
+   "src": "S&P Dow Jones Indices",
+   "id": "SP500",
+   "url": "https://fred.stlouisfed.org/series/SP500",
+   "last_date": "2026-11-23",
+   "last_value": 7237.17,
+   "ok": true
+  }
+ ],
+ "spx_source": "Yahoo Finance (^GSPC)",
+ "method": "Score = 100 × Φ(½·Liquidità − ½·Stress); z-score su finestra mobile di 10 anni, limitati a ±3."
+}
