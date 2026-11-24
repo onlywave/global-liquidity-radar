@@ -1,25 +1,25 @@
 {
- "generated": "2026-11-24T23:40Z",
+ "generated": "2026-11-24T23:42Z",
  "date": "2026-11-25",
- "score": 30.2,
- "liq": -0.55,
+ "score": 26.8,
+ "liq": -0.76,
  "stress": 0.48,
  "regime": "Tightening",
  "regime_it": "Stretta",
  "band_lo": 20,
  "band_hi": 40,
- "to_up": 9.8,
- "to_down": 10.2,
- "to_neutral": 9.8,
- "chg_1w": -3.8,
+ "to_up": 13.2,
+ "to_down": 6.8,
+ "to_neutral": 13.2,
+ "chg_1w": -3.2,
  "chg_4w": -17.8,
- "chg_13w": -34.1,
- "percentile": 14.0,
- "gnl": -899423.0,
- "gnl_4w": -8.45,
- "gnl_13w": -3.61,
- "gnl_52w": 1.6,
- "fed_net": -909872.0,
+ "chg_13w": -31.1,
+ "percentile": 11.0,
+ "gnl": 16273.0,
+ "gnl_4w": -0.26,
+ "gnl_13w": -2.64,
+ "gnl_52w": -5.62,
+ "fed_net": 5825.0,
  "ecb": 6504.0,
  "boj": 3944.0,
  "components": [
@@ -27,13 +27,13 @@
    "key": "gnl_13w",
    "name": "Liquidità netta globale, var. 13 sett.",
    "group": "Liquidità",
-   "z": -0.25
+   "z": -0.7
   },
   {
    "key": "gnl_52w",
    "name": "Liquidità netta globale, var. 52 sett.",
    "group": "Liquidità",
-   "z": -0.34
+   "z": -0.7
   },
   {
    "key": "m2_52w",
@@ -85,7 +85,7 @@
   },
   {
    "name": "Tesoro USA — conto TGA",
-   "unit": "mld $",
+   "unit": "mln $",
    "src": "Federal Reserve H.4.1",
    "id": "WTREGEN",
    "url": "https://fred.stlouisfed.org/series/WTREGEN",
@@ -105,7 +105,7 @@
   },
   {
    "name": "Riserve bancarie USA",
-   "unit": "mld $",
+   "unit": "mln $",
    "src": "Federal Reserve H.4.1",
    "id": "WRESBAL",
    "url": "https://fred.stlouisfed.org/series/WRESBAL",
