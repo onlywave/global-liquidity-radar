@@ -154,7 +154,7 @@ function histChart(){
 function spxChart(){
   const ann = {};
   E.episodes.forEach((e,i)=>{ ann['e'+i]={type:'box',xMin:e.start,xMax:e.end,yScaleID:'y',backgroundColor:heat(e.stress_z).replace(/[\d.]+\)$/,m=>(parseFloat(m)*0.55).toFixed(2)+')'),borderWidth:0,drawTime:'beforeDatasetsDraw',
-    label:{display:e.stress_z>1.2,content:e.name.split(' → ')[0].split(' / ')[0],position:{x:'center',y:'start'},color:'#ffb3bf',font:{size:10,weight:600},rotation:0}}; });
+    label:{display:e.stress_z>=2.3,content:e.name.split(' → ')[0].split(' / ')[0],position:{x:'center',y:'start'},color:'#ffb3bf',font:{size:10,weight:600},rotation:0}}; });
   const spxAt = d => { const i = H.dates.findIndex(x=>x>=d); return i<0?null:H.spx[i] ?? H.spx[i+1]; };
   const ivAll = (E.interventions||[]).map(v=>({x:v.date,y:spxAt(v.date),v})).filter(p=>p.y!=null);
   const ds = Object.entries(KIND).map(([k,[col,lab]])=>({type:'scatter',label:lab,data:ivAll.filter(p=>p.v.kind===k),yAxisID:'y',
