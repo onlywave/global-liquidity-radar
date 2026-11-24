@@ -28,3 +28,14 @@ GitHub Actions esegue `scripts/build.py` ogni 3 ore (e a ogni modifica di script
 `config/events.json` contiene i nomi degli episodi e gli interventi. Livelli e date di picco vengono sempre dai dati; per aggiungere un intervento basta una riga nel file.
 
 Ricostruzione indipendente ispirata al gauge GLSI di James Easton: i valori non coincidono con l'originale. Strumento di analisi, non consulenza finanziaria.
+
+## Segnale di mercato (S&P 500)
+
+Ricavato dallo storico del GLSI dal 2003 (`long_signal` in `scripts/build.py`, risultati in `data/signal.json`).
+
+- **Allerta long**: score < 20 (siccità). È una fase di stress, non ancora un ingresso.
+- **Long anticipato**: score sotto 20 nelle ultime 8 settimane e risalito di almeno 8 punti in 4 settimane.
+- **Long confermato**: score di nuovo sopra 40 dopo essere stato sotto 20 nelle ultime 26 settimane. Resta valido 12 mesi.
+- **Short / riduzione rischio**: liquidità z < −0,5, stress z > +0,5 e S&P 500 sotto la media mobile a 40 settimane, tutte e tre insieme. Si chiude quando cade una condizione.
+
+Ogni nuovo segnale genera un alert. I casi storici sono pochi (4–6 per i segnali long), le soglie sono state scelte con un test di sensibilità sugli stessi dati e le serie FRED sono nella versione rivista, non quella disponibile in tempo reale: va letto come indicazione storica, non come previsione.

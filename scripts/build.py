@@ -365,6 +365,133 @@ def notify(new: list[dict], latest: dict):
             print("email:", e, file=sys.stderr)
 
 
+
+# ---------------------------------------------------------------- segnale long
+SIG_RULES = {
+    "ALLERTA": "Score in siccità (< 20): fase di stress, non ancora un ingresso",
+    "ANTICIPATO": "Score passato sotto 20 nelle ultime 8 settimane e risalito di almeno 8 punti in 4 settimane",
+    "CONFERMATO": "Score torna sopra 40 dopo essere stato sotto 20 nelle ultime 26 settimane",
+    "SHORT": "Liquidità z < −0,5 e stress z > +0,5 con S&P 500 sotto la media mobile a 40 settimane",
+}
+
+
+def long_signal(df: pd.DataFrame) -> dict:
+    sc, spx = df["score"], df["spx"]
+    ant = (sc.rolling(8).min() < 20) & (sc - sc.shift(4) >= 8)
+    conf = (sc > 40) & (sc.shift(1) <= 40) & (sc.rolling(26).min() < 20)
+    allerta = sc < 20
+
+    def first_events(mask, gap_w=26):
+        out, last = [], None
+        for d in mask[mask.fillna(False)].index:
+            if last is None or (d - last).days > gap_w * 7:
+                out.append(d)
+                last = d
+        return out
+
+    def outcome(d):
+        v0 = spx.get(d)
+        r = {}
+        for h, k in ((13, "r3m"), (26, "r6m"), (52, "r12m")):
+            t = d + pd.Timedelta(weeks=h)
+            r[k] = r1((spx.asof(t) / v0 - 1) * 100, 1) if t <= df.index[-1] and v0 and not pd.isna(v0) else None
+        w = spx.loc[d:d + pd.Timedelta(weeks=26)].dropna()
+        r["mdd6m"] = r1((w.min() / v0 - 1) * 100, 1) if len(w) > 1 and v0 else None
+        return r
+
+    hist, stats = [], {}
+    for tier, m in (("ALLERTA", allerta), ("ANTICIPATO", ant), ("CONFERMATO", conf)):
+        evs = first_events(m)
+        rows = [dict(tier=tier, date=d.strftime("%Y-%m-%d"), score=r1(sc.get(d), 1),
+                     spx=r1(spx.get(d), 0), **outcome(d)) for d in evs]
+        hist += rows
+
+        def agg(k):
+            v = [x[k] for x in rows if x[k] is not None]
+            return dict(n=len(v), mean=r1(np.mean(v), 1) if v else None,
+                        pos=r1(100 * np.mean([x > 0 for x in v]), 0) if v else None)
+        stats[tier] = dict(rule=SIG_RULES[tier], r3m=agg("r3m"), r6m=agg("r6m"), r12m=agg("r12m"),
+                           mdd6m=agg("mdd6m"))
+
+    # baseline: tutte le settimane
+    def base(h):
+        f = (spx.shift(-h) / spx - 1) * 100
+        f = f[sc.notna()].dropna()
+        return dict(n=int(len(f)), mean=r1(f.mean(), 1), pos=r1((f > 0).mean() * 100, 0))
+    stats["BASE"] = dict(rule="Tutte le settimane dal 2003 (riferimento)", r3m=base(13), r6m=base(26), r12m=base(52))
+
+    # ---- lato short / risk-off: stato, non evento
+    ma40 = spx.rolling(40, min_periods=30).mean()
+    c_liq, c_str, c_trend = df["liq"] < -0.5, df["stress"] > 0.5, spx < ma40
+    short_on = (c_liq & c_str & c_trend).fillna(False)
+    entries = short_on & ~short_on.shift(1, fill_value=False)
+    srows = [dict(tier="SHORT", date=d.strftime("%Y-%m-%d"), score=r1(sc.get(d), 1),
+                  spx=r1(spx.get(d), 0), **outcome(d)) for d in first_events(entries, 13)]
+    hist += srows
+    def st_agg(mask, h):
+        f = (spx.shift(-h) / spx - 1) * 100
+        f = f[mask].dropna()
+        return dict(n=int(len(f)), mean=r1(f.mean(), 1), pos=r1((f > 0).mean() * 100, 0))
+    mdd = pd.Series([(spx.iloc[i:i + 27].min() / spx.iloc[i] - 1) * 100 if i < len(spx) - 1 else np.nan
+                     for i in range(len(spx))], index=spx.index)
+    stats["SHORT"] = dict(rule=SIG_RULES["SHORT"], unit="settimane in stato",
+                          r3m=st_agg(short_on, 13), r6m=st_agg(short_on, 26), r12m=st_agg(short_on, 52),
+                          mdd6m=dict(n=int(short_on.sum()), mean=r1(mdd[short_on].mean(), 1), pos=None),
+                          r3m_2003_14=st_agg(short_on & (spx.index < "2015-01-01"), 13),
+                          r3m_2015_26=st_agg(short_on & (spx.index >= "2015-01-01"), 13))
+    stats["BASE"]["mdd6m"] = dict(n=int(mdd[sc.notna()].notna().sum()), mean=r1(mdd[sc.notna()].mean(), 1), pos=None)
+    li = spx.last_valid_index()
+    short_checks = [
+        dict(text="Liquidità z sotto −0,5", ok=bool(c_liq.iloc[-1]), value=r1(df["liq"].iloc[-1])),
+        dict(text="Stress z sopra +0,5", ok=bool(c_str.iloc[-1]), value=r1(df["stress"].iloc[-1])),
+        dict(text="S&P 500 sotto la media a 40 settimane", ok=bool(c_trend.iloc[-1]),
+             value=r1((spx.loc[li] / ma40.loc[li] - 1) * 100, 1)),
+    ]
+    n_short = sum(c["ok"] for c in short_checks)
+    short_state = "SHORT ATTIVO" if n_short == 3 else ("PRE-ALLERTA SHORT" if n_short == 2 else "NESSUN SEGNALE")
+    short_since = None
+    if n_short == 3:
+        run = short_on[::-1]
+        k = 0
+        while k < len(run) and run.iloc[k]:
+            k += 1
+        short_since = run.index[k - 1].strftime("%Y-%m-%d")
+
+    # stato corrente
+    last = sc.last_valid_index()
+    cur = sc.loc[last]
+    min26 = sc.loc[:last].tail(26).min()
+    min8 = sc.loc[:last].tail(8).min()
+    jump4 = cur - sc.dropna().iloc[-5]
+    recent = {t: max([pd.Timestamp(h["date"]) for h in hist if h["tier"] == t], default=None)
+              for t in ("ANTICIPATO", "CONFERMATO")}
+    live = None
+    for t in ("CONFERMATO", "ANTICIPATO"):
+        if recent[t] is not None and (last - recent[t]).days <= 52 * 7:
+            live = (t, recent[t])
+            break
+    if live and live[0] == "CONFERMATO":
+        state = "LONG CONFERMATO"
+    elif live:
+        state = "LONG ANTICIPATO"
+    elif cur < 20:
+        state = "ALLERTA LONG"
+    else:
+        state = "NESSUN SEGNALE"
+    checks = [
+        dict(text="Score sotto 20 nelle ultime 8 settimane", ok=bool(min8 < 20), value=r1(min8, 1)),
+        dict(text="Score +8 punti in 4 settimane", ok=bool(jump4 >= 8), value=r1(jump4, 1)),
+        dict(text="Score sotto 20 nelle ultime 26 settimane", ok=bool(min26 < 20), value=r1(min26, 1)),
+        dict(text="Score sopra 40", ok=bool(cur > 40), value=r1(cur, 1)),
+    ]
+    return dict(state=state, since=live[1].strftime("%Y-%m-%d") if live else None,
+                short_state=short_state, short_since=short_since, short_checks=short_checks,
+                date=last.strftime("%Y-%m-%d"), score=r1(cur, 1), checks=checks,
+                stats=stats, history=sorted(hist, key=lambda x: x["date"], reverse=True),
+                note=("Pochi casi (4–6 per stadio dal 2003): indicazione storica, non statisticamente robusta. "
+                      "Soglie scelte dopo un test di sensibilità sugli stessi dati; serie FRED nell'ultima versione "
+                      "pubblicata, non com'erano disponibili in tempo reale. Non è consulenza finanziaria."))
+
 # ---------------------------------------------------------------- main
 def main():
     DATA.mkdir(exist_ok=True)
@@ -415,6 +542,9 @@ def main():
     )
 
     eps = episodes(df, events)
+    sig = long_signal(df)
+    latest["signal"] = sig["state"]
+    latest["signal_short"] = sig["short_state"]
     # transizioni di regime storiche (per il log)
     sc = df["score"].dropna()
     regs, prevb = [], None
@@ -428,6 +558,16 @@ def main():
     ap = DATA / "alerts.json"
     log = json.loads(ap.read_text()) if ap.exists() else {"log": []}
     new = make_alerts(df, latest["gnl_4w"])
+    for h in sig["history"]:
+        if h["date"] == sig["date"] and h["tier"] in ("ANTICIPATO", "CONFERMATO"):
+            new.append(dict(level="alta", code="LONG_" + h["tier"], date=h["date"],
+                            text=f"Segnale LONG {h['tier'].lower()}: {SIG_RULES[h['tier']]} (score {h['score']})"))
+        elif h["date"] == sig["date"] and h["tier"] == "SHORT":
+            new.append(dict(level="alta", code="SHORT", date=h["date"],
+                            text="Segnale SHORT / riduzione rischio: " + SIG_RULES["SHORT"]))
+        elif h["date"] == sig["date"] and h["tier"] == "ALLERTA":
+            new.append(dict(level="media", code="ALLERTA_LONG", date=h["date"],
+                            text="Score entrato in siccità (< 20): fase di allerta per un possibile ingresso long"))
     seen = {(x["date"], x["code"]) for x in log["log"]}
     fresh = [x for x in new if (x["date"], x["code"]) not in seen]
     log["log"] = (fresh + log["log"])[:500]
@@ -439,6 +579,7 @@ def main():
     (DATA / "episodes.json").write_text(json.dumps(dict(threshold=EP_THRESHOLD, episodes=eps[::-1],
                                                         interventions=events["interventions"]),
                                                    ensure_ascii=False, indent=1))
+    (DATA / "signal.json").write_text(json.dumps(sig, ensure_ascii=False, indent=1))
     ap.write_text(json.dumps(log, ensure_ascii=False, indent=1))
     if os.environ.get("GLSI_NOTIFY", "1") == "1":
         notify(fresh, latest)

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=1">
+<link rel="stylesheet" href="assets/style.css?v=2">
 </head>
 <body>
 <div class="frame">
@@ -56,6 +56,19 @@
   </div>
 </section>
 
+<section class="panel" id="sig-sec">
+  <div class="head"><h2>Segnale di mercato (S&amp;P 500)</h2><p class="sub">Regole derivate dallo storico del GLSI dal 2003. Si aggiornano a ogni nuovo dato.</p></div>
+  <div class="sigs">
+    <div class="sigcard long"><span class="side">LONG</span><b id="sig-long">…</b><small id="sig-long-since"></small><ul id="sig-long-checks" class="checks"></ul></div>
+    <div class="sigcard short"><span class="side">SHORT / RIDUZIONE RISCHIO</span><b id="sig-short">…</b><small id="sig-short-since"></small><ul id="sig-short-checks" class="checks"></ul></div>
+  </div>
+  <div class="tablewrap"><table class="src sigstats" id="sigstats"><thead><tr><th>Segnale</th><th>Regola</th><th>Casi</th><th>S&amp;P +3m</th><th>S&amp;P +6m</th><th>S&amp;P +12m</th><th>Drawdown medio 6m</th></tr></thead><tbody></tbody></table></div>
+  <details><summary>Tutti i segnali storici</summary>
+    <div class="tablewrap"><table class="src" id="sighist"><thead><tr><th>Data</th><th>Segnale</th><th>GLSI</th><th>S&amp;P</th><th>+3m</th><th>+6m</th><th>+12m</th><th>Drawdown 6m</th></tr></thead><tbody></tbody></table></div>
+  </details>
+  <p class="note" id="sig-note"></p>
+</section>
+
 <section class="panel" id="alerts-sec">
   <div class="head">
     <h2>Alert</h2>
@@ -95,7 +108,7 @@
       <button id="logtog" class="tog on">Log</button>
     </div>
   </div>
-  <p class="sub">Fasce rosse: episodi di stress (intensità = picco dello stress). Triangoli: interventi di banche centrali e governi. Linea viola: stress composito (asse destro). Clicca una riga della tabella per zoomare.</p>
+  <p class="sub">Fasce rosse: episodi di stress (intensità = picco dello stress). Triangoli: interventi di banche centrali e governi. Cerchi verdi: segnali long; croci rosse: ingressi short. Linea viola: stress composito (asse destro). Clicca una riga della tabella per zoomare.</p>
   <div class="chart xtall"><canvas id="spx"></canvas></div>
   <div class="kinds" id="kinds"></div>
 </section>
@@ -142,6 +155,6 @@
 <script src="assets/vendor/chart.umd.js"></script>
 <script src="assets/vendor/chartjs-adapter-date-fns.bundle.min.js"></script>
 <script src="assets/vendor/chartjs-plugin-annotation.min.js"></script>
-<script src="assets/app.js?v=2"></script>
+<script src="assets/app.js?v=3"></script>
 </body>
 </html>

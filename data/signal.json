@@ -1,0 +1,398 @@
+{
+ "state": "NESSUN SEGNALE",
+ "since": null,
+ "short_state": "PRE-ALLERTA SHORT",
+ "short_since": null,
+ "short_checks": [
+  {
+   "text": "Liquidità z sotto −0,5",
+   "ok": true,
+   "value": -0.76
+  },
+  {
+   "text": "Stress z sopra +0,5",
+   "ok": false,
+   "value": 0.48
+  },
+  {
+   "text": "S&P 500 sotto la media a 40 settimane",
+   "ok": true,
+   "value": -2.1
+  }
+ ],
+ "date": "2026-11-25",
+ "score": 26.8,
+ "checks": [
+  {
+   "text": "Score sotto 20 nelle ultime 8 settimane",
+   "ok": false,
+   "value": 26.8
+  },
+  {
+   "text": "Score +8 punti in 4 settimane",
+   "ok": false,
+   "value": -17.8
+  },
+  {
+   "text": "Score sotto 20 nelle ultime 26 settimane",
+   "ok": false,
+   "value": 26.8
+  },
+  {
+   "text": "Score sopra 40",
+   "ok": false,
+   "value": 26.8
+  }
+ ],
+ "stats": {
+  "ALLERTA": {
+   "rule": "Score in siccità (< 20): fase di stress, non ancora un ingresso",
+   "r3m": {
+    "n": 6,
+    "mean": 6.6,
+    "pos": 67.0
+   },
+   "r6m": {
+    "n": 6,
+    "mean": 5.4,
+    "pos": 67.0
+   },
+   "r12m": {
+    "n": 6,
+    "mean": 15.9,
+    "pos": 83.0
+   },
+   "mdd6m": {
+    "n": 6,
+    "mean": -15.1,
+    "pos": 0.0
+   }
+  },
+  "ANTICIPATO": {
+   "rule": "Score passato sotto 20 nelle ultime 8 settimane e risalito di almeno 8 punti in 4 settimane",
+   "r3m": {
+    "n": 6,
+    "mean": 5.1,
+    "pos": 67.0
+   },
+   "r6m": {
+    "n": 6,
+    "mean": 9.4,
+    "pos": 67.0
+   },
+   "r12m": {
+    "n": 6,
+    "mean": 27.2,
+    "pos": 100.0
+   },
+   "mdd6m": {
+    "n": 6,
+    "mean": -7.0,
+    "pos": 0.0
+   }
+  },
+  "CONFERMATO": {
+   "rule": "Score torna sopra 40 dopo essere stato sotto 20 nelle ultime 26 settimane",
+   "r3m": {
+    "n": 4,
+    "mean": 9.9,
+    "pos": 100.0
+   },
+   "r6m": {
+    "n": 4,
+    "mean": 16.2,
+    "pos": 100.0
+   },
+   "r12m": {
+    "n": 4,
+    "mean": 28.3,
+    "pos": 100.0
+   },
+   "mdd6m": {
+    "n": 4,
+    "mean": -2.0,
+    "pos": 0.0
+   }
+  },
+  "BASE": {
+   "rule": "Tutte le settimane dal 2003 (riferimento)",
+   "r3m": {
+    "n": 1121,
+    "mean": 2.5,
+    "pos": 72.0
+   },
+   "r6m": {
+    "n": 1108,
+    "mean": 5.0,
+    "pos": 75.0
+   },
+   "r12m": {
+    "n": 1082,
+    "mean": 10.2,
+    "pos": 81.0
+   },
+   "mdd6m": {
+    "n": 1133,
+    "mean": -6.1,
+    "pos": null
+   }
+  },
+  "SHORT": {
+   "rule": "Liquidità z < −0,5 e stress z > +0,5 con S&P 500 sotto la media mobile a 40 settimane",
+   "unit": "settimane in stato",
+   "r3m": {
+    "n": 43,
+    "mean": -3.8,
+    "pos": 42.0
+   },
+   "r6m": {
+    "n": 43,
+    "mean": -3.0,
+    "pos": 53.0
+   },
+   "r12m": {
+    "n": 43,
+    "mean": 7.9,
+    "pos": 84.0
+   },
+   "mdd6m": {
+    "n": 43,
+    "mean": -12.3,
+    "pos": null
+   },
+   "r3m_2003_14": {
+    "n": 8,
+    "mean": -23.8,
+    "pos": 12.0
+   },
+   "r3m_2015_26": {
+    "n": 35,
+    "mean": 0.7,
+    "pos": 49.0
+   }
+  }
+ },
+ "history": [
+  {
+   "tier": "CONFERMATO",
+   "date": "2023-11-29",
+   "score": 41.8,
+   "spx": 4595.0,
+   "r3m": 11.8,
+   "r6m": 14.9,
+   "r12m": 31.3,
+   "mdd6m": 0.0
+  },
+  {
+   "tier": "ANTICIPATO",
+   "date": "2023-11-15",
+   "score": 36.8,
+   "spx": 4514.0,
+   "r3m": 10.9,
+   "r6m": 17.5,
+   "r12m": 30.1,
+   "mdd6m": 0.0
+  },
+  {
+   "tier": "ALLERTA",
+   "date": "2023-10-25",
+   "score": 19.3,
+   "spx": 4117.0,
+   "r3m": 18.8,
+   "r6m": 23.9,
+   "r12m": 41.1,
+   "mdd6m": 0.0
+  },
+  {
+   "tier": "ANTICIPATO",
+   "date": "2023-04-19",
+   "score": 24.7,
+   "spx": 4134.0,
+   "r3m": 9.7,
+   "r6m": 2.2,
+   "r12m": 20.2,
+   "mdd6m": -0.2
+  },
+  {
+   "tier": "SHORT",
+   "date": "2023-03-15",
+   "score": 16.0,
+   "spx": 3917.0,
+   "r3m": 12.6,
+   "r6m": 13.6,
+   "r12m": 30.7,
+   "mdd6m": 0.0
+  },
+  {
+   "tier": "CONFERMATO",
+   "date": "2023-01-18",
+   "score": 43.2,
+   "spx": 3973.0,
+   "r3m": 4.1,
+   "r6m": 14.2,
+   "r12m": 21.8,
+   "mdd6m": -2.8
+  },
+  {
+   "tier": "SHORT",
+   "date": "2022-12-07",
+   "score": 22.7,
+   "spx": 3934.0,
+   "r3m": -1.9,
+   "r6m": 9.3,
+   "r12m": 17.0,
+   "mdd6m": -2.4
+  },
+  {
+   "tier": "ALLERTA",
+   "date": "2022-11-02",
+   "score": 9.2,
+   "spx": 3771.0,
+   "r3m": 9.7,
+   "r6m": 9.7,
+   "r12m": 15.6,
+   "mdd6m": 0.0
+  },
+  {
+   "tier": "ANTICIPATO",
+   "date": "2022-07-27",
+   "score": 14.4,
+   "spx": 4130.0,
+   "r3m": -5.5,
+   "r6m": -1.4,
+   "r12m": 10.9,
+   "mdd6m": -13.2
+  },
+  {
+   "tier": "ALLERTA",
+   "date": "2022-04-27",
+   "score": 13.6,
+   "spx": 4132.0,
+   "r3m": -0.0,
+   "r6m": -5.6,
+   "r12m": 0.9,
+   "mdd6m": -13.3
+  },
+  {
+   "tier": "SHORT",
+   "date": "2022-04-13",
+   "score": 25.9,
+   "spx": 4393.0,
+   "r3m": -12.1,
+   "r6m": -18.4,
+   "r12m": -5.8,
+   "mdd6m": -18.4
+  },
+  {
+   "tier": "CONFERMATO",
+   "date": "2020-05-20",
+   "score": 49.8,
+   "spx": 2955.0,
+   "r3m": 14.9,
+   "r6m": 20.4,
+   "r12m": 40.6,
+   "mdd6m": 0.0
+  },
+  {
+   "tier": "ANTICIPATO",
+   "date": "2020-04-15",
+   "score": 19.8,
+   "spx": 2875.0,
+   "r3m": 12.2,
+   "r6m": 21.2,
+   "r12m": 45.6,
+   "mdd6m": -1.5
+  },
+  {
+   "tier": "ALLERTA",
+   "date": "2020-03-11",
+   "score": 13.5,
+   "spx": 2711.0,
+   "r3m": 12.2,
+   "r6m": 23.2,
+   "r12m": 45.5,
+   "mdd6m": -15.0
+  },
+  {
+   "tier": "SHORT",
+   "date": "2018-12-26",
+   "score": 20.2,
+   "spx": 2486.0,
+   "r3m": 14.0,
+   "r6m": 18.3,
+   "r12m": 30.3,
+   "mdd6m": 0.0
+  },
+  {
+   "tier": "SHORT",
+   "date": "2010-05-26",
+   "score": 21.6,
+   "spx": 1089.0,
+   "r3m": -2.3,
+   "r6m": 9.2,
+   "r12m": 22.2,
+   "mdd6m": -6.1
+  },
+  {
+   "tier": "CONFERMATO",
+   "date": "2009-05-06",
+   "score": 40.9,
+   "spx": 929.0,
+   "r3m": 8.7,
+   "r6m": 15.1,
+   "r12m": 19.6,
+   "mdd6m": -5.4
+  },
+  {
+   "tier": "ANTICIPATO",
+   "date": "2009-04-22",
+   "score": 28.1,
+   "spx": 866.0,
+   "r3m": 13.1,
+   "r6m": 24.6,
+   "r12m": 40.5,
+   "mdd6m": 0.0
+  },
+  {
+   "tier": "ALLERTA",
+   "date": "2009-02-04",
+   "score": 15.1,
+   "spx": 869.0,
+   "r3m": 7.0,
+   "r6m": 16.3,
+   "r12m": 22.7,
+   "mdd6m": -21.3
+  },
+  {
+   "tier": "ANTICIPATO",
+   "date": "2008-10-15",
+   "score": 14.9,
+   "spx": 940.0,
+   "r3m": -9.6,
+   "r6m": -7.5,
+   "r12m": 15.7,
+   "mdd6m": -27.3
+  },
+  {
+   "tier": "SHORT",
+   "date": "2008-08-13",
+   "score": 13.1,
+   "spx": 1298.0,
+   "r3m": -32.7,
+   "r6m": -36.3,
+   "r12m": -22.7,
+   "mdd6m": -38.4
+  },
+  {
+   "tier": "ALLERTA",
+   "date": "2008-06-11",
+   "score": 19.5,
+   "spx": 1360.0,
+   "r3m": -8.0,
+   "r6m": -35.3,
+   "r12m": -30.4,
+   "mdd6m": -41.2
+  }
+ ],
+ "note": "Pochi casi (4–6 per stadio dal 2003): indicazione storica, non statisticamente robusta. Soglie scelte dopo un test di sensibilità sugli stessi dati; serie FRED nell'ultima versione pubblicata, non com'erano disponibili in tempo reale. Non è consulenza finanziaria."
+}

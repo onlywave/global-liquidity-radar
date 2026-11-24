@@ -10,16 +10,17 @@ const dIt = s => s ? new Date(s+'T00:00:00').toLocaleDateString('it-CH',{day:'2-
 const bandOf = v => BANDS.find(b => v>=b[0] && v<b[1]) || BANDS[4];
 const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
 
-let L, H, E, A, charts = {}, lastGen = null;
+let L, H, E, A, S, charts = {}, lastGen = null;
 
 async function j(p){ const r = await fetch(p+'?t='+Date.now()); if(!r.ok) throw new Error(p); return r.json(); }
 
 async function load(first){
   try{
     [L,H,E,A] = await Promise.all([j('data/latest.json'),j('data/history.json'),j('data/episodes.json'),j('data/alerts.json')]);
+    try{ S = await j('data/signal.json'); }catch(e){ S = null; }
   }catch(e){ $('#fresh').textContent='dati non disponibili: il primo aggiornamento automatico è in corso'; return; }
   if(!first && L.generated===lastGen) return; lastGen = L.generated;
-  renderTop(); gauge(); renderAlerts(first); renderComps(); renderEpisodes(); renderSources();
+  renderTop(); gauge(); renderSignal(); renderAlerts(first); renderComps(); renderEpisodes(); renderSources();
   if(first){ histChart(); spxChart(); } else { charts.hist?.destroy(); charts.spx?.destroy(); histChart(); spxChart(); }
 }
 
@@ -66,6 +67,30 @@ function gauge(){
   const sub = `${cur[3]} · ` + (L.to_up!=null ? `${fmt(L.to_up)} pt alla fascia superiore` : `${fmt(L.to_down)} pt sopra ${cur[0]}`);
   h += `<text x="${cx}" y="${cy-34}" fill="#8792ad" font-size="13.5" text-anchor="middle">${sub}</text>`;
   svg.innerHTML = h;
+}
+
+
+function renderSignal(){
+  if(!S){ $('#sig-sec').style.display='none'; return; }
+  const lc = $('#sig-long').closest('.sigcard'), shc = $('#sig-short').closest('.sigcard');
+  $('#sig-long').textContent = S.state;
+  $('#sig-long').style.color = S.state.startsWith('LONG') ? 'var(--green)' : S.state.startsWith('ALLERTA') ? 'var(--amber)' : 'var(--mut)';
+  lc.classList.toggle('on', S.state.startsWith('LONG')); lc.classList.toggle('pre', S.state.startsWith('ALLERTA'));
+  $('#sig-long-since').textContent = S.since ? 'dal '+dIt(S.since)+' (validità 12 mesi)' : 'condizioni per un ingresso long:';
+  $('#sig-long-checks').innerHTML = S.checks.map(c=>`<li class="${c.ok?'ok':''}">${c.text}<code>${fmt(c.value,1)}</code></li>`).join('');
+  $('#sig-short').textContent = S.short_state;
+  $('#sig-short').style.color = S.short_state==='SHORT ATTIVO' ? 'var(--red)' : S.short_state.startsWith('PRE') ? 'var(--amber)' : 'var(--mut)';
+  shc.classList.toggle('on', S.short_state==='SHORT ATTIVO'); shc.classList.toggle('pre', S.short_state.startsWith('PRE'));
+  $('#sig-short-since').textContent = S.short_since ? 'dal '+dIt(S.short_since)+' · si chiude quando cade una condizione' : 'si attiva con tutte e tre le condizioni:';
+  $('#sig-short-checks').innerHTML = S.short_checks.map((c,i)=>`<li class="${c.ok?'ok':''}">${c.text}<code>${fmt(c.value,i==2?1:2,true)}${i==2?'%':''}</code></li>`).join('');
+  const lab = {ALLERTA:'Allerta long (siccità)',ANTICIPATO:'Long anticipato',CONFERMATO:'Long confermato',SHORT:'Short / riduzione rischio',BASE:'Riferimento'};
+  const cell = (x,inv) => x&&x.mean!=null ? `<span class="${cls(inv?-x.mean:x.mean)}">${fmt(x.mean,1,true)}%</span> <small class="note">${x.pos!=null?(inv?100-x.pos:x.pos)+'% '+(inv?'neg.':'pos.'):''}</small>` : '—';
+  $('#sigstats tbody').innerHTML = ['CONFERMATO','ANTICIPATO','ALLERTA','SHORT','BASE'].map(k=>{ const t=S.stats[k]; if(!t) return '';
+    const n = k==='SHORT' ? t.r3m.n+' sett.' : k==='BASE' ? t.r3m.n+' sett.' : t.r12m.n+' (+12m)';
+    const extra = k==='SHORT' && t.r3m_2003_14 ? `<br><small>+3m: 2003–14 ${fmt(t.r3m_2003_14.mean,1,true)}% · 2015–26 ${fmt(t.r3m_2015_26.mean,1,true)}%</small>` : '';
+    return `<tr><td><b>${lab[k]}</b></td><td>${t.rule}${extra}</td><td>${n}</td><td>${cell(t.r3m,k==='SHORT')}</td><td>${cell(t.r6m,k==='SHORT')}</td><td>${cell(t.r12m,k==='SHORT')}</td><td>${t.mdd6m&&t.mdd6m.mean!=null?fmt(t.mdd6m.mean,1)+'%':'—'}</td></tr>`; }).join('');
+  $('#sighist tbody').innerHTML = S.history.map(h=>`<tr><td>${h.date}</td><td style="color:${h.tier==='SHORT'?'var(--red)':h.tier==='ALLERTA'?'var(--amber)':'var(--green)'}">${lab[h.tier]}</td><td>${fmt(h.score)}</td><td>${fmt(h.spx,0)}</td>${['r3m','r6m','r12m','mdd6m'].map(k=>`<td class="${cls(h[k])}">${h[k]==null?'—':fmt(h[k],1,true)+'%'}</td>`).join('')}</tr>`).join('');
+  $('#sig-note').textContent = S.note;
 }
 
 function renderAlerts(first){
@@ -159,6 +184,12 @@ function spxChart(){
   const ivAll = (E.interventions||[]).map(v=>({x:v.date,y:spxAt(v.date),v})).filter(p=>p.y!=null);
   const ds = Object.entries(KIND).map(([k,[col,lab]])=>({type:'scatter',label:lab,data:ivAll.filter(p=>p.v.kind===k),yAxisID:'y',
     pointStyle:'triangle',pointRadius:7,pointHoverRadius:10,backgroundColor:col,borderColor:'#03050c',borderWidth:1,order:0}));
+  if(S){
+    const sp = t => (S.history||[]).filter(h=>h.tier===t).map(h=>({x:h.date,y:h.spx,s:h}));
+    ds.push({type:'scatter',label:'Long confermato',data:sp('CONFERMATO'),yAxisID:'y',pointStyle:'circle',pointRadius:8,backgroundColor:'#38d39f',borderColor:'#fff',borderWidth:1.5,order:-1});
+    ds.push({type:'scatter',label:'Long anticipato',data:sp('ANTICIPATO'),yAxisID:'y',pointStyle:'circle',pointRadius:6,backgroundColor:'#38d39f55',borderColor:'#38d39f',borderWidth:2,order:-1});
+    ds.push({type:'scatter',label:'Ingresso short',data:sp('SHORT'),yAxisID:'y',pointStyle:'crossRot',pointRadius:9,borderColor:'#ff5d73',borderWidth:3,order:-1});
+  }
   const [a,b] = rangeOf(20);
   charts.spx = new Chart($('#spx'),{
     data:{datasets:[
@@ -171,9 +202,9 @@ function spxChart(){
         y2:{position:'right',min:-2,max:3.2,grid:{display:false},title:{display:true,text:'stress z'}}},
       plugins:{legend:{display:false},annotation:{annotations:ann},
         tooltip:{callbacks:{
-          title:it=>it[0]?.raw?.v ? dIt(it[0].raw.v.date) : dIt(String(it[0]?.raw?.x).slice(0,10)),
-          label:c=> c.raw.v ? ` ${c.raw.v.bank}: ${c.raw.v.action}` : ` ${c.dataset.label}: ${fmt(c.parsed.y, c.dataset.yAxisID==='y2'?2:0)}`}}}}});
-  $('#kinds').innerHTML = Object.values(KIND).map(([c,l])=>`<span><i style="--c:${c}"></i>${l}</span>`).join('') + `<span><span style="display:inline-block;width:14px;height:10px;background:#ff5d7366;margin-right:6px"></span>Episodio di stress</span>`;
+          title:it=>it[0]?.raw?.s ? dIt(it[0].raw.s.date) : it[0]?.raw?.v ? dIt(it[0].raw.v.date) : dIt(String(it[0]?.raw?.x).slice(0,10)),
+          label:c=> c.raw.s ? ` ${c.dataset.label} · GLSI ${fmt(c.raw.s.score)} · +12m ${c.raw.s.r12m==null?'—':fmt(c.raw.s.r12m,1,true)+'%'}` : c.raw.v ? ` ${c.raw.v.bank}: ${c.raw.v.action}` : ` ${c.dataset.label}: ${fmt(c.parsed.y, c.dataset.yAxisID==='y2'?2:0)}`}}}}});
+  $('#kinds').innerHTML = Object.values(KIND).map(([c,l])=>`<span><i style="--c:${c}"></i>${l}</span>`).join('') + `<span><span style="display:inline-block;width:14px;height:10px;background:#ff5d7366;margin-right:6px"></span>Episodio di stress</span><span style="color:#38d39f">● Long confermato</span><span style="color:#38d39f">○ Long anticipato</span><span style="color:#ff5d73">✕ Ingresso short</span>`;
 }
 
 document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click',ev=>{
