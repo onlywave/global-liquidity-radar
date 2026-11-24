@@ -37,9 +37,9 @@ UA = {"User-Agent": "Mozilla/5.0 (GLSI radar; github.com/onlywave)"}
 SERIES = {
     # liquidità — livelli
     "WALCL": dict(name="Fed — attivo totale", unit="mln $", src="Federal Reserve H.4.1"),
-    "WTREGEN": dict(name="Tesoro USA — conto TGA", unit="mld $", src="Federal Reserve H.4.1"),
+    "WTREGEN": dict(name="Tesoro USA — conto TGA", unit="mln $", src="Federal Reserve H.4.1"),
     "RRPONTSYD": dict(name="Fed — reverse repo overnight", unit="mld $", src="NY Fed"),
-    "WRESBAL": dict(name="Riserve bancarie USA", unit="mld $", src="Federal Reserve H.4.1"),
+    "WRESBAL": dict(name="Riserve bancarie USA", unit="mln $", src="Federal Reserve H.4.1"),
     "ECBASSETSW": dict(name="BCE — attivo totale", unit="mln €", src="BCE"),
     "JPNASSETS": dict(name="BoJ — attivo totale", unit="100 mln ¥", src="Bank of Japan"),
     "M2SL": dict(name="M2 USA", unit="mld $", src="Federal Reserve H.6"),
@@ -178,7 +178,7 @@ def build():
         return u.reindex(idx)
 
     walcl = wk("WALCL", 20) / 1000.0                     # mld $
-    tga = wk("WTREGEN", 20)
+    tga = wk("WTREGEN", 20) / 1000.0                     # mln $ → mld $
     rrp = wk("RRPONTSYD", 30).fillna(0.0)
     eur = wk("DEXUSEU", 30)
     jpy = wk("DEXJPUS", 30)
