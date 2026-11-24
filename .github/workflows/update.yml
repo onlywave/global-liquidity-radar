@@ -33,7 +33,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install
-        run: pip install --quiet pandas numpy requests
+        run: pip install --quiet pandas numpy requests matplotlib
 
       - name: Build GLSI
         env:
@@ -44,13 +44,15 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
-        run: python scripts/build.py
+        run: |
+          python scripts/build.py
+          python scripts/static.py
 
       - name: Commit data
         run: |
           git config user.name "glsi-bot"
           git config user.email "glsi-bot@users.noreply.github.com"
-          git add data/
+          git add data/ index.html
           if git diff --cached --quiet; then echo "nessun cambiamento"; exit 0; fi
           git commit -m "data: aggiornamento $(date -u +%Y-%m-%dT%H:%MZ)" --quiet
           for i in 1 2 3; do

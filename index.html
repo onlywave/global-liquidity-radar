@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=2">
+<link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 <body>
 <div class="frame">
@@ -26,6 +26,8 @@
     <div class="kpi"><span>ALLA NEUTRALITÀ</span><b id="k-neutral">…</b></div>
   </div>
 </header>
+
+<!--VERDICT--><div class="verdict v-neutro" id="verdict"><span class="vlab">SEGNALE S&amp;P 500</span><b id="v-main">NEUTRO</b><span id="v-why">Nessun segnale attivo — pre-allerta short (2/3 condizioni; manca: stress z sopra +0,5)</span><span class="vmeta" id="v-meta">GLSI 26.8 · Stretta · dati al 2026-11-25</span></div><!--/VERDICT-->
 
 <ul class="legend">
   <li><i style="--c:var(--b0)"></i>Siccità &lt; 20</li>
@@ -97,7 +99,7 @@
       <button data-r="1">1A</button><button data-r="3">3A</button><button data-r="5">5A</button><button data-r="10">10A</button><button data-r="20" class="on">20A</button><button data-r="0">Max</button>
     </div>
   </div>
-  <div class="chart tall"><canvas id="hist"></canvas></div>
+  <div class="chart tall"><img class="static" src="data/hist.png" alt="Storico GLSI"><canvas id="hist"></canvas></div>
 </section>
 
 <section class="panel">
@@ -109,7 +111,7 @@
     </div>
   </div>
   <p class="sub">Fasce rosse: episodi di stress (intensità = picco dello stress). Triangoli: interventi di banche centrali e governi. Cerchi verdi: segnali long; croci rosse: ingressi short. Linea viola: stress composito (asse destro). Clicca una riga della tabella per zoomare.</p>
-  <div class="chart xtall"><canvas id="spx"></canvas></div>
+  <div class="chart xtall"><img class="static" src="data/spx.png" alt="S&amp;P 500 con episodi di stress e segnali"><canvas id="spx"></canvas></div>
   <div class="kinds" id="kinds"></div>
 </section>
 
@@ -155,6 +157,6 @@
 <script src="assets/vendor/chart.umd.js"></script>
 <script src="assets/vendor/chartjs-adapter-date-fns.bundle.min.js"></script>
 <script src="assets/vendor/chartjs-plugin-annotation.min.js"></script>
-<script src="assets/app.js?v=3"></script>
+<script src="assets/app.js?v=4"></script>
 </body>
 </html>

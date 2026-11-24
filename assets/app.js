@@ -20,8 +20,11 @@ async function load(first){
     try{ S = await j('data/signal.json'); }catch(e){ S = null; }
   }catch(e){ $('#fresh').textContent='dati non disponibili: il primo aggiornamento automatico è in corso'; return; }
   if(!first && L.generated===lastGen) return; lastGen = L.generated;
-  renderTop(); gauge(); renderSignal(); renderAlerts(first); renderComps(); renderEpisodes(); renderSources();
-  if(first){ histChart(); spxChart(); } else { charts.hist?.destroy(); charts.spx?.destroy(); histChart(); spxChart(); }
+  const safe = (f,...x) => { try{ f(...x); }catch(e){ console.error(f.name, e); } };
+  safe(renderVerdict); safe(renderTop); safe(gauge); safe(renderSignal); safe(renderAlerts, first); safe(renderComps); safe(renderEpisodes); safe(renderSources);
+  if(!first){ try{charts.hist&&charts.hist.destroy(); charts.spx&&charts.spx.destroy();}catch(e){} }
+  if(typeof Chart!=='undefined'){ safe(histChart); safe(spxChart); }
+  ['hist','spx'].forEach(id=>{ if(charts[id]) document.getElementById(id).parentElement.classList.add('live'); });
 }
 
 function renderTop(){
@@ -69,6 +72,19 @@ function gauge(){
   svg.innerHTML = h;
 }
 
+
+function renderVerdict(){
+  if(!S) return;
+  let v='NEUTRO', why;
+  if(S.short_state==='SHORT ATTIVO'){ v='SHORT'; why='Liquidità in calo, stress elevato e S&P 500 sotto la media a 40 settimane.'; }
+  else if(S.state.startsWith('LONG')){ v='LONG'; why=S.state.charAt(0)+S.state.slice(1).toLowerCase()+' dal '+S.since+': il GLSI sta uscendo da una fase di siccità.'; }
+  else { const n=[]; if(S.short_state==='PRE-ALLERTA SHORT'){ const k=S.short_checks.filter(c=>c.ok).length, miss=S.short_checks.filter(c=>!c.ok).map(c=>c.text.toLowerCase()); n.push(`pre-allerta short (${k}/3 condizioni; manca: ${miss.join(', ')})`); }
+    if(S.state==='ALLERTA LONG') n.push('allerta long: score in siccità, in attesa della risalita');
+    why='Nessun segnale attivo'+(n.length?' — '+n.join('; '):'.'); }
+  const box=$('#verdict'); if(!box) return;
+  box.className='verdict v-'+v.toLowerCase(); $('#v-main').textContent=v; $('#v-why').textContent=why;
+  $('#v-meta').textContent=`GLSI ${fmt(L.score)} · ${L.regime_it} · dati al ${L.date}`;
+}
 
 function renderSignal(){
   if(!S){ $('#sig-sec').style.display='none'; return; }
