@@ -1,25 +1,25 @@
 {
  "date": "2026-11-25",
- "generated": "2026-11-25T14:03Z",
+ "generated": "2026-11-25T14:58Z",
  "kind": "auto",
  "blocks": [
   {
    "title": "Breve (3–7 giorni)",
    "tone": "neg",
    "headline": "Pressione di mercato in aumento",
-   "text": "VIX a 26,6 (+3,7 punti in 5 sedute; massimo a 20 sedute 35,9); spread high yield 3,63% (+29 pb in 5 sedute); S&P 500 -2,4% in 5 sedute. Stress composito settimanale +0,20 sull'ultima settimana. Su questo orizzonte i dati di liquidità non hanno capacità previsiva: conta l'umore di mercato."
+   "text": "VIX a 26,4 (+0,9 punti in 5 sedute; massimo a 20 sedute 35,9); spread high yield 3,63% (+29 pb in 5 sedute); S&P 500 -2,4% in 5 sedute. Stress composito settimanale +0,19 sull'ultima settimana. Su questo orizzonte i dati di liquidità non hanno capacità previsiva: conta l'umore di mercato."
   },
   {
    "title": "Medio (1 mese)",
    "tone": "neg",
    "headline": "Deterioramento in corso",
-   "text": "Score -18,5 punti in 4 settimane (liquidità z -0,38, stress z +0,63). Liquidità netta globale -0,3% in 4 settimane e -2,6% in 13. Nelle settimane passate con uno score simile (±5 punti, 85 casi) l'S&P a 1 mese ha fatto in media -0,2% (55% positivi), contro +0,8% di tutte le settimane."
+   "text": "Score -18,4 punti in 4 settimane (liquidità z -0,38, stress z +0,62). Liquidità netta globale -0,3% in 4 settimane e -2,6% in 13. Nelle settimane passate con uno score simile (±5 punti, 89 casi) l'S&P a 1 mese ha fatto in media -0,0% (57% positivi), contro +0,8% di tutte le settimane."
   },
   {
    "title": "Lungo (12 mesi)",
    "tone": "neg",
    "headline": "Rischio elevato, ma i 12 mesi restano incerti",
-   "text": "Con score intorno a 26,0 (85 settimane simili dal 2003) l'S&P a 12 mesi ha fatto in media +8,5% (67% positivi), contro +10,2% di media generale. Lo score da solo, a questo livello, non dà un vantaggio sull'anno: decide come evolvono liquidità e stress. Se lo score scende sotto 20 e poi risale, storicamente l'anno successivo è stato molto buono; se la stretta si prolunga come nel 2008 o nel 2022, no."
+   "text": "Con score intorno a 26,1 (89 settimane simili dal 2003) l'S&P a 12 mesi ha fatto in media +8,3% (67% positivi), contro +10,2% di media generale. Lo score da solo, a questo livello, non dà un vantaggio sull'anno: decide come evolvono liquidità e stress. Se lo score scende sotto 20 e poi risale, storicamente l'anno successivo è stato molto buono; se la stretta si prolunga come nel 2008 o nel 2022, no."
   },
   {
    "title": "Considerazioni pratiche",
@@ -31,7 +31,7 @@
  "analogs": [
   {
    "date": "2023-03-01",
-   "dist": 0.22,
+   "dist": 0.24,
    "score": 24.7,
    "liq": -0.81,
    "stress": 0.56,
@@ -43,7 +43,7 @@
   },
   {
    "date": "2010-05-19",
-   "dist": 0.36,
+   "dist": 0.37,
    "score": 24.0,
    "liq": -0.99,
    "stress": 0.42,
@@ -67,7 +67,7 @@
   },
   {
    "date": "2024-12-18",
-   "dist": 0.82,
+   "dist": 0.8,
    "score": 25.8,
    "liq": -1.12,
    "stress": 0.18,
@@ -79,7 +79,7 @@
   },
   {
    "date": "2019-08-14",
-   "dist": 0.83,
+   "dist": 0.81,
    "score": 33.3,
    "liq": -0.39,
    "stress": 0.47,
@@ -92,22 +92,22 @@
  ],
  "conditional": {
   "1m": {
-   "n": 85,
-   "mean": -0.2,
-   "pos": 55.0,
+   "n": 89,
+   "mean": -0.0,
+   "pos": 57.0,
    "base_mean": 0.8,
    "base_pos": 65.0
   },
   "3m": {
-   "n": 85,
+   "n": 89,
    "mean": 0.8,
-   "pos": 59.0,
+   "pos": 60.0,
    "base_mean": 2.5,
    "base_pos": 72.0
   },
   "12m": {
-   "n": 85,
-   "mean": 8.5,
+   "n": 89,
+   "mean": 8.3,
    "pos": 67.0,
    "base_mean": 10.2,
    "base_pos": 81.0
