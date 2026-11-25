@@ -2,13 +2,17 @@ name: GLSI update
 
 on:
   schedule:
-    - cron: "17 */3 * * *"
+    # ogni ora al minuto 23: GitHub salta a volte le esecuzioni programmate,
+    # un orario fitto garantisce più giri utili al giorno
+    - cron: "23 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - "config/**"
       - "scripts/**"
+      - "assets/**"
+      - "data/commentary.json"
       - ".github/workflows/**"
 
 permissions:
@@ -48,12 +52,15 @@ jobs:
           python scripts/build.py
           python scripts/static.py
 
-      - name: Commit data
+      - name: Commit data (solo se cambiati)
         run: |
           git config user.name "glsi-bot"
           git config user.email "glsi-bot@users.noreply.github.com"
+          if ! python scripts/changed.py; then
+            echo "Dati invariati: nessun commit"
+            exit 0
+          fi
           git add data/ index.html
-          if git diff --cached --quiet; then echo "nessun cambiamento"; exit 0; fi
           git commit -m "data: aggiornamento $(date -u +%Y-%m-%dT%H:%MZ)" --quiet
           for i in 1 2 3; do
             git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0

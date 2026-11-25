@@ -497,12 +497,40 @@ def long_signal(df: pd.DataFrame) -> dict:
                       "Soglie scelte dopo un test di sensibilità sugli stessi dati; serie FRED nell'ultima versione "
                       "pubblicata, non com'erano disponibili in tempo reale. Non è consulenza finanziaria."))
 
+
+# età massima accettabile dell'ultimo dato (giorni di calendario) prima di segnalarlo come fermo
+MAX_AGE = {"WALCL": 12, "WTREGEN": 12, "RRPONTSYD": 7, "WRESBAL": 12, "ECBASSETSW": 16, "JPNASSETS": 60,
+           "M2SL": 75, "DTWEXBGS": 10, "DEXUSEU": 10, "DEXJPUS": 10, "NFCI": 14, "STLFSI4": 14,
+           "VIXCLS": 7, "BAMLH0A0HYM2": 7, "SP500": 7}
+ESSENTIAL = {"WALCL", "WTREGEN", "NFCI", "STLFSI4", "VIXCLS", "BAMLH0A0HYM2", "DTWEXBGS"}
+
+
+def health_check(meta: dict, spx_src: str) -> dict:
+    today = pd.Timestamp(datetime.now(timezone.utc).date())
+    stale, missing = [], []
+    for sid, m in meta.items():
+        if not m["ok"]:
+            missing.append(sid)
+            m["status"] = "mancante"
+            continue
+        age = (today - pd.Timestamp(m["last_date"])).days
+        m["age_days"] = int(age)
+        if age > MAX_AGE.get(sid, 30):
+            stale.append(sid)
+            m["status"] = "fermo"
+        else:
+            m["status"] = "ok"
+    bad_ess = [x for x in stale + missing if x in ESSENTIAL]
+    level = "rosso" if bad_ess else ("giallo" if stale or missing or not spx_src.startswith("Yahoo") else "verde")
+    return dict(level=level, stale=stale, missing=missing, essential_problems=bad_ess, spx_source=spx_src)
+
 # ---------------------------------------------------------------- main
 def main():
     DATA.mkdir(exist_ok=True)
     events = json.loads((CFG / "events.json").read_text())
     df, L, S, meta, spx_src = build()
 
+    hc = health_check(meta, spx_src)
     last = df["score"].last_valid_index()
     cur = df.loc[last]
     ben, bit, lo, hi = band(cur["score"])
@@ -535,7 +563,7 @@ def main():
                     for k in L.columns] +
                    [dict(key=k, name=comp_names[k], group="Stress", z=r1(S[k].loc[last]))
                     for k in S.columns],
-        series=list(meta.values()), spx_source=spx_src,
+        series=list(meta.values()), spx_source=spx_src, health=hc,
         method="Score = 100 × Φ(½·Liquidità − ½·Stress); z-score su finestra mobile di 10 anni, limitati a ±3.",
     )
 
@@ -563,6 +591,9 @@ def main():
     ap = DATA / "alerts.json"
     log = json.loads(ap.read_text()) if ap.exists() else {"log": []}
     new = make_alerts(df, latest["gnl_4w"])
+    if hc["essential_problems"]:
+        new.append(dict(level="alta", code="DATI_FERMI", date=latest["date"],
+                        text="Serie essenziali ferme o mancanti: " + ", ".join(hc["essential_problems"]) + ". Lo score può essere non aggiornato."))
     for h in sig["history"]:
         if h["date"] == sig["date"] and h["tier"] in ("ANTICIPATO", "CONFERMATO"):
             new.append(dict(level="alta", code="LONG_" + h["tier"], date=h["date"],

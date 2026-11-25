@@ -38,8 +38,9 @@ function renderTop(){
   $('#k-neutral').textContent = L.to_neutral===0 ? 'in fascia' : (L.score<40?'+':'−')+fmt(Math.abs(L.to_neutral))+' pt';
   [ '#k-up','#k-neutral' ].forEach(s=>$(s).style.color=col);
   const gen = new Date(L.generated.replace('Z',':00Z')), age = (Date.now()-gen)/36e5;
-  $('#fresh').textContent = `dati al ${dIt(L.date)} · aggiornato ${gen.toLocaleString('it-CH',{dateStyle:'short',timeStyle:'short'})}`;
-  document.querySelector('.fresh .pulse').classList.toggle('stale', age>8);
+  $('#fresh').textContent = `dati al ${dIt(L.date)} · ultimo cambiamento ${gen.toLocaleString('it-CH',{dateStyle:'short',timeStyle:'short'})}`;
+  document.querySelector('.fresh .pulse').classList.toggle('stale', !!(L.health && L.health.level!=='verde'));
+  if(L.health && L.health.level!=='verde') $('#fresh').textContent += ' · controllo dati: '+L.health.level+(L.health.stale.length?' (ferme: '+L.health.stale.join(', ')+')':'');
   $('#s-liq').textContent = fmt(L.liq,2,true); $('#s-str').textContent = fmt(L.stress,2,true);
   $('#s-liq-t').textContent = L.liq>0.5?'sopra la media':L.liq<-0.5?'sotto la media':'vicino alla media';
   $('#s-str-t').textContent = L.stress>1?'stress elevato':L.stress>0.3?'stress sopra la media':L.stress<-0.3?'stress basso':'nella media';
@@ -190,7 +191,7 @@ function renderEpisodes(){
 }
 
 function renderSources(){
-  $('#src tbody').innerHTML = L.series.map(s=>`<tr><td><a href="${s.url}" target="_blank" rel="noopener" style="color:#8fb3ff">${s.name}</a> <code>${s.id}</code></td><td>${s.src}</td><td>${s.ok?dIt(s.last_date):'<span class="neg">non disponibile</span>'}</td><td>${s.last_value==null?'—':fmt(s.last_value,2)}</td><td>${s.unit}</td></tr>`).join('');
+  $('#src tbody').innerHTML = L.series.map(s=>`<tr><td><a href="${s.url}" target="_blank" rel="noopener" style="color:#8fb3ff">${s.name}</a> <code>${s.id}</code></td><td>${s.src}</td><td>${s.ok?dIt(s.last_date):'<span class="neg">non disponibile</span>'} ${s.status==='fermo'?'<span class="neg">● fermo</span>':s.status==='ok'?'<span class="pos">●</span>':''}</td><td>${s.last_value==null?'—':fmt(s.last_value,2)}</td><td>${s.unit}</td></tr>`).join('');
 }
 
 /* ------------------------------------------------ charts */
