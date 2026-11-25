@@ -1,20 +1,20 @@
 {
- "generated": "2026-11-25T11:57Z",
+ "generated": "2026-11-25T14:03Z",
  "date": "2026-11-25",
- "score": 26.8,
+ "score": 26.0,
  "liq": -0.76,
- "stress": 0.48,
+ "stress": 0.53,
  "regime": "Tightening",
  "regime_it": "Stretta",
  "band_lo": 20,
  "band_hi": 40,
- "to_up": 13.2,
- "to_down": 6.8,
- "to_neutral": 13.2,
- "chg_1w": -3.2,
- "chg_4w": -17.8,
- "chg_13w": -31.1,
- "percentile": 11.0,
+ "to_up": 14.0,
+ "to_down": 6.0,
+ "to_neutral": 14.0,
+ "chg_1w": -3.3,
+ "chg_4w": -18.5,
+ "chg_13w": -31.8,
+ "percentile": 10.0,
  "gnl": 16273.0,
  "gnl_4w": -0.26,
  "gnl_13w": -2.64,
@@ -51,7 +51,7 @@
    "key": "nfci",
    "name": "Chicago Fed NFCI",
    "group": "Stress",
-   "z": -0.11
+   "z": 0.09
   },
   {
    "key": "stlfsi",
@@ -199,10 +199,10 @@
    "src": "Chicago Fed",
    "id": "NFCI",
    "url": "https://fred.stlouisfed.org/series/NFCI",
-   "last_date": "2026-11-13",
-   "last_value": -0.478,
+   "last_date": "2026-11-20",
+   "last_value": -0.444,
    "ok": true,
-   "age_days": 12,
+   "age_days": 5,
    "status": "ok"
   },
   {
@@ -264,5 +264,5 @@
  },
  "method": "Score = 100 × Φ(½·Liquidità − ½·Stress); z-score su finestra mobile di 10 anni, limitati a ±3.",
  "signal": "NESSUN SEGNALE",
- "signal_short": "PRE-ALLERTA SHORT"
+ "signal_short": "SHORT ATTIVO"
 }

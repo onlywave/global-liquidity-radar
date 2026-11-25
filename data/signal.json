@@ -1,8 +1,8 @@
 {
  "state": "NESSUN SEGNALE",
  "since": null,
- "short_state": "PRE-ALLERTA SHORT",
- "short_since": null,
+ "short_state": "SHORT ATTIVO",
+ "short_since": "2026-11-25",
  "short_checks": [
   {
    "text": "Liquidità z sotto −0,5",
@@ -11,8 +11,8 @@
   },
   {
    "text": "Stress z sopra +0,5",
-   "ok": false,
-   "value": 0.48
+   "ok": true,
+   "value": 0.53
   },
   {
    "text": "S&P 500 sotto la media a 40 settimane",
@@ -21,27 +21,27 @@
   }
  ],
  "date": "2026-11-25",
- "score": 26.8,
+ "score": 26.0,
  "checks": [
   {
    "text": "Score sotto 20 nelle ultime 8 settimane",
    "ok": false,
-   "value": 26.8
+   "value": 26.0
   },
   {
    "text": "Score +8 punti in 4 settimane",
    "ok": false,
-   "value": -17.8
+   "value": -18.5
   },
   {
    "text": "Score sotto 20 nelle ultime 26 settimane",
    "ok": false,
-   "value": 26.8
+   "value": 26.0
   },
   {
    "text": "Score sopra 40",
    "ok": false,
-   "value": 26.8
+   "value": 26.0
   }
  ],
  "stats": {
@@ -141,23 +141,23 @@
    "rule": "Liquidità z < −0,5 e stress z > +0,5 con S&P 500 sotto la media mobile a 40 settimane",
    "unit": "settimane in stato",
    "r3m": {
-    "n": 44,
-    "mean": -3.9,
-    "pos": 41.0
+    "n": 42,
+    "mean": -3.6,
+    "pos": 43.0
    },
    "r6m": {
-    "n": 44,
-    "mean": -3.2,
-    "pos": 52.0
+    "n": 42,
+    "mean": -2.6,
+    "pos": 55.0
    },
    "r12m": {
-    "n": 44,
-    "mean": 7.6,
-    "pos": 82.0
+    "n": 42,
+    "mean": 8.2,
+    "pos": 86.0
    },
    "mdd6m": {
-    "n": 44,
-    "mean": -12.4,
+    "n": 43,
+    "mean": -12.2,
     "pos": null
    },
    "r3m_2003_14": {
@@ -166,13 +166,23 @@
     "pos": 12.0
    },
    "r3m_2015_26": {
-    "n": 36,
-    "mean": 0.5,
-    "pos": 47.0
+    "n": 34,
+    "mean": 1.1,
+    "pos": 50.0
    }
   }
  },
  "history": [
+  {
+   "tier": "SHORT",
+   "date": "2026-11-25",
+   "score": 26.0,
+   "spx": 7201.0,
+   "r3m": null,
+   "r6m": null,
+   "r12m": null,
+   "mdd6m": null
+  },
   {
    "tier": "CONFERMATO",
    "date": "2023-11-29",
@@ -226,7 +236,7 @@
   {
    "tier": "CONFERMATO",
    "date": "2023-01-18",
-   "score": 43.2,
+   "score": 43.3,
    "spx": 3973.0,
    "r3m": 4.1,
    "r6m": 14.2,
@@ -246,7 +256,7 @@
   {
    "tier": "ALLERTA",
    "date": "2022-11-02",
-   "score": 9.2,
+   "score": 9.3,
    "spx": 3771.0,
    "r3m": 9.7,
    "r6m": 9.7,
@@ -256,7 +266,7 @@
   {
    "tier": "ANTICIPATO",
    "date": "2022-07-27",
-   "score": 14.4,
+   "score": 14.5,
    "spx": 4130.0,
    "r3m": -5.5,
    "r6m": -1.4,
@@ -266,7 +276,7 @@
   {
    "tier": "ALLERTA",
    "date": "2022-04-27",
-   "score": 13.6,
+   "score": 13.9,
    "spx": 4132.0,
    "r3m": -0.0,
    "r6m": -5.6,
@@ -275,18 +285,18 @@
   },
   {
    "tier": "SHORT",
-   "date": "2022-04-13",
-   "score": 25.9,
-   "spx": 4393.0,
-   "r3m": -12.1,
-   "r6m": -18.4,
-   "r12m": -5.8,
-   "mdd6m": -18.4
+   "date": "2022-04-27",
+   "score": 13.9,
+   "spx": 4132.0,
+   "r3m": -0.0,
+   "r6m": -5.6,
+   "r12m": 0.9,
+   "mdd6m": -13.3
   },
   {
    "tier": "CONFERMATO",
    "date": "2020-05-20",
-   "score": 49.8,
+   "score": 50.6,
    "spx": 2955.0,
    "r3m": 14.9,
    "r6m": 20.4,
@@ -306,7 +316,7 @@
   {
    "tier": "ALLERTA",
    "date": "2020-03-11",
-   "score": 13.5,
+   "score": 14.3,
    "spx": 2711.0,
    "r3m": 12.2,
    "r6m": 23.2,
@@ -326,7 +336,7 @@
   {
    "tier": "SHORT",
    "date": "2010-05-26",
-   "score": 21.6,
+   "score": 21.3,
    "spx": 1089.0,
    "r3m": -2.3,
    "r6m": 9.2,
@@ -336,7 +346,7 @@
   {
    "tier": "CONFERMATO",
    "date": "2009-05-06",
-   "score": 40.9,
+   "score": 40.7,
    "spx": 929.0,
    "r3m": 8.7,
    "r6m": 15.1,
@@ -346,7 +356,7 @@
   {
    "tier": "ANTICIPATO",
    "date": "2009-04-22",
-   "score": 28.1,
+   "score": 27.8,
    "spx": 866.0,
    "r3m": 13.0,
    "r6m": 24.6,
@@ -376,7 +386,7 @@
   {
    "tier": "SHORT",
    "date": "2008-08-13",
-   "score": 13.1,
+   "score": 13.2,
    "spx": 1298.0,
    "r3m": -32.7,
    "r6m": -36.3,
@@ -386,7 +396,7 @@
   {
    "tier": "ALLERTA",
    "date": "2008-06-11",
-   "score": 19.5,
+   "score": 19.6,
    "spx": 1360.0,
    "r3m": -8.0,
    "r6m": -35.3,

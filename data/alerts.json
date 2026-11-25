@@ -1,6 +1,12 @@
 {
  "log": [
   {
+   "level": "alta",
+   "code": "SHORT",
+   "date": "2026-11-25",
+   "text": "Segnale SHORT / riduzione rischio: Liquidità z < −0,5 e stress z > +0,5 con S&P 500 sotto la media mobile a 40 settimane"
+  },
+  {
    "level": "media",
    "code": "MOMENTUM",
    "date": "2026-11-25",
@@ -12,7 +18,13 @@
    "level": "media",
    "code": "MOMENTUM",
    "date": "2026-11-25",
-   "text": "Score -17.8 punti in 4 settimane"
+   "text": "Score -18.5 punti in 4 settimane"
+  },
+  {
+   "level": "alta",
+   "code": "SHORT",
+   "date": "2026-11-25",
+   "text": "Segnale SHORT / riduzione rischio: Liquidità z < −0,5 e stress z > +0,5 con S&P 500 sotto la media mobile a 40 settimane"
   }
  ],
  "regime_changes": [
@@ -20,7 +32,7 @@
    "date": "2026-11-04",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 39.6
+   "score": 39.3
   },
   {
    "date": "2026-09-16",
@@ -32,7 +44,7 @@
    "date": "2026-09-09",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 60.4
+   "score": 60.3
   },
   {
    "date": "2026-04-08",
@@ -44,19 +56,19 @@
    "date": "2026-03-18",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 37.9
+   "score": 37.8
   },
   {
    "date": "2026-02-25",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 58.0
+   "score": 57.9
   },
   {
    "date": "2026-01-21",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 60.5
+   "score": 60.4
   },
   {
    "date": "2025-11-26",
@@ -68,7 +80,7 @@
    "date": "2025-11-19",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 38.2
+   "score": 38.1
   },
   {
    "date": "2025-07-30",
@@ -86,13 +98,13 @@
    "date": "2025-07-16",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 56.6
+   "score": 56.5
   },
   {
    "date": "2025-06-04",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 60.6
+   "score": 60.5
   },
   {
    "date": "2025-05-28",
@@ -134,7 +146,7 @@
    "date": "2024-11-27",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 40.6
+   "score": 40.5
   },
   {
    "date": "2024-11-06",
@@ -200,7 +212,7 @@
    "date": "2023-03-29",
    "frm": "Siccità",
    "to": "Stretta",
-   "score": 22.6
+   "score": 22.7
   },
   {
    "date": "2023-03-15",
@@ -212,13 +224,13 @@
    "date": "2023-02-08",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 37.6
+   "score": 37.7
   },
   {
    "date": "2023-01-18",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 43.2
+   "score": 43.3
   },
   {
    "date": "2022-12-07",
@@ -242,163 +254,151 @@
    "date": "2022-08-17",
    "frm": "Stretta",
    "to": "Siccità",
-   "score": 19.3
+   "score": 19.4
   },
   {
    "date": "2022-08-10",
    "frm": "Siccità",
    "to": "Stretta",
-   "score": 23.2
+   "score": 23.3
   },
   {
    "date": "2022-04-27",
    "frm": "Stretta",
    "to": "Siccità",
-   "score": 13.6
+   "score": 13.9
   },
   {
    "date": "2022-02-23",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 32.2
+   "score": 32.5
   },
   {
    "date": "2022-02-02",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 40.2
+   "score": 40.5
   },
   {
    "date": "2022-01-26",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 33.3
+   "score": 33.6
   },
   {
    "date": "2021-12-08",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 42.9
+   "score": 43.2
   },
   {
    "date": "2021-12-01",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 35.2
+   "score": 35.5
   },
   {
    "date": "2021-11-10",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 57.7
+   "score": 58.0
   },
   {
    "date": "2021-10-13",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 61.0
+   "score": 61.2
   },
   {
    "date": "2021-09-29",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 58.5
+   "score": 58.7
   },
   {
    "date": "2021-08-25",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 62.2
+   "score": 62.4
   },
   {
    "date": "2021-08-18",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 59.5
+   "score": 59.7
   },
   {
    "date": "2021-05-05",
    "frm": "Abbondanza",
    "to": "Allentamento",
-   "score": 77.1
-  },
-  {
-   "date": "2021-04-28",
-   "frm": "Allentamento",
-   "to": "Abbondanza",
-   "score": 80.6
-  },
-  {
-   "date": "2021-04-21",
-   "frm": "Abbondanza",
-   "to": "Allentamento",
-   "score": 79.9
+   "score": 77.3
   },
   {
    "date": "2021-04-14",
    "frm": "Allentamento",
    "to": "Abbondanza",
-   "score": 80.2
+   "score": 80.4
   },
   {
    "date": "2021-03-03",
    "frm": "Abbondanza",
    "to": "Allentamento",
-   "score": 77.3
+   "score": 77.5
   },
   {
    "date": "2021-02-03",
    "frm": "Allentamento",
    "to": "Abbondanza",
-   "score": 82.3
+   "score": 82.5
   },
   {
    "date": "2021-01-27",
    "frm": "Abbondanza",
    "to": "Allentamento",
-   "score": 76.7
+   "score": 76.9
   },
   {
    "date": "2020-11-18",
    "frm": "Allentamento",
    "to": "Abbondanza",
-   "score": 83.0
+   "score": 83.2
   },
   {
    "date": "2020-09-23",
    "frm": "Abbondanza",
    "to": "Allentamento",
-   "score": 78.3
+   "score": 78.7
   },
   {
    "date": "2020-09-16",
    "frm": "Allentamento",
    "to": "Abbondanza",
-   "score": 81.2
+   "score": 81.5
   },
   {
    "date": "2020-09-09",
    "frm": "Abbondanza",
    "to": "Allentamento",
-   "score": 76.6
+   "score": 76.9
   },
   {
    "date": "2020-07-22",
    "frm": "Allentamento",
    "to": "Abbondanza",
-   "score": 80.5
+   "score": 80.9
   },
   {
    "date": "2020-06-03",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 67.8
+   "score": 68.5
   },
   {
    "date": "2020-05-20",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 49.8
+   "score": 50.6
   },
   {
    "date": "2020-04-22",
@@ -410,175 +410,187 @@
    "date": "2020-03-11",
    "frm": "Stretta",
    "to": "Siccità",
-   "score": 13.5
+   "score": 14.3
   },
   {
    "date": "2020-02-26",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 31.7
+   "score": 32.3
   },
   {
    "date": "2020-01-29",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 54.0
+   "score": 54.1
   },
   {
-   "date": "2020-01-22",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 60.3
-  },
-  {
-   "date": "2020-01-01",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 58.8
-  },
-  {
-   "date": "2019-12-25",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 60.4
-  },
-  {
-   "date": "2019-10-16",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 40.9
-  },
-  {
-   "date": "2019-09-25",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 34.6
-  },
-  {
-   "date": "2019-09-18",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 45.0
-  },
-  {
-   "date": "2019-08-14",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 33.1
-  },
-  {
-   "date": "2019-06-05",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 42.0
-  },
-  {
-   "date": "2019-05-29",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 39.5
-  },
-  {
-   "date": "2019-01-30",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 43.6
-  },
-  {
-   "date": "2018-10-24",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 33.2
-  },
-  {
-   "date": "2018-10-17",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 42.0
-  },
-  {
-   "date": "2018-10-10",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 38.3
-  },
-  {
-   "date": "2018-07-25",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 43.9
-  },
-  {
-   "date": "2018-06-27",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 35.3
-  },
-  {
-   "date": "2018-02-07",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 54.0
-  },
-  {
-   "date": "2017-12-27",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 61.8
-  },
-  {
-   "date": "2017-12-06",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 57.2
-  },
-  {
-   "date": "2017-11-22",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 60.7
-  },
-  {
-   "date": "2017-10-25",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 59.3
-  },
-  {
-   "date": "2017-02-15",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 61.3
-  },
-  {
-   "date": "2016-10-26",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 59.9
-  },
-  {
-   "date": "2016-10-19",
+   "date": "2020-01-15",
    "frm": "Neutrale",
    "to": "Allentamento",
    "score": 60.1
   },
   {
-   "date": "2016-10-05",
+   "date": "2020-01-01",
    "frm": "Allentamento",
    "to": "Neutrale",
    "score": 59.1
   },
   {
+   "date": "2019-12-25",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.7
+  },
+  {
+   "date": "2019-10-16",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 41.2
+  },
+  {
+   "date": "2019-09-25",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 35.0
+  },
+  {
+   "date": "2019-09-18",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 45.4
+  },
+  {
+   "date": "2019-08-28",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.3
+  },
+  {
+   "date": "2019-08-21",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 40.2
+  },
+  {
+   "date": "2019-08-14",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 33.3
+  },
+  {
+   "date": "2019-06-05",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 42.2
+  },
+  {
+   "date": "2019-05-29",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 39.7
+  },
+  {
+   "date": "2019-01-30",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 43.8
+  },
+  {
+   "date": "2018-10-24",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 33.4
+  },
+  {
+   "date": "2018-10-17",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 42.2
+  },
+  {
+   "date": "2018-10-10",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.4
+  },
+  {
+   "date": "2018-07-25",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 44.1
+  },
+  {
+   "date": "2018-06-27",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 35.4
+  },
+  {
+   "date": "2018-02-07",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 54.1
+  },
+  {
+   "date": "2017-12-27",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 62.0
+  },
+  {
+   "date": "2017-12-06",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.4
+  },
+  {
+   "date": "2017-11-22",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.9
+  },
+  {
+   "date": "2017-10-25",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.5
+  },
+  {
+   "date": "2017-02-15",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.4
+  },
+  {
+   "date": "2016-10-26",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 60.0
+  },
+  {
+   "date": "2016-10-19",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.2
+  },
+  {
+   "date": "2016-10-05",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.2
+  },
+  {
    "date": "2016-09-28",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 61.9
+   "score": 62.0
   },
   {
    "date": "2016-09-14",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 59.7
+   "score": 59.8
   },
   {
    "date": "2016-07-13",
@@ -596,31 +608,31 @@
    "date": "2016-03-16",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 60.4
+   "score": 60.3
   },
   {
    "date": "2016-02-03",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 42.7
+   "score": 42.5
   },
   {
    "date": "2016-01-13",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 35.6
+   "score": 35.5
   },
   {
    "date": "2015-10-07",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 47.4
+   "score": 47.3
   },
   {
    "date": "2015-09-30",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 38.5
+   "score": 38.4
   },
   {
    "date": "2015-09-16",
@@ -632,31 +644,31 @@
    "date": "2015-09-02",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 38.9
+   "score": 38.8
   },
   {
    "date": "2015-03-18",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 40.6
+   "score": 40.7
   },
   {
    "date": "2015-03-11",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 39.2
+   "score": 39.3
   },
   {
    "date": "2015-02-04",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 41.1
+   "score": 41.0
   },
   {
    "date": "2015-01-07",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 40.0
+   "score": 39.9
   },
   {
    "date": "2014-10-22",
@@ -668,247 +680,247 @@
    "date": "2014-10-15",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 39.0
+   "score": 38.9
   },
   {
    "date": "2014-08-06",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 55.6
+   "score": 55.5
   },
   {
    "date": "2014-03-19",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 60.3
+   "score": 60.2
   },
   {
    "date": "2014-03-12",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 59.9
+   "score": 59.8
   },
   {
    "date": "2014-03-05",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 61.9
+   "score": 61.7
   },
   {
    "date": "2013-12-04",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 59.4
+   "score": 59.2
   },
   {
    "date": "2013-09-25",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 61.6
+   "score": 61.4
   },
   {
    "date": "2013-01-30",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 59.8
+   "score": 59.5
   },
   {
-   "date": "2013-01-09",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 60.2
-  },
-  {
-   "date": "2012-12-26",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 58.9
-  },
-  {
-   "date": "2012-11-14",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 60.5
-  },
-  {
-   "date": "2012-10-31",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 59.3
-  },
-  {
-   "date": "2012-08-22",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 60.2
-  },
-  {
-   "date": "2012-05-09",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 59.8
-  },
-  {
-   "date": "2011-12-28",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 62.1
-  },
-  {
-   "date": "2011-10-12",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 45.5
-  },
-  {
-   "date": "2011-09-28",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 38.2
-  },
-  {
-   "date": "2011-08-10",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 49.9
-  },
-  {
-   "date": "2011-06-29",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 61.2
-  },
-  {
-   "date": "2011-06-15",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 57.5
-  },
-  {
-   "date": "2011-03-23",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 62.5
-  },
-  {
-   "date": "2011-03-16",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 55.1
-  },
-  {
-   "date": "2011-03-02",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 61.4
-  },
-  {
-   "date": "2010-09-01",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 41.7
-  },
-  {
-   "date": "2010-08-25",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 38.2
-  },
-  {
-   "date": "2010-08-18",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 40.7
-  },
-  {
-   "date": "2010-08-11",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 39.6
-  },
-  {
-   "date": "2010-08-04",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 44.6
-  },
-  {
-   "date": "2010-04-28",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 39.8
-  },
-  {
-   "date": "2010-03-31",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 42.9
-  },
-  {
-   "date": "2010-03-24",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 39.9
-  },
-  {
-   "date": "2010-03-17",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 43.3
-  },
-  {
-   "date": "2009-12-09",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 38.9
-  },
-  {
-   "date": "2009-09-30",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 51.0
-  },
-  {
-   "date": "2009-09-09",
-   "frm": "Neutrale",
-   "to": "Allentamento",
-   "score": 63.4
-  },
-  {
-   "date": "2009-08-19",
-   "frm": "Allentamento",
-   "to": "Neutrale",
-   "score": 58.3
-  },
-  {
-   "date": "2009-07-22",
+   "date": "2013-01-23",
    "frm": "Neutrale",
    "to": "Allentamento",
    "score": 62.6
   },
   {
+   "date": "2012-12-26",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.6
+  },
+  {
+   "date": "2012-11-14",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.1
+  },
+  {
+   "date": "2012-10-31",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.9
+  },
+  {
+   "date": "2012-09-05",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.0
+  },
+  {
+   "date": "2012-05-09",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 59.2
+  },
+  {
+   "date": "2011-12-28",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.5
+  },
+  {
+   "date": "2011-10-12",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 44.9
+  },
+  {
+   "date": "2011-09-28",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 37.6
+  },
+  {
+   "date": "2011-08-10",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 49.5
+  },
+  {
+   "date": "2011-06-29",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 60.9
+  },
+  {
+   "date": "2011-06-15",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 57.1
+  },
+  {
+   "date": "2011-03-23",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 62.2
+  },
+  {
+   "date": "2011-03-16",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 54.7
+  },
+  {
+   "date": "2011-03-02",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 61.0
+  },
+  {
+   "date": "2010-09-01",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 41.3
+  },
+  {
+   "date": "2010-08-25",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 37.8
+  },
+  {
+   "date": "2010-08-18",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 40.4
+  },
+  {
+   "date": "2010-08-11",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 39.3
+  },
+  {
+   "date": "2010-08-04",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 44.2
+  },
+  {
+   "date": "2010-04-28",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 39.4
+  },
+  {
+   "date": "2010-03-31",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 42.6
+  },
+  {
+   "date": "2010-03-24",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 39.6
+  },
+  {
+   "date": "2010-03-17",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 43.0
+  },
+  {
+   "date": "2009-12-09",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 38.8
+  },
+  {
+   "date": "2009-09-30",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 50.9
+  },
+  {
+   "date": "2009-09-09",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 63.2
+  },
+  {
+   "date": "2009-08-19",
+   "frm": "Allentamento",
+   "to": "Neutrale",
+   "score": 58.1
+  },
+  {
+   "date": "2009-07-22",
+   "frm": "Neutrale",
+   "to": "Allentamento",
+   "score": 62.4
+  },
+  {
    "date": "2009-06-10",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 59.1
+   "score": 58.9
   },
   {
    "date": "2009-06-03",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 61.7
+   "score": 61.5
   },
   {
    "date": "2009-05-06",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 40.9
+   "score": 40.7
   },
   {
    "date": "2009-04-15",
    "frm": "Siccità",
    "to": "Stretta",
-   "score": 27.2
+   "score": 27.0
   },
   {
    "date": "2009-02-04",
@@ -926,7 +938,7 @@
    "date": "2008-08-06",
    "frm": "Stretta",
    "to": "Siccità",
-   "score": 19.0
+   "score": 19.1
   },
   {
    "date": "2008-07-30",
@@ -962,19 +974,19 @@
    "date": "2008-06-11",
    "frm": "Stretta",
    "to": "Siccità",
-   "score": 19.5
+   "score": 19.6
   },
   {
    "date": "2008-05-28",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 38.1
+   "score": 38.3
   },
   {
    "date": "2008-05-21",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 51.8
+   "score": 52.0
   },
   {
    "date": "2008-01-09",
@@ -989,22 +1001,34 @@
    "score": 45.0
   },
   {
+   "date": "2007-11-14",
+   "frm": "Neutrale",
+   "to": "Stretta",
+   "score": 29.9
+  },
+  {
+   "date": "2007-11-07",
+   "frm": "Stretta",
+   "to": "Neutrale",
+   "score": 40.5
+  },
+  {
    "date": "2007-10-31",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 37.3
+   "score": 37.9
   },
   {
    "date": "2007-10-10",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 40.4
+   "score": 41.2
   },
   {
    "date": "2007-10-03",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 35.9
+   "score": 36.8
   },
   {
    "date": "2007-09-19",
@@ -1016,97 +1040,85 @@
    "date": "2007-08-15",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 35.7
+   "score": 36.8
   },
   {
-   "date": "2007-07-11",
+   "date": "2007-07-18",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 59.7
+   "score": 59.5
   },
   {
    "date": "2007-07-04",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 61.5
+   "score": 62.2
   },
   {
-   "date": "2007-05-30",
+   "date": "2007-06-06",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 59.4
+   "score": 57.1
   },
   {
    "date": "2007-03-28",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 61.0
+   "score": 61.5
   },
   {
    "date": "2007-03-07",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 56.2
+   "score": 56.7
   },
   {
    "date": "2006-11-01",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 62.5
+   "score": 63.2
   },
   {
    "date": "2006-06-21",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 41.2
+   "score": 42.0
   },
   {
    "date": "2006-06-14",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 35.4
+   "score": 36.2
   },
   {
    "date": "2005-12-14",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 46.5
+   "score": 47.2
   },
   {
    "date": "2005-12-07",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 35.7
-  },
-  {
-   "date": "2005-07-06",
-   "frm": "Stretta",
-   "to": "Neutrale",
-   "score": 49.4
-  },
-  {
-   "date": "2005-06-29",
-   "frm": "Neutrale",
-   "to": "Stretta",
-   "score": 39.8
+   "score": 36.3
   },
   {
    "date": "2005-06-22",
    "frm": "Stretta",
    "to": "Neutrale",
-   "score": 41.0
+   "score": 41.6
   },
   {
    "date": "2005-05-18",
    "frm": "Neutrale",
    "to": "Stretta",
-   "score": 37.6
+   "score": 38.1
   },
   {
    "date": "2005-03-23",
    "frm": "Allentamento",
    "to": "Neutrale",
-   "score": 53.2
+   "score": 53.8
   }
  ]
 }
