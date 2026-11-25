@@ -1,20 +1,20 @@
 {
- "generated": "2026-11-25T14:58Z",
+ "generated": "2026-11-25T15:53Z",
  "date": "2026-11-25",
- "score": 26.1,
+ "score": 25.0,
  "liq": -0.76,
- "stress": 0.52,
+ "stress": 0.59,
  "regime": "Tightening",
  "regime_it": "Stretta",
  "band_lo": 20,
  "band_hi": 40,
- "to_up": 13.9,
- "to_down": 6.1,
- "to_neutral": 13.9,
- "chg_1w": -3.2,
- "chg_4w": -18.4,
- "chg_13w": -31.7,
- "percentile": 10.0,
+ "to_up": 15.0,
+ "to_down": 5.0,
+ "to_neutral": 15.0,
+ "chg_1w": -4.3,
+ "chg_4w": -19.5,
+ "chg_13w": -32.7,
+ "percentile": 9.0,
  "gnl": 16273.0,
  "gnl_4w": -0.26,
  "gnl_13w": -2.64,
@@ -69,7 +69,7 @@
    "key": "hy",
    "name": "Spread high yield",
    "group": "Stress",
-   "z": 1.76
+   "z": 2.03
   }
  ],
  "series": [
@@ -235,10 +235,10 @@
    "src": "ICE BofA",
    "id": "BAMLH0A0HYM2",
    "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-   "last_date": "2026-11-23",
-   "last_value": 3.63,
+   "last_date": "2026-11-24",
+   "last_value": 3.72,
    "ok": true,
-   "age_days": 2,
+   "age_days": 1,
    "status": "ok"
   },
   {
@@ -247,10 +247,10 @@
    "src": "S&P Dow Jones Indices",
    "id": "SP500",
    "url": "https://fred.stlouisfed.org/series/SP500",
-   "last_date": "2026-11-23",
-   "last_value": 7237.17,
+   "last_date": "2026-11-24",
+   "last_value": 7201.09,
    "ok": true,
-   "age_days": 2,
+   "age_days": 1,
    "status": "ok"
   }
  ],
