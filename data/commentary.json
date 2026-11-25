@@ -1,21 +1,49 @@
 {
  "date": "2026-11-25",
  "author": "Claude",
- "summary": "Settimana violenta. Tra il 13 e il 20 novembre l'S&P 500 ha perso l'8,6%, la peggior settimana da aprile 2025, trascinato dal crollo dei titoli AI dopo le dimissioni di Jensen Huang da Nvidia. Lunedì 23 il suo reintegro ha prodotto un +4,7%, la miglior seduta da aprile 2025. Il GLSI però non è cambiato: resta a 26,8, fascia Stretta. La liquidità resta debole perché la Fed sta alzando i tassi (rialzo a settembre, un altro possibile il 9 dicembre) e il dollaro è forte.",
+ "summary": "Aggiornamento delle 15:00: è scattato il segnale SHORT / riduzione rischio. La causa è il dato settimanale della Chicago Fed (NFCI) pubblicato oggi: −0,444 nella settimana al 20 novembre, da −0,478, cioè condizioni finanziarie più strette. Lo stress composito è salito a +0,53 e ha superato la soglia di +0,5. Le altre due condizioni erano già vere: liquidità z −0,76, S&P 500 sotto la media a 40 settimane (−2,1%). GLSI 26,0, fascia Stretta.",
  "blocks": [
-  {"key": "breve", "tone": "neu", "headline": "Rimbalzo di sollievo, volatilità ancora alta",
-   "text": "Il rimbalzo ha interrotto sette sedute consecutive di calo, ma il VIX resta intorno a 26–27, sopra la soglia di 20 che separa la calma dalla tensione. Rialzi giornalieri del 4–5% capitano quasi solo nelle fasi di stress (aprile 2025, marzo 2020), non in quelle tranquille. Nei prossimi 3–7 giorni la settimana del Ringraziamento è corta e con pochi scambi. Il test vero è lo spread high yield: se torna ad allargarsi, lo stress supera +0,5 e scatta il segnale short."},
-  {"key": "medio", "tone": "neg", "headline": "Il nodo del mese è la Fed del 9 dicembre",
-   "text": "Il rimbalzo non cambia la liquidità. La Fed ha alzato i tassi a settembre per la prima volta dal 2023 e il mercato tiene aperta l'ipotesi di un secondo rialzo a dicembre. Il dollaro forte drena liquidità dal resto del mondo, e la liquidità netta globale è scesa del 2,6% in 13 settimane. Nel 2022, con la Fed che stringeva, i rimbalzi forti, come quello dell'estate, si sono esauriti nel giro di poche settimane. Finché la Fed non cambia rotta, il quadro a un mese resta debole."},
-  {"key": "lungo", "tone": "neu", "headline": "Esito aperto: decide la politica monetaria",
-   "text": "I tre precedenti più simili a oggi danno risposte opposte. Marzo 2023 (SVB) e maggio 2010 (debito greco): +27% e +23% a 12 mesi, perché le banche centrali hanno risposto subito con liquidità. Marzo 2022: −12% a 12 mesi, perché la Fed ha continuato ad alzare i tassi. Oggi la Fed stringe per l'inflazione spinta dall'energia (guerra con l'Iran): finché resta così, il caso più vicino è il 2022."},
-  {"key": "pratico", "tone": "neu", "headline": "Cosa farei con questi dati",
-   "text": "1) Non inseguirei il rimbalzo di lunedì: senza un miglioramento della liquidità, in passato questi rimbalzi sono stati fragili. 2) Preparerei ora le coperture, a mercato ancora sostenuto: siamo in pre-allerta short e manca solo lo stress sopra +0,5. 3) Terrei pronta una lista acquisti per lo scenario opposto: se lo score scende sotto 20 e poi risale di 8 punti, storicamente l'anno dopo è stato positivo in tutti i casi. 4) Da guardare nei prossimi giorni: lo spread high yield, il dollaro e la decisione Fed del 9 dicembre. Sono considerazioni basate sui dati storici, non consulenza finanziaria."}
+  {
+   "key": "breve",
+   "tone": "neg",
+   "headline": "Short attivo, ma di un soffio",
+   "text": "Lo stress è sopra soglia di soli 0,03 punti (+0,53 contro +0,5). VIX e spread nel calcolo sono ancora quelli di lunedì 23, il giorno del rimbalzo del 4,7%. Se nei prossimi giorni VIX e spread scendono, lo stress torna sotto +0,5 e il segnale si chiude da solo. Il segnale è uno stato, non un evento: resta acceso solo finché tutte e tre le condizioni sono vere, quindi va ricontrollato ogni giorno. Settimana corta del Ringraziamento: pochi scambi, movimenti poco significativi."
+  },
+  {
+   "key": "medio",
+   "tone": "neg",
+   "headline": "Il nodo del mese è la Fed del 9 dicembre",
+   "text": "Il rimbalzo non cambia la liquidità. La Fed ha alzato i tassi a settembre per la prima volta dal 2023 e il mercato tiene aperta l'ipotesi di un secondo rialzo a dicembre. Il dollaro forte drena liquidità dal resto del mondo, e la liquidità netta globale è scesa del 2,6% in 13 settimane. Nel 2022, con la Fed che stringeva, i rimbalzi forti, come quello dell'estate, si sono esauriti nel giro di poche settimane. Finché la Fed non cambia rotta, il quadro a un mese resta debole."
+  },
+  {
+   "key": "lungo",
+   "tone": "neu",
+   "headline": "Esito aperto: decide la politica monetaria",
+   "text": "I tre precedenti più simili a oggi danno risposte opposte. Marzo 2023 (SVB) e maggio 2010 (debito greco): +27% e +23% a 12 mesi, perché le banche centrali hanno risposto subito con liquidità. Marzo 2022: −12% a 12 mesi, perché la Fed ha continuato ad alzare i tassi. Oggi la Fed stringe per l'inflazione spinta dall'energia (guerra con l'Iran): finché resta così, il caso più vicino è il 2022."
+  },
+  {
+   "key": "pratico",
+   "tone": "neg",
+   "headline": "Come usarlo: ridurre il rischio, non vendere allo scoperto",
+   "text": "1) Lo storico dice di usarlo come freno, non come scommessa al ribasso. Dei 6 ingressi passati solo agosto 2008 è stato seguito da un crollo (−33% a 3 mesi). Maggio 2010, aprile e dicembre 2022 sono rimasti tra −2% e 0% a 3 mesi. Dicembre 2018 e marzo 2023, arrivati come oggi dopo una correzione già fatta, sono stati vicini ai minimi (+14% e +13% a 3 mesi). Il vantaggio medio (−3,6% a 3 mesi nelle settimane in stato, drawdown medio −12%) viene soprattutto dal 2008. 2) Concretamente: coperture parziali o riduzione dell'esposizione azionaria più rischiosa (tecnologia ad alta valutazione, leva), non short pieno. 3) Tenere la liquidità pronta: se lo stress sale ancora e poi lo score scende sotto 20, storicamente lì si è preparato il miglior ingresso long. 4) Da guardare: VIX e spread high yield di questa settimana (decidono se il segnale resta acceso), il dato NFCI di mercoledì prossimo, la Fed del 9 dicembre. Sono considerazioni basate sui dati storici, non consulenza finanziaria."
+  }
  ],
  "sources": [
-  {"title": "CNBC — mercati del 23 novembre 2026", "url": "https://www.cnbc.com/2026/11/22/stock-market-today-live-updates.html"},
-  {"title": "Yahoo Finance — settimana al 20 novembre 2026", "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-nov-23-073600160.html"},
-  {"title": "Babypips — riepilogo mercati 23 novembre 2026", "url": "https://www.babypips.com/news/daily-financial-forex-market-recap-2026-11-23"},
-  {"title": "Axios — rialzo Fed di settembre 2026", "url": "https://www.axios.com/2026/09/16/fed-rates-warsh-trump"}
+  {
+   "title": "CNBC — mercati del 23 novembre 2026",
+   "url": "https://www.cnbc.com/2026/11/22/stock-market-today-live-updates.html"
+  },
+  {
+   "title": "Yahoo Finance — settimana al 20 novembre 2026",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-nov-23-073600160.html"
+  },
+  {
+   "title": "Babypips — riepilogo mercati 23 novembre 2026",
+   "url": "https://www.babypips.com/news/daily-financial-forex-market-recap-2026-11-23"
+  },
+  {
+   "title": "Axios — rialzo Fed di settembre 2026",
+   "url": "https://www.axios.com/2026/09/16/fed-rates-warsh-trump"
+  }
  ]
 }
