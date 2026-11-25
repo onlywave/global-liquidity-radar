@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T11:38Z",
+ "generated": "2026-11-25T11:57Z",
  "date": "2026-11-25",
  "score": 26.8,
  "liq": -0.76,
@@ -81,7 +81,9 @@
    "url": "https://fred.stlouisfed.org/series/WALCL",
    "last_date": "2026-11-18",
    "last_value": 6741452.0,
-   "ok": true
+   "ok": true,
+   "age_days": 7,
+   "status": "ok"
   },
   {
    "name": "Tesoro USA — conto TGA",
@@ -91,7 +93,9 @@
    "url": "https://fred.stlouisfed.org/series/WTREGEN",
    "last_date": "2026-11-18",
    "last_value": 916613.0,
-   "ok": true
+   "ok": true,
+   "age_days": 7,
+   "status": "ok"
   },
   {
    "name": "Fed — reverse repo overnight",
@@ -101,7 +105,9 @@
    "url": "https://fred.stlouisfed.org/series/RRPONTSYD",
    "last_date": "2026-11-24",
    "last_value": 0.301,
-   "ok": true
+   "ok": true,
+   "age_days": 1,
+   "status": "ok"
   },
   {
    "name": "Riserve bancarie USA",
@@ -111,7 +117,9 @@
    "url": "https://fred.stlouisfed.org/series/WRESBAL",
    "last_date": "2026-11-18",
    "last_value": 2979656.0,
-   "ok": true
+   "ok": true,
+   "age_days": 7,
+   "status": "ok"
   },
   {
    "name": "BCE — attivo totale",
@@ -121,7 +129,9 @@
    "url": "https://fred.stlouisfed.org/series/ECBASSETSW",
    "last_date": "2026-11-20",
    "last_value": 5923063.0,
-   "ok": true
+   "ok": true,
+   "age_days": 5,
+   "status": "ok"
   },
   {
    "name": "BoJ — attivo totale",
@@ -131,7 +141,9 @@
    "url": "https://fred.stlouisfed.org/series/JPNASSETS",
    "last_date": "2026-10-01",
    "last_value": 6261882.0,
-   "ok": true
+   "ok": true,
+   "age_days": 55,
+   "status": "ok"
   },
   {
    "name": "M2 USA",
@@ -141,7 +153,9 @@
    "url": "https://fred.stlouisfed.org/series/M2SL",
    "last_date": "2026-10-01",
    "last_value": 23532.8,
-   "ok": true
+   "ok": true,
+   "age_days": 55,
+   "status": "ok"
   },
   {
    "name": "Dollaro — indice ampio",
@@ -151,7 +165,9 @@
    "url": "https://fred.stlouisfed.org/series/DTWEXBGS",
    "last_date": "2026-11-20",
    "last_value": 123.598,
-   "ok": true
+   "ok": true,
+   "age_days": 5,
+   "status": "ok"
   },
   {
    "name": "Cambio USD per EUR",
@@ -161,7 +177,9 @@
    "url": "https://fred.stlouisfed.org/series/DEXUSEU",
    "last_date": "2026-11-20",
    "last_value": 1.098,
-   "ok": true
+   "ok": true,
+   "age_days": 5,
+   "status": "ok"
   },
   {
    "name": "Cambio JPY per USD",
@@ -171,7 +189,9 @@
    "url": "https://fred.stlouisfed.org/series/DEXJPUS",
    "last_date": "2026-11-20",
    "last_value": 158.76,
-   "ok": true
+   "ok": true,
+   "age_days": 5,
+   "status": "ok"
   },
   {
    "name": "Chicago Fed NFCI",
@@ -181,7 +201,9 @@
    "url": "https://fred.stlouisfed.org/series/NFCI",
    "last_date": "2026-11-13",
    "last_value": -0.478,
-   "ok": true
+   "ok": true,
+   "age_days": 12,
+   "status": "ok"
   },
   {
    "name": "St. Louis Fed Financial Stress",
@@ -191,7 +213,9 @@
    "url": "https://fred.stlouisfed.org/series/STLFSI4",
    "last_date": "2026-11-13",
    "last_value": -0.866,
-   "ok": true
+   "ok": true,
+   "age_days": 12,
+   "status": "ok"
   },
   {
    "name": "VIX",
@@ -201,7 +225,9 @@
    "url": "https://fred.stlouisfed.org/series/VIXCLS",
    "last_date": "2026-11-23",
    "last_value": 26.62,
-   "ok": true
+   "ok": true,
+   "age_days": 2,
+   "status": "ok"
   },
   {
    "name": "Spread high yield USA (OAS)",
@@ -211,7 +237,9 @@
    "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
    "last_date": "2026-11-23",
    "last_value": 3.63,
-   "ok": true
+   "ok": true,
+   "age_days": 2,
+   "status": "ok"
   },
   {
    "name": "S&P 500 (FRED, 10 anni)",
@@ -221,10 +249,19 @@
    "url": "https://fred.stlouisfed.org/series/SP500",
    "last_date": "2026-11-23",
    "last_value": 7237.17,
-   "ok": true
+   "ok": true,
+   "age_days": 2,
+   "status": "ok"
   }
  ],
  "spx_source": "Yahoo Finance (^GSPC)",
+ "health": {
+  "level": "verde",
+  "stale": [],
+  "missing": [],
+  "essential_problems": [],
+  "spx_source": "Yahoo Finance (^GSPC)"
+ },
  "method": "Score = 100 × Φ(½·Liquidità − ½·Stress); z-score su finestra mobile di 10 anni, limitati a ±3.",
  "signal": "NESSUN SEGNALE",
  "signal_short": "PRE-ALLERTA SHORT"
