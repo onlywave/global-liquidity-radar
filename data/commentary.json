@@ -1,13 +1,13 @@
 {
  "date": "2026-11-25",
  "author": "Claude",
- "summary": "Aggiornamento delle 15:00: è scattato il segnale SHORT / riduzione rischio. La causa è il dato settimanale della Chicago Fed (NFCI) pubblicato oggi: −0,444 nella settimana al 20 novembre, da −0,478, cioè condizioni finanziarie più strette. Lo stress composito è salito a +0,53 e ha superato la soglia di +0,5. Le altre due condizioni erano già vere: liquidità z −0,76, S&P 500 sotto la media a 40 settimane (−2,1%). GLSI 26,0, fascia Stretta.",
+ "summary": "Aggiornamento delle 19:00: il segnale SHORT / riduzione rischio si è rafforzato. Nel pomeriggio sono arrivati due dati: l'indice di stress della St. Louis Fed per la settimana al 20 novembre (−0,07, da −0,87: il salto più ampio dall'inizio dell'episodio) e lo spread high yield di martedì 24, salito a 3,72% (+9 pb in un giorno nonostante il rimbalzo di lunedì). Lo stress composito è passato da +0,53 a +0,92 e il GLSI è sceso a 20,1, a un passo dalla fascia Siccità (sotto 20).",
  "blocks": [
   {
    "key": "breve",
    "tone": "neg",
-   "headline": "Short attivo, ma di un soffio",
-   "text": "Lo stress è sopra soglia di soli 0,03 punti (+0,53 contro +0,5). VIX e spread nel calcolo sono ancora quelli di lunedì 23, il giorno del rimbalzo del 4,7%. Se nei prossimi giorni VIX e spread scendono, lo stress torna sotto +0,5 e il segnale si chiude da solo. Il segnale è uno stato, non un evento: resta acceso solo finché tutte e tre le condizioni sono vere, quindi va ricontrollato ogni giorno. Settimana corta del Ringraziamento: pochi scambi, movimenti poco significativi."
+   "headline": "Short confermato, credito sotto pressione",
+   "text": "Lo stress ora è +0,92, ben sopra la soglia di +0,5: il segnale non è più al limite. Il dettaglio che conta è il credito: lo spread high yield si è allargato anche nel giorno dopo il +4,7% delle azioni, cioè gli investitori obbligazionari non credono al rimbalzo. Il VIX resta a 26. Settimana del Ringraziamento con pochi scambi: possibili movimenti ampi su volumi bassi. Se il GLSI scende sotto 20 si accende anche l'allerta long (fascia Siccità), che storicamente ha preceduto i migliori ingressi, ma solo dopo la risalita dello score."
   },
   {
    "key": "medio",
@@ -24,8 +24,8 @@
   {
    "key": "pratico",
    "tone": "neg",
-   "headline": "Come usarlo: ridurre il rischio, non vendere allo scoperto",
-   "text": "1) Lo storico dice di usarlo come freno, non come scommessa al ribasso. Dei 6 ingressi passati solo agosto 2008 è stato seguito da un crollo (−33% a 3 mesi). Maggio 2010, aprile e dicembre 2022 sono rimasti tra −2% e 0% a 3 mesi. Dicembre 2018 e marzo 2023, arrivati come oggi dopo una correzione già fatta, sono stati vicini ai minimi (+14% e +13% a 3 mesi). Il vantaggio medio (−3,6% a 3 mesi nelle settimane in stato, drawdown medio −12%) viene soprattutto dal 2008. 2) Concretamente: coperture parziali o riduzione dell'esposizione azionaria più rischiosa (tecnologia ad alta valutazione, leva), non short pieno. 3) Tenere la liquidità pronta: se lo stress sale ancora e poi lo score scende sotto 20, storicamente lì si è preparato il miglior ingresso long. 4) Da guardare: VIX e spread high yield di questa settimana (decidono se il segnale resta acceso), il dato NFCI di mercoledì prossimo, la Fed del 9 dicembre. Sono considerazioni basate sui dati storici, non consulenza finanziaria."
+   "headline": "Ridurre il rischio ora, preparare la lista acquisti",
+   "text": "1) Il segnale va usato come freno: coperture parziali o riduzione della parte più rischiosa (tecnologia molto cara, posizioni a leva), non short pieno. Dei 6 ingressi passati solo agosto 2008 è stato seguito da un crollo (−33% a 3 mesi); dicembre 2018 e marzo 2023, arrivati come oggi dopo una correzione già fatta, erano vicini ai minimi. 2) Lo spread high yield che si allarga mentre le azioni rimbalzano è il campanello più serio: nel 2008 e nel 2022 è stato il credito ad anticipare le azioni. 3) Score a 20,1: se scende sotto 20 e poi risale di 8 punti in 4 settimane scatta il long anticipato, storicamente positivo a 12 mesi in tutti e 6 i casi. Tenere pronta la liquidità e la lista dei titoli. 4) Da guardare: spread high yield ogni giorno, NFCI e St. Louis la prossima settimana, Fed del 9 dicembre. Sono considerazioni basate sui dati storici, non consulenza finanziaria."
   }
  ],
  "sources": [
