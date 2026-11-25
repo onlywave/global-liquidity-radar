@@ -1,10 +1,11 @@
 name: GLSI update
 
+# Ciclo autosufficiente: ogni esecuzione fa 4 giri a un'ora di distanza e alla fine
+# rilancia se stessa (workflow_dispatch). L'orario programmato di GitHub, che spesso
+# salta, e i push (es. il commento del mattino) servono solo come riavvio di riserva.
 on:
   schedule:
-    # ogni ora al minuto 23: GitHub salta a volte le esecuzioni programmate,
-    # un orario fitto garantisce più giri utili al giorno
-    - cron: "23 * * * *"
+    - cron: "23 */2 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -18,6 +19,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write
 
 concurrency:
   group: glsi-update
@@ -26,7 +28,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
         with:
@@ -39,7 +41,8 @@ jobs:
       - name: Install
         run: pip install --quiet pandas numpy requests matplotlib
 
-      - name: Build GLSI
+      - name: Giri orari (4)
+        id: loop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SITE_URL: https://onlywave.github.io/global-liquidity-radar/
@@ -49,21 +52,25 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
         run: |
-          python scripts/build.py
-          python scripts/static.py
-
-      - name: Commit data (solo se cambiati)
-        run: |
           git config user.name "glsi-bot"
           git config user.email "glsi-bot@users.noreply.github.com"
-          if ! python scripts/changed.py; then
-            echo "Dati invariati: nessun commit"
-            exit 0
-          fi
-          git add data/ index.html
-          git commit -m "data: aggiornamento $(date -u +%Y-%m-%dT%H:%MZ)" --quiet
-          for i in 1 2 3; do
-            git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0
-            sleep 5
+          ok=0
+          for i in 1 2 3 4; do
+            echo "=== giro $i $(date -u +%H:%MZ) ==="
+            if bash scripts/run_once.sh; then ok=$((ok+1)); fi
+            [ "$i" -lt 4 ] && sleep 3300
           done
-          exit 1
+          echo "giri riusciti: $ok/4"
+          [ "$ok" -gt 0 ]
+
+      - name: Rilancio del ciclo
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # se i giri sono falliti, attende 30 minuti per non creare un ciclo rapido di errori
+          if [ "${{ steps.loop.outcome }}" != "success" ]; then sleep 1800; fi
+          curl -s -o /dev/null -w "dispatch HTTP %{http_code}\n" -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/update.yml/dispatches" \
+            -d '{"ref":"main"}'
