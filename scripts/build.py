@@ -499,8 +499,8 @@ def long_signal(df: pd.DataFrame) -> dict:
 
 
 # età massima accettabile dell'ultimo dato (giorni di calendario) prima di segnalarlo come fermo
-MAX_AGE = {"WALCL": 12, "WTREGEN": 12, "RRPONTSYD": 7, "WRESBAL": 12, "ECBASSETSW": 16, "JPNASSETS": 60,
-           "M2SL": 75, "DTWEXBGS": 10, "DEXUSEU": 10, "DEXJPUS": 10, "NFCI": 14, "STLFSI4": 14,
+MAX_AGE = {"WALCL": 12, "WTREGEN": 12, "RRPONTSYD": 7, "WRESBAL": 12, "ECBASSETSW": 16, "JPNASSETS": 80,
+           "M2SL": 95, "DTWEXBGS": 10, "DEXUSEU": 10, "DEXJPUS": 10, "NFCI": 16, "STLFSI4": 16,
            "VIXCLS": 7, "BAMLH0A0HYM2": 7, "SP500": 7}
 ESSENTIAL = {"WALCL", "WTREGEN", "NFCI", "STLFSI4", "VIXCLS", "BAMLH0A0HYM2", "DTWEXBGS"}
 
