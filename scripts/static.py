@@ -48,9 +48,9 @@ def banner_html(sig: dict, latest: dict) -> str:
             f'dati al {latest["date"]}</span></div>')
 
 
-def inject(index: Path, block: str):
+def inject(index: Path, block: str, tag: str = "VERDICT"):
     t = index.read_text()
-    new = re.sub(r"<!--VERDICT-->.*?<!--/VERDICT-->", "<!--VERDICT-->" + block + "<!--/VERDICT-->", t, flags=re.S)
+    new = re.sub(rf"<!--{tag}-->.*?<!--/{tag}-->", lambda m: f"<!--{tag}-->" + block + f"<!--/{tag}-->", t, flags=re.S)
     if new != t:
         index.write_text(new)
 
@@ -118,12 +118,36 @@ def charts(hist: dict, eps: dict, sig: dict):
     plt.close(fig)
 
 
+def comment_html(auto: dict, ed: dict | None, data_date: str) -> str:
+    out = []
+    use_ed = ed and ed.get("date", "") >= (pd.Timestamp(data_date) - pd.Timedelta(days=3)).strftime("%Y-%m-%d")
+    blocks = auto["blocks"]
+    if use_ed:
+        out.append(f'<div class="editorial"><span class="by">COMMENTO DI CLAUDE · {html.escape(ed["date"])}</span>'
+                   f'<p>{html.escape(ed.get("summary", ""))}</p></div>')
+        eb = {b["key"]: b for b in ed.get("blocks", [])}
+        keys = ["breve", "medio", "lungo", "pratico"]
+        blocks = [dict(b, **{k: v for k, v in eb.get(keys[i], {}).items() if k in ("headline", "text", "tone")})
+                  for i, b in enumerate(blocks)]
+    out.append('<div class="coms" id="coms">' + "".join(
+        f'<div class="com t-{b["tone"]}{" wide" if i == 3 else ""}"><h3>{html.escape(b["title"])}</h3>'
+        f'<b>{html.escape(b["headline"])}</b><p>{html.escape(b["text"])}</p></div>'
+        for i, b in enumerate(blocks)) + "</div>")
+    return "".join(out)
+
+
 def main():
     latest = json.loads((DATA / "latest.json").read_text())
     sig = json.loads((DATA / "signal.json").read_text())
     hist = json.loads((DATA / "history.json").read_text())
     eps = json.loads((DATA / "episodes.json").read_text())
     inject(ROOT / "index.html", banner_html(sig, latest))
+    ap = DATA / "commentary_auto.json"
+    if ap.exists():
+        auto = json.loads(ap.read_text())
+        ep = DATA / "commentary.json"
+        ed = json.loads(ep.read_text()) if ep.exists() else None
+        inject(ROOT / "index.html", comment_html(auto, ed, latest["date"]), "COMMENT")
     charts(hist, eps, sig)
     print("statico:", verdict(sig)["v"])
 

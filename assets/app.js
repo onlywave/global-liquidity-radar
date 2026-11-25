@@ -10,7 +10,7 @@ const dIt = s => s ? new Date(s+'T00:00:00').toLocaleDateString('it-CH',{day:'2-
 const bandOf = v => BANDS.find(b => v>=b[0] && v<b[1]) || BANDS[4];
 const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
 
-let L, H, E, A, S, charts = {}, lastGen = null;
+let L, H, E, A, S, C, CE, charts = {}, lastGen = null;
 
 async function j(p){ const r = await fetch(p+'?t='+Date.now()); if(!r.ok) throw new Error(p); return r.json(); }
 
@@ -18,10 +18,12 @@ async function load(first){
   try{
     [L,H,E,A] = await Promise.all([j('data/latest.json'),j('data/history.json'),j('data/episodes.json'),j('data/alerts.json')]);
     try{ S = await j('data/signal.json'); }catch(e){ S = null; }
+    try{ C = await j('data/commentary_auto.json'); }catch(e){ C = null; }
+    try{ CE = await j('data/commentary.json'); }catch(e){ CE = null; }
   }catch(e){ $('#fresh').textContent='dati non disponibili: il primo aggiornamento automatico è in corso'; return; }
   if(!first && L.generated===lastGen) return; lastGen = L.generated;
   const safe = (f,...x) => { try{ f(...x); }catch(e){ console.error(f.name, e); } };
-  safe(renderVerdict); safe(renderTop); safe(gauge); safe(renderSignal); safe(renderAlerts, first); safe(renderComps); safe(renderEpisodes); safe(renderSources);
+  safe(renderVerdict); safe(renderComment); safe(renderTop); safe(gauge); safe(renderSignal); safe(renderAlerts, first); safe(renderComps); safe(renderEpisodes); safe(renderSources);
   if(!first){ try{charts.hist&&charts.hist.destroy(); charts.spx&&charts.spx.destroy();}catch(e){} }
   if(typeof Chart!=='undefined'){ safe(histChart); safe(spxChart); }
   ['hist','spx'].forEach(id=>{ if(charts[id]) document.getElementById(id).parentElement.classList.add('live'); });
@@ -72,6 +74,25 @@ function gauge(){
   svg.innerHTML = h;
 }
 
+
+function renderComment(){
+  if(!C){ $('#com-sec').style.display='none'; return; }
+  const esc = t => String(t||'').replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  const lim = new Date(L.date); lim.setDate(lim.getDate()-3);
+  const useEd = CE && new Date(CE.date) >= lim;
+  let blocks = C.blocks.map(b=>Object.assign({},b));
+  let html = '';
+  if(useEd){
+    html += `<div class="editorial"><span class="by">COMMENTO DI CLAUDE · ${esc(CE.date)}</span><p>${esc(CE.summary)}</p>${(CE.sources||[]).length?'<p class="note">Fonti: '+CE.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener" style="color:#8fb3ff">${esc(s.title)}</a>`).join(' · ')+'</p>':''}</div>`;
+    const keys=['breve','medio','lungo','pratico'];
+    (CE.blocks||[]).forEach(b=>{ const i=keys.indexOf(b.key); if(i>=0) ['headline','text','tone'].forEach(k=>{ if(b[k]) blocks[i][k]=b[k]; }); });
+  }
+  html += '<div class="coms">'+blocks.map((b,i)=>`<div class="com t-${b.tone}${i==3?' wide':''}"><h3>${esc(b.title)}</h3><b>${esc(b.headline)}</b><p>${esc(b.text)}</p></div>`).join('')+'</div>';
+  const host = $('#com-sec'); host.querySelectorAll('.editorial,.coms').forEach(n=>n.remove());
+  host.querySelector('.head').insertAdjacentHTML('afterend', html);
+  $('#com-sub').textContent = (useEd ? 'Commento scritto da Claude, integrato con i dati aggiornati' : 'Commento automatico dai dati')+` · dati al ${dIt(L.date)}`;
+  $('#analogs tbody').innerHTML = (C.analogs||[]).map(a=>`<tr><td>${a.date}</td><td>${a.episode||'—'}</td><td>${fmt(a.score)}</td><td>${fmt(a.liq,2,true)}</td><td>${fmt(a.stress,2,true)}</td>${['r1m','r3m','r12m','mdd3m'].map(k=>`<td class="${cls(a[k])}">${a[k]==null?'—':fmt(a[k],1,true)+'%'}</td>`).join('')}</tr>`).join('');
+}
 
 function renderVerdict(){
   if(!S) return;

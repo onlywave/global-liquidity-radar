@@ -149,6 +149,9 @@ def r1(x, nd=2):
     return round(float(x), nd)
 
 
+RAW: dict = {}
+
+
 def build():
     raw, meta = {}, {}
     for sid in SERIES:
@@ -225,6 +228,8 @@ def build():
                        "dxy": dxy})
     last_i = df["score"].last_valid_index()
     df = df.loc[:last_i]
+    global RAW
+    RAW = raw
     return df, L.loc[:last_i], S.loc[:last_i], meta, spx_src
 
 
@@ -579,6 +584,12 @@ def main():
     (DATA / "episodes.json").write_text(json.dumps(dict(threshold=EP_THRESHOLD, episodes=eps[::-1],
                                                         interventions=events["interventions"]),
                                                    ensure_ascii=False, indent=1))
+    try:
+        from commentary import build_commentary
+        com = build_commentary(df, latest, sig, RAW, events, [e for e in eps if e.get("ongoing")])
+        (DATA / "commentary_auto.json").write_text(json.dumps(com, ensure_ascii=False, indent=1))
+    except Exception as e:  # noqa: BLE001
+        print("[warn] commento:", e, file=sys.stderr)
     (DATA / "signal.json").write_text(json.dumps(sig, ensure_ascii=False, indent=1))
     ap.write_text(json.dumps(log, ensure_ascii=False, indent=1))
     if os.environ.get("GLSI_NOTIFY", "1") == "1":

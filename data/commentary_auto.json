@@ -1,0 +1,117 @@
+{
+ "date": "2026-11-25",
+ "generated": "2026-11-25T08:41Z",
+ "kind": "auto",
+ "blocks": [
+  {
+   "title": "Breve (3–7 giorni)",
+   "tone": "neu",
+   "headline": "Pressione di mercato stabile o mista",
+   "text": "Stress composito settimanale +0,19 sull'ultima settimana. Su questo orizzonte i dati di liquidità non hanno capacità previsiva: conta l'umore di mercato. Lo stress è a un passo dalla soglia del segnale short: un nuovo rialzo di VIX o spread lo farebbe scattare."
+  },
+  {
+   "title": "Medio (1 mese)",
+   "tone": "neg",
+   "headline": "Deterioramento in corso",
+   "text": "Score -17,8 punti in 4 settimane (liquidità z -0,39, stress z +0,58). Liquidità netta globale -0,3% in 4 settimane e -2,6% in 13. Nelle settimane passate con uno score simile (±5 punti, 95 casi) l'S&P a 1 mese ha fatto in media -0,2% (57% positivi), contro +0,8% di tutte le settimane."
+  },
+  {
+   "title": "Lungo (12 mesi)",
+   "tone": "neu",
+   "headline": "In linea con la media storica, con esiti molto dispersi",
+   "text": "Con score intorno a 26,8 (95 settimane simili dal 2003) l'S&P a 12 mesi ha fatto in media +9,8% (71% positivi), contro +10,2% di media generale. Lo score da solo, a questo livello, non dà un vantaggio sull'anno: decide come evolvono liquidità e stress. Se lo score scende sotto 20 e poi risale, storicamente l'anno successivo è stato molto buono; se la stretta si prolunga come nel 2008 o nel 2022, no."
+  },
+  {
+   "title": "Considerazioni pratiche",
+   "tone": "neu",
+   "headline": "Cosa suggerisce lo storico",
+   "text": "Pre-allerta short: manca solo «stress z sopra +0,5». È il momento di decidere in anticipo le coperture, non di inseguire il mercato. Nessun segnale long: i rimbalzi in fase di stretta, senza miglioramento della liquidità, sono stati spesso fragili. I precedenti più simili a oggi sono 2023-03 (Banche regionali USA (SVB)), 2010-05 (Debito greco / flash crash), 2022-03 (Stretta monetaria 2022 / gilt). In questi 5 casi l'S&P a 12 mesi ha fatto in media +13,9%, ma con un calo massimo medio di -6,9% nei 3 mesi successivi. Episodio di stress in corso: «Rout tecnologico post-midterm», drawdown S&P finora -11,5%; per questo episodio non c'è ancora un intervento di banca centrale in catalogo; negli episodi passati la svolta è arrivata quasi sempre dopo un intervento."
+  }
+ ],
+ "analogs": [
+  {
+   "date": "2023-03-01",
+   "dist": 0.33,
+   "score": 24.7,
+   "liq": -0.81,
+   "stress": 0.56,
+   "episode": "Banche regionali USA (SVB)",
+   "r1m": 1.6,
+   "r3m": 5.9,
+   "r12m": 27.0,
+   "mdd3m": -4.5
+  },
+  {
+   "date": "2010-05-19",
+   "dist": 0.42,
+   "score": 24.3,
+   "liq": -0.99,
+   "stress": 0.4,
+   "episode": "Debito greco / flash crash",
+   "r1m": 2.7,
+   "r3m": -1.5,
+   "r12m": 22.6,
+   "mdd3m": -6.0
+  },
+  {
+   "date": "2022-03-16",
+   "dist": 0.68,
+   "score": 25.7,
+   "liq": -0.32,
+   "stress": 0.98,
+   "episode": "Stretta monetaria 2022 / gilt",
+   "r1m": -1.6,
+   "r3m": -17.7,
+   "r12m": -12.2,
+   "mdd3m": -17.7
+  },
+  {
+   "date": "2024-12-18",
+   "dist": 0.74,
+   "score": 25.8,
+   "liq": -1.12,
+   "stress": 0.18,
+   "episode": null,
+   "r1m": 1.1,
+   "r3m": -4.4,
+   "r12m": 15.2,
+   "mdd3m": -4.9
+  },
+  {
+   "date": "2019-08-14",
+   "dist": 0.74,
+   "score": 33.1,
+   "liq": -0.39,
+   "stress": 0.49,
+   "episode": "Guerra dei dazi / repo spike",
+   "r1m": 4.1,
+   "r3m": 8.0,
+   "r12m": 16.8,
+   "mdd3m": -1.4
+  }
+ ],
+ "conditional": {
+  "1m": {
+   "n": 95,
+   "mean": -0.2,
+   "pos": 57.0,
+   "base_mean": 0.8,
+   "base_pos": 65.0
+  },
+  "3m": {
+   "n": 95,
+   "mean": 1.6,
+   "pos": 63.0,
+   "base_mean": 2.5,
+   "base_pos": 72.0
+  },
+  "12m": {
+   "n": 95,
+   "mean": 9.8,
+   "pos": 71.0,
+   "base_mean": 10.2,
+   "base_pos": 81.0
+  }
+ },
+ "note": "Commento generato automaticamente dai dati a ogni aggiornamento. Non è consulenza finanziaria."
+}
