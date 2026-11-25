@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T17:44Z",
+ "generated": "2026-11-25T19:34Z",
  "date": "2026-11-25",
  "score": 20.1,
  "liq": -0.76,
@@ -103,10 +103,10 @@
    "src": "NY Fed",
    "id": "RRPONTSYD",
    "url": "https://fred.stlouisfed.org/series/RRPONTSYD",
-   "last_date": "2026-11-24",
-   "last_value": 0.301,
+   "last_date": "2026-11-25",
+   "last_value": 0.3,
    "ok": true,
-   "age_days": 1,
+   "age_days": 0,
    "status": "ok"
   },
   {
