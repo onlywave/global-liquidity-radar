@@ -1,37 +1,49 @@
 {
  "date": "2026-11-25",
- "generated": "2026-11-25T15:53Z",
+ "generated": "2026-11-25T17:44Z",
  "kind": "auto",
  "blocks": [
   {
    "title": "Breve (3–7 giorni)",
    "tone": "neg",
    "headline": "Pressione di mercato in aumento",
-   "text": "VIX a 26,4 (+0,9 punti in 5 sedute; massimo a 20 sedute 35,9); spread high yield 3,72% (+29 pb in 5 sedute); S&P 500 -1,9% in 5 sedute. Stress composito settimanale +0,26 sull'ultima settimana. Su questo orizzonte i dati di liquidità non hanno capacità previsiva: conta l'umore di mercato."
+   "text": "VIX a 26,4 (+0,9 punti in 5 sedute; massimo a 20 sedute 35,9); spread high yield 3,72% (+29 pb in 5 sedute); S&P 500 -1,9% in 5 sedute. Stress composito settimanale +0,59 sull'ultima settimana. Su questo orizzonte i dati di liquidità non hanno capacità previsiva: conta l'umore di mercato."
   },
   {
    "title": "Medio (1 mese)",
    "tone": "neg",
    "headline": "Deterioramento in corso",
-   "text": "Score -19,5 punti in 4 settimane (liquidità z -0,38, stress z +0,69). Liquidità netta globale -0,3% in 4 settimane e -2,6% in 13. Nelle settimane passate con uno score simile (±5 punti, 80 casi) l'S&P a 1 mese ha fatto in media -0,0% (56% positivi), contro +0,8% di tutte le settimane."
+   "text": "Score -24,4 punti in 4 settimane (liquidità z -0,38, stress z +1,02). Liquidità netta globale -0,3% in 4 settimane e -2,6% in 13. Nelle settimane passate con uno score simile (±5 punti, 58 casi) l'S&P a 1 mese ha fatto in media +0,4% (55% positivi), contro +0,8% di tutte le settimane."
   },
   {
    "title": "Lungo (12 mesi)",
    "tone": "neg",
    "headline": "Rischio elevato, ma i 12 mesi restano incerti",
-   "text": "Con score intorno a 25,0 (80 settimane simili dal 2003) l'S&P a 12 mesi ha fatto in media +9,4% (68% positivi), contro +10,2% di media generale. Lo score da solo, a questo livello, non dà un vantaggio sull'anno: decide come evolvono liquidità e stress. Se lo score scende sotto 20 e poi risale, storicamente l'anno successivo è stato molto buono; se la stretta si prolunga come nel 2008 o nel 2022, no."
+   "text": "Con score intorno a 20,1 (58 settimane simili dal 2003) l'S&P a 12 mesi ha fatto in media +14,3% (74% positivi), contro +10,2% di media generale. Lo score da solo, a questo livello, non dà un vantaggio sull'anno: decide come evolvono liquidità e stress. Se lo score scende sotto 20 e poi risale, storicamente l'anno successivo è stato molto buono; se la stretta si prolunga come nel 2008 o nel 2022, no."
   },
   {
    "title": "Considerazioni pratiche",
    "tone": "neu",
    "headline": "Cosa suggerisce lo storico",
-   "text": "Segnale short attivo: storicamente conveniva ridurre l'esposizione o coprirsi, non necessariamente vendere allo scoperto. Nessun segnale long: i rimbalzi in fase di stretta, senza miglioramento della liquidità, sono stati spesso fragili. I precedenti più simili a oggi sono 2023-03 (Banche regionali USA (SVB)), 2010-05 (Debito greco / flash crash), 2022-03 (Stretta monetaria 2022 / gilt). In questi 5 casi l'S&P a 12 mesi ha fatto in media +16,6%, ma con un calo massimo medio di -10,3% nei 3 mesi successivi. Episodio di stress in corso: «Rout tecnologico post-midterm», drawdown S&P finora -11,5%; per questo episodio non c'è ancora un intervento di banca centrale in catalogo; negli episodi passati la svolta è arrivata quasi sempre dopo un intervento."
+   "text": "Segnale short attivo: storicamente conveniva ridurre l'esposizione o coprirsi, non necessariamente vendere allo scoperto. Nessun segnale long: i rimbalzi in fase di stretta, senza miglioramento della liquidità, sono stati spesso fragili. I precedenti più simili a oggi sono 2022-03 (Stretta monetaria 2022 / gilt), 2023-03 (Banche regionali USA (SVB)), 2010-05 (Debito greco / flash crash). In questi 5 casi l'S&P a 12 mesi ha fatto in media -0,3%, ma con un calo massimo medio di -4,8% nei 3 mesi successivi. Episodio di stress in corso: «Rout tecnologico post-midterm», drawdown S&P finora -11,5%; per questo episodio non c'è ancora un intervento di banca centrale in catalogo; negli episodi passati la svolta è arrivata quasi sempre dopo un intervento."
   }
  ],
  "analogs": [
   {
+   "date": "2022-03-09",
+   "dist": 0.56,
+   "score": 20.8,
+   "liq": -0.34,
+   "stress": 1.29,
+   "episode": "Stretta monetaria 2022 / gilt",
+   "r1m": 6.8,
+   "r3m": -7.2,
+   "r12m": -8.2,
+   "mdd3m": -7.2
+  },
+  {
    "date": "2023-03-01",
-   "dist": 0.1,
+   "dist": 0.72,
    "score": 24.7,
    "liq": -0.81,
    "stress": 0.56,
@@ -42,73 +54,61 @@
    "mdd3m": -4.5
   },
   {
-   "date": "2010-05-19",
-   "dist": 0.31,
-   "score": 24.0,
-   "liq": -0.99,
-   "stress": 0.42,
+   "date": "2010-05-26",
+   "dist": 0.76,
+   "score": 21.3,
+   "liq": -1.01,
+   "stress": 0.58,
    "episode": "Debito greco / flash crash",
-   "r1m": 2.7,
-   "r3m": -1.5,
-   "r12m": 22.6,
-   "mdd3m": -6.0
+   "r1m": -1.2,
+   "r3m": -2.3,
+   "r12m": 22.2,
+   "mdd3m": -6.1
   },
   {
-   "date": "2022-03-16",
-   "dist": 0.62,
-   "score": 26.0,
-   "liq": -0.32,
-   "stress": 0.96,
-   "episode": "Stretta monetaria 2022 / gilt",
+   "date": "2008-06-25",
+   "dist": 0.99,
+   "score": 19.1,
+   "liq": -0.2,
+   "stress": 1.54,
+   "episode": "Bear Stearns",
    "r1m": -1.6,
-   "r3m": -17.7,
-   "r12m": -12.2,
-   "mdd3m": -17.7
+   "r3m": -5.1,
+   "r12m": -28.1,
+   "mdd3m": -5.1
   },
   {
-   "date": "2020-02-26",
-   "dist": 0.88,
-   "score": 32.3,
-   "liq": -0.33,
-   "stress": 0.59,
-   "episode": "COVID-19",
-   "r1m": -14.0,
-   "r3m": 3.0,
-   "r12m": 29.0,
-   "mdd3m": -22.0
-  },
-  {
-   "date": "2019-08-14",
-   "dist": 0.92,
-   "score": 33.3,
-   "liq": -0.39,
-   "stress": 0.47,
-   "episode": "Guerra dei dazi / repo spike",
-   "r1m": 4.1,
-   "r3m": 8.0,
-   "r12m": 16.8,
-   "mdd3m": -1.4
+   "date": "2007-09-05",
+   "dist": 1.35,
+   "score": 22.9,
+   "liq": 0.24,
+   "stress": 1.72,
+   "episode": "Crisi subprime / quant quake",
+   "r1m": 7.2,
+   "r3m": 3.5,
+   "r12m": -14.5,
+   "mdd3m": -0.9
   }
  ],
  "conditional": {
   "1m": {
-   "n": 80,
-   "mean": -0.0,
-   "pos": 56.0,
+   "n": 58,
+   "mean": 0.4,
+   "pos": 55.0,
    "base_mean": 0.8,
    "base_pos": 65.0
   },
   "3m": {
-   "n": 80,
-   "mean": 1.1,
-   "pos": 60.0,
+   "n": 58,
+   "mean": -0.2,
+   "pos": 53.0,
    "base_mean": 2.5,
    "base_pos": 72.0
   },
   "12m": {
-   "n": 80,
-   "mean": 9.4,
-   "pos": 68.0,
+   "n": 58,
+   "mean": 14.3,
+   "pos": 74.0,
    "base_mean": 10.2,
    "base_pos": 81.0
   }

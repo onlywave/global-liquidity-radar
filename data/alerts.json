@@ -1,6 +1,12 @@
 {
  "log": [
   {
+   "level": "media",
+   "code": "SOGLIA",
+   "date": "2026-11-25",
+   "text": "Score 20.1 a meno di 2 punti dalla soglia 20"
+  },
+  {
    "level": "alta",
    "code": "SHORT",
    "date": "2026-11-25",
@@ -16,9 +22,15 @@
  "active": [
   {
    "level": "media",
+   "code": "SOGLIA",
+   "date": "2026-11-25",
+   "text": "Score 20.1 a meno di 2 punti dalla soglia 20"
+  },
+  {
+   "level": "media",
    "code": "MOMENTUM",
    "date": "2026-11-25",
-   "text": "Score -19.5 punti in 4 settimane"
+   "text": "Score -24.4 punti in 4 settimane"
   },
   {
    "level": "alta",
@@ -392,7 +404,7 @@
    "date": "2020-06-03",
    "frm": "Neutrale",
    "to": "Allentamento",
-   "score": 68.5
+   "score": 68.4
   },
   {
    "date": "2020-05-20",

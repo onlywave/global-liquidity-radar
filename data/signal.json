@@ -12,7 +12,7 @@
   {
    "text": "Stress z sopra +0,5",
    "ok": true,
-   "value": 0.59
+   "value": 0.92
   },
   {
    "text": "S&P 500 sotto la media a 40 settimane",
@@ -21,27 +21,27 @@
   }
  ],
  "date": "2026-11-25",
- "score": 25.0,
+ "score": 20.1,
  "checks": [
   {
    "text": "Score sotto 20 nelle ultime 8 settimane",
    "ok": false,
-   "value": 25.0
+   "value": 20.1
   },
   {
    "text": "Score +8 punti in 4 settimane",
    "ok": false,
-   "value": -19.5
+   "value": -24.4
   },
   {
    "text": "Score sotto 20 nelle ultime 26 settimane",
    "ok": false,
-   "value": 25.0
+   "value": 20.1
   },
   {
    "text": "Score sopra 40",
    "ok": false,
-   "value": 25.0
+   "value": 20.1
   }
  ],
  "stats": {
@@ -176,7 +176,7 @@
   {
    "tier": "SHORT",
    "date": "2026-11-25",
-   "score": 25.0,
+   "score": 20.1,
    "spx": 7201.0,
    "r3m": null,
    "r6m": null,
