@@ -1,49 +1,37 @@
 {
- "date": "2026-11-25",
+ "date": "2026-11-26",
  "author": "Claude",
- "summary": "Aggiornamento delle 19:00: il segnale SHORT / riduzione rischio si è rafforzato. Nel pomeriggio sono arrivati due dati: l'indice di stress della St. Louis Fed per la settimana al 20 novembre (−0,07, da −0,87: il salto più ampio dall'inizio dell'episodio) e lo spread high yield di martedì 24, salito a 3,72% (+9 pb in un giorno nonostante il rimbalzo di lunedì). Lo stress composito è passato da +0,53 a +0,92 e il GLSI è sceso a 20,1, a un passo dalla fascia Siccità (sotto 20).",
+ "summary": "Mercoledì 25, ultima seduta piena prima del Ringraziamento (oggi Wall Street è chiusa), l'S&P 500 ha perso lo 0,25% a 7.183 punti e il Nasdaq lo 0,6%, con volumi bassi e la tecnologia ancora sotto pressione per le vendite sui titoli legati all'intelligenza artificiale. Il VIX è risalito sopra 28. Il GLSI è a 20,1, in fascia Stretta (20-40) e a solo 0,1 punti dalla fascia Siccità: lo score ha perso 24,4 punti in 4 settimane. Il segnale SHORT / riduzione rischio è attivo dal 25 novembre; nessun segnale long.",
  "blocks": [
   {
    "key": "breve",
    "tone": "neg",
-   "headline": "Short confermato, credito sotto pressione",
-   "text": "Lo stress ora è +0,92, ben sopra la soglia di +0,5: il segnale non è più al limite. Il dettaglio che conta è il credito: lo spread high yield si è allargato anche nel giorno dopo il +4,7% delle azioni, cioè gli investitori obbligazionari non credono al rimbalzo. Il VIX resta a 26. Settimana del Ringraziamento con pochi scambi: possibili movimenti ampi su volumi bassi. Se il GLSI scende sotto 20 si accende anche l'allerta long (fascia Siccità), che storicamente ha preceduto i migliori ingressi, ma solo dopo la risalita dello score."
+   "headline": "Tecnologia debole, GLSI a un passo da 20",
+   "text": "L'umore resta teso: secondo calo consecutivo per l'S&P 500 e Nasdaq circa 14,5% sotto il massimo del 6 ottobre, mentre i soldi si spostano verso settori difensivi come la sanità. Nei dati del cruscotto il VIX è 26,4 e lo spread high yield 3,72% (dati del 24 novembre), con lo stress composito a +0,92, ben oltre la soglia di +0,5 del segnale short. I mercati riaprono venerdì per una seduta che di norma è breve e con pochi scambi, quindi i movimenti possono essere ampi. Basta un piccolo peggioramento perché lo score scenda sotto 20, entrando in Siccità: è l'allerta che storicamente precede gli ingressi long, ma non è ancora un ingresso."
   },
   {
    "key": "medio",
    "tone": "neg",
-   "headline": "Il nodo del mese è la Fed del 9 dicembre",
-   "text": "Il rimbalzo non cambia la liquidità. La Fed ha alzato i tassi a settembre per la prima volta dal 2023 e il mercato tiene aperta l'ipotesi di un secondo rialzo a dicembre. Il dollaro forte drena liquidità dal resto del mondo, e la liquidità netta globale è scesa del 2,6% in 13 settimane. Nel 2022, con la Fed che stringeva, i rimbalzi forti, come quello dell'estate, si sono esauriti nel giro di poche settimane. Finché la Fed non cambia rotta, il quadro a un mese resta debole."
+   "headline": "Fed verso un rialzo, dollaro forte",
+   "text": "Il fattore del mese è la Fed: i mercati di previsione assegnano oltre il 90% di probabilità a un rialzo di 25 punti base alla riunione di dicembre, dopo un'inflazione più alta del previsto. Il dollaro forte pesa molto sullo score (componente dollaro z -1,56) e la liquidità netta globale è scesa dello 0,3% in 4 settimane, del 2,6% in 13 e del 5,6% in un anno. Non ho trovato notizie aggiornate su BCE, petrolio e dollaro degli ultimi giorni, quindi su questi punti mi baso solo sui dati del cruscotto. Il precedente più simile è marzo 2022: con la Fed che continuava a stringere, lo score è rimasto basso e i rimbalzi si sono spenti in poche settimane (S&P -7,2% a 3 mesi)."
   },
   {
    "key": "lungo",
    "tone": "neu",
-   "headline": "Esito aperto: decide la politica monetaria",
-   "text": "I tre precedenti più simili a oggi danno risposte opposte. Marzo 2023 (SVB) e maggio 2010 (debito greco): +27% e +23% a 12 mesi, perché le banche centrali hanno risposto subito con liquidità. Marzo 2022: −12% a 12 mesi, perché la Fed ha continuato ad alzare i tassi. Oggi la Fed stringe per l'inflazione spinta dall'energia (guerra con l'Iran): finché resta così, il caso più vicino è il 2022."
+   "headline": "Esito aperto, decide la risposta della Fed",
+   "text": "I cinque precedenti più simili danno esiti molto diversi a 12 mesi: +27,0% dopo marzo 2023 (SVB) e +22,2% dopo maggio 2010 (debito greco), ma -8,2% dopo marzo 2022, -14,5% dopo settembre 2007 e -28,1% dopo giugno 2008. Nelle 58 settimane con score simile dal 2003 l'S&P a 12 mesi ha fatto in media +14,3% (74% positivi), poco diverso dalla media generale (+10,2%). Il segnale short ha funzionato bene fino al 2014 (media a 3 mesi -23,8%), molto meno dal 2015 (+1,1%). La differenza l'ha fatta quasi sempre la banca centrale: quando è intervenuta con liquidità l'anno dopo è stato buono, quando ha continuato a stringere no. Oggi la Fed sta stringendo, quindi l'incertezza è alta."
   },
   {
    "key": "pratico",
-   "tone": "neg",
-   "headline": "Ridurre il rischio ora, preparare la lista acquisti",
-   "text": "1) Il segnale va usato come freno: coperture parziali o riduzione della parte più rischiosa (tecnologia molto cara, posizioni a leva), non short pieno. Dei 6 ingressi passati solo agosto 2008 è stato seguito da un crollo (−33% a 3 mesi); dicembre 2018 e marzo 2023, arrivati come oggi dopo una correzione già fatta, erano vicini ai minimi. 2) Lo spread high yield che si allarga mentre le azioni rimbalzano è il campanello più serio: nel 2008 e nel 2022 è stato il credito ad anticipare le azioni. 3) Score a 20,1: se scende sotto 20 e poi risale di 8 punti in 4 settimane scatta il long anticipato, storicamente positivo a 12 mesi in tutti e 6 i casi. Tenere pronta la liquidità e la lista dei titoli. 4) Da guardare: spread high yield ogni giorno, NFCI e St. Louis la prossima settimana, Fed del 9 dicembre. Sono considerazioni basate sui dati storici, non consulenza finanziaria."
+   "tone": "neu",
+   "headline": "Freno sul rischio, pronti per il dopo",
+   "text": "1) Il segnale short va letto come invito a ridurre il rischio o coprirsi, non a vendere allo scoperto a piena forza: nelle 42 settimane storiche in questo stato l'S&P a 3 mesi è stato positivo nel 43% dei casi, con calo massimo medio a 6 mesi del 12,2%; agosto 2008 fu un crollo, dicembre 2018 e marzo 2023 erano vicini ai minimi. 2) Se lo score va sotto 20 scatta l'allerta: in passato è stata seguita da cali ulteriori (in media -15,1% nei 6 mesi) ma anche da buoni 12 mesi (+15,9% medio, 83% positivi). Il segnale più affidabile è il long anticipato, cioè la risalita di almeno 8 punti in 4 settimane dopo essere scesi sotto 20: +27,2% medio a 12 mesi, positivo in tutti i 6 casi. 3) Da osservare nei prossimi giorni: lo spread high yield (se sale verso il 4%, come nell'aprile 2025, il credito conferma lo stress), il VIX sopra 30, i dati settimanali NFCI e St. Louis Fed, e qualsiasi segnale di cambio di tono della Fed prima della riunione di dicembre. Sono considerazioni basate sui dati storici, non consulenza finanziaria."
   }
  ],
  "sources": [
-  {
-   "title": "CNBC — mercati del 23 novembre 2026",
-   "url": "https://www.cnbc.com/2026/11/22/stock-market-today-live-updates.html"
-  },
-  {
-   "title": "Yahoo Finance — settimana al 20 novembre 2026",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-nov-23-073600160.html"
-  },
-  {
-   "title": "Babypips — riepilogo mercati 23 novembre 2026",
-   "url": "https://www.babypips.com/news/daily-financial-forex-market-recap-2026-11-23"
-  },
-  {
-   "title": "Axios — rialzo Fed di settembre 2026",
-   "url": "https://www.axios.com/2026/09/16/fed-rates-warsh-trump"
-  }
+  {"title": "JournalArta — US stocks slip before Thanksgiving as tech weighs on S&P 500 (26/11/2026)", "url": "https://journalarta.com/en/2026/11/26/sp-500-slips-as-tech-pressure-offsets-dow-gains/"},
+  {"title": "Kalshi — Fed rate odds", "url": "https://kalshi.com/economics/fed-rate-odds"},
+  {"title": "FXStreet — Fed expectations power USD (11/11/2026)", "url": "https://www.fxstreet.com/analysis/fed-expectations-power-usd-202611111739"},
+  {"title": "Predictmarkets — Fed December 2026 rate decision odds", "url": "https://predictmarkets.com/odds/fed-rate-decision/december-2026/"}
  ]
 }
