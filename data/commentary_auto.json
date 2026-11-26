@@ -1,6 +1,6 @@
 {
  "date": "2026-11-25",
- "generated": "2026-11-26T00:11Z",
+ "generated": "2026-11-26T02:57Z",
  "kind": "auto",
  "blocks": [
   {
@@ -13,7 +13,7 @@
    "title": "Medio (1 mese)",
    "tone": "neg",
    "headline": "Deterioramento in corso",
-   "text": "Score -24,4 punti in 4 settimane (liquidità z -0,38, stress z +1,02). Liquidità netta globale -0,3% in 4 settimane e -2,6% in 13. Nelle settimane passate con uno score simile (±5 punti, 58 casi) l'S&P a 1 mese ha fatto in media +0,4% (55% positivi), contro +0,8% di tutte le settimane."
+   "text": "Score -24,4 punti in 4 settimane (liquidità z -0,38, stress z +1,02). Liquidità netta globale -0,3% in 4 settimane e -2,6% in 13. Nelle settimane passate con uno score simile (±5 punti, 58 casi) l'S&P a 1 mese ha fatto in media +0,4% (55% positivi), contro +0,7% di tutte le settimane."
   },
   {
    "title": "Lungo (12 mesi)",
@@ -95,7 +95,7 @@
    "n": 58,
    "mean": 0.4,
    "pos": 55.0,
-   "base_mean": 0.8,
+   "base_mean": 0.7,
    "base_pos": 65.0
   },
   "3m": {

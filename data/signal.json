@@ -17,7 +17,7 @@
   {
    "text": "S&P 500 sotto la media a 40 settimane",
    "ok": true,
-   "value": -2.1
+   "value": -2.3
   }
  ],
  "date": "2026-11-25",
@@ -177,7 +177,7 @@
    "tier": "SHORT",
    "date": "2026-11-25",
    "score": 20.1,
-   "spx": 7201.0,
+   "spx": 7183.0,
    "r3m": null,
    "r6m": null,
    "r12m": null,
