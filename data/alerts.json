@@ -1,6 +1,19 @@
 {
  "log": [
   {
+   "level": "alta",
+   "code": "REGIME",
+   "date": "2026-12-02",
+   "text": "Cambio di regime: Siccità → Stretta (score 19.2 → 20.7)",
+   "dir": "up"
+  },
+  {
+   "level": "media",
+   "code": "MOMENTUM",
+   "date": "2026-12-02",
+   "text": "Score -18.6 punti in 4 settimane"
+  },
+  {
    "level": "media",
    "code": "SOGLIA",
    "date": "2026-11-25",
@@ -21,25 +34,32 @@
  ],
  "active": [
   {
-   "level": "media",
-   "code": "SOGLIA",
-   "date": "2026-11-25",
-   "text": "Score 20.1 a meno di 2 punti dalla soglia 20"
+   "level": "alta",
+   "code": "REGIME",
+   "date": "2026-12-02",
+   "text": "Cambio di regime: Siccità → Stretta (score 19.2 → 20.7)",
+   "dir": "up"
   },
   {
    "level": "media",
    "code": "MOMENTUM",
-   "date": "2026-11-25",
-   "text": "Score -24.4 punti in 4 settimane"
-  },
-  {
-   "level": "alta",
-   "code": "SHORT",
-   "date": "2026-11-25",
-   "text": "Segnale SHORT / riduzione rischio: Liquidità z < −0,5 e stress z > +0,5 con S&P 500 sotto la media mobile a 40 settimane"
+   "date": "2026-12-02",
+   "text": "Score -18.6 punti in 4 settimane"
   }
  ],
  "regime_changes": [
+  {
+   "date": "2026-12-02",
+   "frm": "Siccità",
+   "to": "Stretta",
+   "score": 20.7
+  },
+  {
+   "date": "2026-11-25",
+   "frm": "Stretta",
+   "to": "Siccità",
+   "score": 19.2
+  },
   {
    "date": "2026-11-04",
    "frm": "Neutrale",

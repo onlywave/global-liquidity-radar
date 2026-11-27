@@ -7,41 +7,41 @@
   {
    "text": "Liquidità z sotto −0,5",
    "ok": true,
-   "value": -0.76
+   "value": -0.71
   },
   {
    "text": "Stress z sopra +0,5",
    "ok": true,
-   "value": 0.92
+   "value": 0.93
   },
   {
    "text": "S&P 500 sotto la media a 40 settimane",
    "ok": true,
-   "value": -2.3
+   "value": -1.8
   }
  ],
- "date": "2026-11-25",
- "score": 20.1,
+ "date": "2026-12-02",
+ "score": 20.7,
  "checks": [
   {
    "text": "Score sotto 20 nelle ultime 8 settimane",
-   "ok": false,
-   "value": 20.1
+   "ok": true,
+   "value": 19.2
   },
   {
    "text": "Score +8 punti in 4 settimane",
    "ok": false,
-   "value": -24.4
+   "value": -18.6
   },
   {
    "text": "Score sotto 20 nelle ultime 26 settimane",
-   "ok": false,
-   "value": 20.1
+   "ok": true,
+   "value": 19.2
   },
   {
    "text": "Score sopra 40",
    "ok": false,
-   "value": 20.1
+   "value": 20.7
   }
  ],
  "stats": {
@@ -63,8 +63,8 @@
     "pos": 83.0
    },
    "mdd6m": {
-    "n": 6,
-    "mean": -15.1,
+    "n": 7,
+    "mean": -13.0,
     "pos": 0.0
    }
   },
@@ -117,22 +117,22 @@
   "BASE": {
    "rule": "Tutte le settimane dal 2003 (riferimento)",
    "r3m": {
-    "n": 1121,
+    "n": 1122,
     "mean": 2.5,
     "pos": 72.0
    },
    "r6m": {
-    "n": 1108,
+    "n": 1109,
     "mean": 5.0,
     "pos": 75.0
    },
    "r12m": {
-    "n": 1082,
+    "n": 1083,
     "mean": 10.2,
     "pos": 81.0
    },
    "mdd6m": {
-    "n": 1133,
+    "n": 1134,
     "mean": -6.1,
     "pos": null
    }
@@ -156,8 +156,8 @@
     "pos": 86.0
    },
    "mdd6m": {
-    "n": 43,
-    "mean": -12.2,
+    "n": 44,
+    "mean": -11.9,
     "pos": null
    },
    "r3m_2003_14": {
@@ -174,14 +174,24 @@
  },
  "history": [
   {
-   "tier": "SHORT",
+   "tier": "ALLERTA",
    "date": "2026-11-25",
-   "score": 20.1,
+   "score": 19.2,
    "spx": 7183.0,
    "r3m": null,
    "r6m": null,
    "r12m": null,
-   "mdd6m": null
+   "mdd6m": 0.0
+  },
+  {
+   "tier": "SHORT",
+   "date": "2026-11-25",
+   "score": 19.2,
+   "spx": 7183.0,
+   "r3m": null,
+   "r6m": null,
+   "r12m": null,
+   "mdd6m": 0.0
   },
   {
    "tier": "CONFERMATO",
