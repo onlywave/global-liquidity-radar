@@ -1,37 +1,39 @@
 {
- "date": "2026-11-26",
+ "date": "2026-11-27",
  "author": "Claude",
- "summary": "Mercoledì 25, ultima seduta piena prima del Ringraziamento (oggi Wall Street è chiusa), l'S&P 500 ha perso lo 0,25% a 7.183 punti e il Nasdaq lo 0,6%, con volumi bassi e la tecnologia ancora sotto pressione per le vendite sui titoli legati all'intelligenza artificiale. Il VIX è risalito sopra 28. Il GLSI è a 20,1, in fascia Stretta (20-40) e a solo 0,1 punti dalla fascia Siccità: lo score ha perso 24,4 punti in 4 settimane. Il segnale SHORT / riduzione rischio è attivo dal 25 novembre; nessun segnale long.",
+ "summary": "Dopo la pausa del Ringraziamento Wall Street riapre oggi per mezza seduta (chiusura alle 13 di New York). Mercoledì 25 l'S&P 500 ha chiuso a 7.182,78 (-0,25%) e il Nasdaq a 23.585,80 (-0,62%), dopo una mattinata molto pesante sui titoli dell'intelligenza artificiale (S&P fino a -2,7%) recuperata in gran parte nel pomeriggio; pesano anche un'inflazione PCE sopra il previsto e nuovi piani sui dazi. Il GLSI è a 20,1, in fascia Stretta (20-40) e a soli 0,1 punti dalla Siccità, con -24,4 punti in 4 settimane. Il segnale SHORT / riduzione rischio è attivo dal 25 novembre; nessun segnale long.",
  "blocks": [
   {
    "key": "breve",
    "tone": "neg",
-   "headline": "Tecnologia debole, GLSI a un passo da 20",
-   "text": "L'umore resta teso: secondo calo consecutivo per l'S&P 500 e Nasdaq circa 14,5% sotto il massimo del 6 ottobre, mentre i soldi si spostano verso settori difensivi come la sanità. Nei dati del cruscotto il VIX è 26,4 e lo spread high yield 3,72% (dati del 24 novembre), con lo stress composito a +0,92, ben oltre la soglia di +0,5 del segnale short. I mercati riaprono venerdì per una seduta che di norma è breve e con pochi scambi, quindi i movimenti possono essere ampi. Basta un piccolo peggioramento perché lo score scenda sotto 20, entrando in Siccità: è l'allerta che storicamente precede gli ingressi long, ma non è ancora un ingresso."
+   "headline": "Volatilità alta, seduta corta e sottile",
+   "text": "Mercoledì il VIX ha chiuso intorno a 28 (le fonti danno 27,98 o 28,29), più alto del 26,4 registrato nei dati del cruscotto; lo spread high yield nel cruscotto è 3,72%, salito di 29 punti base in 5 sedute. Lo stress composito è a +0,92, ben sopra la soglia +0,5 del segnale short, e la liquidità a -0,76, sotto la soglia -0,5: entrambe le condizioni short sono soddisfatte con margine, e l'S&P è il 2,3% sotto la media a 40 settimane. La seduta di oggi è breve e con pochi scambi, quindi i movimenti possono essere esagerati in entrambe le direzioni. Basta un lieve peggioramento perché lo score scenda sotto 20 ed entri in Siccità: è un'allerta, non un ingresso."
   },
   {
    "key": "medio",
    "tone": "neg",
-   "headline": "Fed verso un rialzo, dollaro forte",
-   "text": "Il fattore del mese è la Fed: i mercati di previsione assegnano oltre il 90% di probabilità a un rialzo di 25 punti base alla riunione di dicembre, dopo un'inflazione più alta del previsto. Il dollaro forte pesa molto sullo score (componente dollaro z -1,56) e la liquidità netta globale è scesa dello 0,3% in 4 settimane, del 2,6% in 13 e del 5,6% in un anno. Non ho trovato notizie aggiornate su BCE, petrolio e dollaro degli ultimi giorni, quindi su questi punti mi baso solo sui dati del cruscotto. Il precedente più simile è marzo 2022: con la Fed che continuava a stringere, lo score è rimasto basso e i rimbalzi si sono spenti in poche settimane (S&P -7,2% a 3 mesi)."
+   "headline": "Fed verso il rialzo del 9 dicembre",
+   "text": "Il tema del mese è una Fed che stringe: dopo il PCE di ottobre (core al 3,3%, un decimo sopra le attese) i futures prezzano per intero un rialzo di 25 punti base alla riunione dell'8-9 dicembre, e i verbali dell'ultima riunione sono stati letti come molto restrittivi. Il dollaro è vicino ai massimi da circa 19 mesi e nel cruscotto è il componente che pesa di più (z -1,56); la liquidità netta globale è scesa dello 0,3% in 4 settimane, del 2,6% in 13 e del 5,6% in un anno. Il petrolio resta alto e volatile per la guerra con l'Iran (mercoledì in rialzo, tra 84 e 89 dollari a seconda del contratto). Sulla BCE non ho trovato notizie affidabili e aggiornate per dicembre 2026, quindi mi baso solo sui dati. Il precedente più vicino è marzo 2022: con la Fed che continuava a stringere lo score è rimasto basso e l'S&P a 3 mesi ha fatto -7,2%."
   },
   {
    "key": "lungo",
    "tone": "neu",
-   "headline": "Esito aperto, decide la risposta della Fed",
-   "text": "I cinque precedenti più simili danno esiti molto diversi a 12 mesi: +27,0% dopo marzo 2023 (SVB) e +22,2% dopo maggio 2010 (debito greco), ma -8,2% dopo marzo 2022, -14,5% dopo settembre 2007 e -28,1% dopo giugno 2008. Nelle 58 settimane con score simile dal 2003 l'S&P a 12 mesi ha fatto in media +14,3% (74% positivi), poco diverso dalla media generale (+10,2%). Il segnale short ha funzionato bene fino al 2014 (media a 3 mesi -23,8%), molto meno dal 2015 (+1,1%). La differenza l'ha fatta quasi sempre la banca centrale: quando è intervenuta con liquidità l'anno dopo è stato buono, quando ha continuato a stringere no. Oggi la Fed sta stringendo, quindi l'incertezza è alta."
+   "headline": "Precedenti divisi, decide la banca centrale",
+   "text": "I cinque precedenti più simili danno esiti opposti a 12 mesi: +27,0% dopo marzo 2023 (SVB) e +22,2% dopo maggio 2010 (debito greco), ma -8,2% dopo marzo 2022, -14,5% dopo settembre 2007 e -28,1% dopo giugno 2008, in media -0,3%. Nelle 58 settimane con score simile dal 2003 l'S&P a 12 mesi ha fatto in media +14,3% (74% positivi), vicino alla media generale di +10,2%. Il segnale short ha funzionato molto bene fino al 2014 (media a 3 mesi -23,8%) e quasi per nulla dal 2015 (+1,1%). Negli episodi passati la svolta è arrivata quasi sempre dopo un intervento di sostegno; per l'episodio in corso, il «Rout tecnologico post-midterm» (drawdown S&P finora -11,5%), non c'è ancora un intervento in catalogo e la Fed va nella direzione opposta."
   },
   {
    "key": "pratico",
    "tone": "neu",
-   "headline": "Freno sul rischio, pronti per il dopo",
-   "text": "1) Il segnale short va letto come invito a ridurre il rischio o coprirsi, non a vendere allo scoperto a piena forza: nelle 42 settimane storiche in questo stato l'S&P a 3 mesi è stato positivo nel 43% dei casi, con calo massimo medio a 6 mesi del 12,2%; agosto 2008 fu un crollo, dicembre 2018 e marzo 2023 erano vicini ai minimi. 2) Se lo score va sotto 20 scatta l'allerta: in passato è stata seguita da cali ulteriori (in media -15,1% nei 6 mesi) ma anche da buoni 12 mesi (+15,9% medio, 83% positivi). Il segnale più affidabile è il long anticipato, cioè la risalita di almeno 8 punti in 4 settimane dopo essere scesi sotto 20: +27,2% medio a 12 mesi, positivo in tutti i 6 casi. 3) Da osservare nei prossimi giorni: lo spread high yield (se sale verso il 4%, come nell'aprile 2025, il credito conferma lo stress), il VIX sopra 30, i dati settimanali NFCI e St. Louis Fed, e qualsiasi segnale di cambio di tono della Fed prima della riunione di dicembre. Sono considerazioni basate sui dati storici, non consulenza finanziaria."
+   "headline": "Ridurre il rischio, aspettare la risalita",
+   "text": "1) Il segnale short invita a ridurre l'esposizione o coprirsi più che a vendere allo scoperto: nelle 42 settimane storiche in questo stato l'S&P a 3 mesi è salito nel 43% dei casi, con un calo massimo medio a 6 mesi del 12,2%; nel 2008 fu un crollo, nel 2018 e nel 2023 si era vicini ai minimi. 2) Se lo score scende sotto 20 scatta l'allerta Siccità: storicamente seguita da altri cali (in media -15,1% di calo massimo a 6 mesi) ma da buoni 12 mesi (+15,9%, 83% positivi); il segnale più utile è il long anticipato, cioè una risalita di almeno 8 punti in 4 settimane dopo la Siccità (+27,2% medio a 12 mesi, 6 casi su 6 positivi, pochi casi). 3) Da osservare: la seduta corta di oggi, lo spread high yield verso il 4% (come nell'aprile 2025 con i dazi), il VIX sopra 30, i dati sul lavoro di inizio dicembre e il tono della Fed prima del 9 dicembre. Sono considerazioni basate sui dati storici, non consulenza finanziaria."
   }
  ],
  "sources": [
-  {"title": "JournalArta — US stocks slip before Thanksgiving as tech weighs on S&P 500 (26/11/2026)", "url": "https://journalarta.com/en/2026/11/26/sp-500-slips-as-tech-pressure-offsets-dow-gains/"},
-  {"title": "Kalshi — Fed rate odds", "url": "https://kalshi.com/economics/fed-rate-odds"},
-  {"title": "FXStreet — Fed expectations power USD (11/11/2026)", "url": "https://www.fxstreet.com/analysis/fed-expectations-power-usd-202611111739"},
-  {"title": "Predictmarkets — Fed December 2026 rate decision odds", "url": "https://predictmarkets.com/odds/fed-rate-decision/december-2026/"}
+  {"title": "JournalArta — S&P 500 slips in pre-Thanksgiving trading as tech drag persists (26/11/2026)", "url": "https://journalarta.com/en/2026/11/26/sp-500-slips-in-pre-thanksgiving-trading-as-tech-drag-persists/"},
+  {"title": "Vista Partners — Stocks close mixed on Wednesday, November 25, 2026", "url": "https://vistapglobal.com/stocks-close-mixed-on-wednesday-november-25-2026-as-hot-pce-inflation-new-tariff-plans-and-an-ai-sell-off-test-wall-street-amd-eprx-googl-modd-nvda-ser-spcx-vix/"},
+  {"title": "Washington Times (AP) — AI rout drags Wall Street lower (25/11/2026)", "url": "https://www.washingtontimes.com/news/2026/nov/25/ai-rout-dragging-wall-street-lower-sp-500-slumps-27/"},
+  {"title": "FXStreet — The last Fed meeting minutes were very hawkish (19/11/2026)", "url": "https://www.fxstreet.com/analysis/the-last-fed-meeting-minutes-were-very-hawkish-202611191521"},
+  {"title": "Fortune — Current price of oil as of November 23, 2026", "url": "https://fortune.com/article/price-of-oil-11-23-2026/"},
+  {"title": "IC Markets — General market analysis 23 November 2026", "url": "https://www.ic.com/blog/general-market-analysis-23-november-2026-ic/"}
  ]
 }
