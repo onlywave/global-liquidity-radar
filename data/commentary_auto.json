@@ -1,6 +1,6 @@
 {
  "date": "2026-12-02",
- "generated": "2026-11-27T19:30Z",
+ "generated": "2026-11-27T22:16Z",
  "kind": "auto",
  "blocks": [
   {
@@ -13,19 +13,19 @@
    "title": "Medio (1 mese)",
    "tone": "neg",
    "headline": "Deterioramento in corso",
-   "text": "Score -19,1 punti in 4 settimane (liquidità z -0,23, stress z +0,89). Liquidità netta globale -0,8% in 4 settimane e -1,8% in 13. Nelle settimane passate con uno score simile (±5 punti, 57 casi) l'S&P a 1 mese ha fatto in media +0,9% (58% positivi), contro +0,7% di tutte le settimane."
+   "text": "Score -19,1 punti in 4 settimane (liquidità z -0,23, stress z +0,89). Liquidità netta globale -0,8% in 4 settimane e -1,7% in 13. Nelle settimane passate con uno score simile (±5 punti, 57 casi) l'S&P a 1 mese ha fatto in media +0,9% (58% positivi), contro +0,7% di tutte le settimane."
   },
   {
    "title": "Lungo (12 mesi)",
    "tone": "neg",
    "headline": "Rischio elevato, ma i 12 mesi restano incerti",
-   "text": "Con score intorno a 20,2 (57 settimane simili dal 2003) l'S&P a 12 mesi ha fatto in media +13,4% (72% positivi), contro +10,2% di media generale. Lo score da solo, a questo livello, non dà un vantaggio sull'anno: decide come evolvono liquidità e stress. Se lo score scende sotto 20 e poi risale, storicamente l'anno successivo è stato molto buono; se la stretta si prolunga come nel 2008 o nel 2022, no."
+   "text": "Con score intorno a 20,3 (57 settimane simili dal 2003) l'S&P a 12 mesi ha fatto in media +13,4% (72% positivi), contro +10,2% di media generale. Lo score da solo, a questo livello, non dà un vantaggio sull'anno: decide come evolvono liquidità e stress. Se lo score scende sotto 20 e poi risale, storicamente l'anno successivo è stato molto buono; se la stretta si prolunga come nel 2008 o nel 2022, no."
   },
   {
    "title": "Considerazioni pratiche",
    "tone": "neu",
    "headline": "Cosa suggerisce lo storico",
-   "text": "Segnale short attivo: storicamente conveniva ridurre l'esposizione o coprirsi, non necessariamente vendere allo scoperto. Nessun segnale long: i rimbalzi in fase di stretta, senza miglioramento della liquidità, sono stati spesso fragili. I precedenti più simili a oggi sono 2010-05 (Debito greco / flash crash), 2023-03 (Banche regionali USA (SVB)), 2022-03 (Stretta monetaria 2022 / gilt). In questi 5 casi l'S&P a 12 mesi ha fatto in media +8,6%, ma con un calo massimo medio di -5,8% nei 3 mesi successivi. Episodio di stress in corso: «Rout tecnologico post-midterm», drawdown S&P finora -11,5%; per questo episodio non c'è ancora un intervento di banca centrale in catalogo; negli episodi passati la svolta è arrivata quasi sempre dopo un intervento."
+   "text": "Segnale short attivo: storicamente conveniva ridurre l'esposizione o coprirsi, non necessariamente vendere allo scoperto. Nessun segnale long: i rimbalzi in fase di stretta, senza miglioramento della liquidità, sono stati spesso fragili. I precedenti più simili a oggi sono 2010-05 (Debito greco / flash crash), 2023-03 (Banche regionali USA (SVB)), 2022-03 (Stretta monetaria 2022 / gilt). In questi 5 casi l'S&P a 12 mesi ha fatto in media +7,8%, ma con un calo massimo medio di -6,7% nei 3 mesi successivi. Episodio di stress in corso: «Rout tecnologico post-midterm», drawdown S&P finora -11,5%; per questo episodio non c'è ancora un intervento di banca centrale in catalogo; negli episodi passati la svolta è arrivata quasi sempre dopo un intervento."
   }
  ],
  "analogs": [
@@ -42,16 +42,16 @@
    "mdd3m": -6.1
   },
   {
-   "date": "2023-03-15",
+   "date": "2023-03-01",
    "dist": 0.62,
-   "score": 16.0,
-   "liq": -0.98,
-   "stress": 1.01,
+   "score": 24.7,
+   "liq": -0.81,
+   "stress": 0.56,
    "episode": "Banche regionali USA (SVB)",
-   "r1m": 5.6,
-   "r3m": 12.6,
-   "r12m": 30.6,
-   "mdd3m": 0.0
+   "r1m": 1.6,
+   "r3m": 5.9,
+   "r12m": 27.0,
+   "mdd3m": -4.5
   },
   {
    "date": "2022-03-16",

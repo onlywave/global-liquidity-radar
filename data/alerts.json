@@ -37,7 +37,7 @@
    "level": "alta",
    "code": "REGIME",
    "date": "2026-12-02",
-   "text": "Cambio di regime: Siccità → Stretta (score 18.7 → 20.2)",
+   "text": "Cambio di regime: Siccità → Stretta (score 18.7 → 20.3)",
    "dir": "up"
   },
   {
@@ -52,7 +52,7 @@
    "date": "2026-12-02",
    "frm": "Siccità",
    "to": "Stretta",
-   "score": 20.2
+   "score": 20.3
   },
   {
    "date": "2026-11-25",
