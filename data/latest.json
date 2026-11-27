@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T15:49Z",
+ "generated": "2026-11-27T16:44Z",
  "date": "2026-12-02",
  "score": 20.7,
  "liq": -0.71,
@@ -247,10 +247,10 @@
    "src": "S&P Dow Jones Indices",
    "id": "SP500",
    "url": "https://fred.stlouisfed.org/series/SP500",
-   "last_date": "2026-11-24",
-   "last_value": 7201.09,
+   "last_date": "2026-11-25",
+   "last_value": 7182.78,
    "ok": true,
-   "age_days": 3,
+   "age_days": 2,
    "status": "ok"
   }
  ],
