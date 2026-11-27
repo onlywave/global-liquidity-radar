@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T02:57Z",
+ "generated": "2026-11-27T00:09Z",
  "date": "2026-11-25",
  "score": 20.1,
  "liq": -0.76,
@@ -82,7 +82,7 @@
    "last_date": "2026-11-18",
    "last_value": 6741452.0,
    "ok": true,
-   "age_days": 8,
+   "age_days": 9,
    "status": "ok"
   },
   {
@@ -94,7 +94,7 @@
    "last_date": "2026-11-18",
    "last_value": 916613.0,
    "ok": true,
-   "age_days": 8,
+   "age_days": 9,
    "status": "ok"
   },
   {
@@ -106,7 +106,7 @@
    "last_date": "2026-11-25",
    "last_value": 0.3,
    "ok": true,
-   "age_days": 1,
+   "age_days": 2,
    "status": "ok"
   },
   {
@@ -118,7 +118,7 @@
    "last_date": "2026-11-18",
    "last_value": 2979656.0,
    "ok": true,
-   "age_days": 8,
+   "age_days": 9,
    "status": "ok"
   },
   {
@@ -130,7 +130,7 @@
    "last_date": "2026-11-20",
    "last_value": 5923063.0,
    "ok": true,
-   "age_days": 6,
+   "age_days": 7,
    "status": "ok"
   },
   {
@@ -142,7 +142,7 @@
    "last_date": "2026-10-01",
    "last_value": 6261882.0,
    "ok": true,
-   "age_days": 56,
+   "age_days": 57,
    "status": "ok"
   },
   {
@@ -154,7 +154,7 @@
    "last_date": "2026-10-01",
    "last_value": 23532.8,
    "ok": true,
-   "age_days": 56,
+   "age_days": 57,
    "status": "ok"
   },
   {
@@ -166,7 +166,7 @@
    "last_date": "2026-11-20",
    "last_value": 123.598,
    "ok": true,
-   "age_days": 6,
+   "age_days": 7,
    "status": "ok"
   },
   {
@@ -178,7 +178,7 @@
    "last_date": "2026-11-20",
    "last_value": 1.098,
    "ok": true,
-   "age_days": 6,
+   "age_days": 7,
    "status": "ok"
   },
   {
@@ -190,7 +190,7 @@
    "last_date": "2026-11-20",
    "last_value": 158.76,
    "ok": true,
-   "age_days": 6,
+   "age_days": 7,
    "status": "ok"
   },
   {
@@ -202,7 +202,7 @@
    "last_date": "2026-11-20",
    "last_value": -0.444,
    "ok": true,
-   "age_days": 6,
+   "age_days": 7,
    "status": "ok"
   },
   {
@@ -214,7 +214,7 @@
    "last_date": "2026-11-20",
    "last_value": -0.07,
    "ok": true,
-   "age_days": 6,
+   "age_days": 7,
    "status": "ok"
   },
   {
@@ -226,7 +226,7 @@
    "last_date": "2026-11-24",
    "last_value": 26.36,
    "ok": true,
-   "age_days": 2,
+   "age_days": 3,
    "status": "ok"
   },
   {
@@ -238,7 +238,7 @@
    "last_date": "2026-11-24",
    "last_value": 3.72,
    "ok": true,
-   "age_days": 2,
+   "age_days": 3,
    "status": "ok"
   },
   {
@@ -250,7 +250,7 @@
    "last_date": "2026-11-24",
    "last_value": 7201.09,
    "ok": true,
-   "age_days": 2,
+   "age_days": 3,
    "status": "ok"
   }
  ],
