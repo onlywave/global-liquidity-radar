@@ -37,14 +37,14 @@
    "level": "alta",
    "code": "REGIME",
    "date": "2026-12-02",
-   "text": "Cambio di regime: Siccità → Stretta (score 19.2 → 20.7)",
+   "text": "Cambio di regime: Siccità → Stretta (score 18.7 → 20.2)",
    "dir": "up"
   },
   {
    "level": "media",
    "code": "MOMENTUM",
    "date": "2026-12-02",
-   "text": "Score -18.6 punti in 4 settimane"
+   "text": "Score -19.1 punti in 4 settimane"
   }
  ],
  "regime_changes": [
@@ -52,13 +52,13 @@
    "date": "2026-12-02",
    "frm": "Siccità",
    "to": "Stretta",
-   "score": 20.7
+   "score": 20.2
   },
   {
    "date": "2026-11-25",
    "frm": "Stretta",
    "to": "Siccità",
-   "score": 19.2
+   "score": 18.7
   },
   {
    "date": "2026-11-04",
